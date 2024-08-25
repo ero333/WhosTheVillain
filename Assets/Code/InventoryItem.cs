@@ -22,5 +22,6 @@ public class InventoryItem : MonoBehaviour
     {
         print(itemName);
         InventoryManager.Instance.AddItem(this);
+        Destroy(gameObject);
     }
 }

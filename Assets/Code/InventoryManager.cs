@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance { get; private set; }
-    public Image[] invetorySlots;
+    public Image[] inventorySlots;
 
     // Start is called before the first frame update
     void Start()
@@ -35,13 +35,13 @@ public class InventoryManager : MonoBehaviour
     public void AddItem(InventoryItem item)
     {
         print(item.name);
-        for (int i = 0; i < invetorySlots.Length; i++)
+        for (int i = 0; i < inventorySlots.Length; i++)
         {
-            if (invetorySlots[i].sprite == null)
+            if (inventorySlots[i].sprite == null)
             {
-                invetorySlots[i].sprite = item.itemIcon;
-                invetorySlots[i].preserveAspect = true;
-                invetorySlots[i].GetComponent<Button>().interactable = false;
+                inventorySlots[i].sprite = item.itemIcon;
+                inventorySlots[i].preserveAspect = true;
+                //inventorySlots[i].GetComponent<Button>().interactable = false;
                 break;
             }
         }
