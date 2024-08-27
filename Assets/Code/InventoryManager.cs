@@ -7,6 +7,7 @@ public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance { get; private set; }
     public Image[] inventorySlots;
+    bool lleno = false;
 
     // Start is called before the first frame update
     void Start()
@@ -15,20 +16,19 @@ public class InventoryManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
+            
         }
         else
         {
             Destroy(gameObject);
+            
         }
     }
 
@@ -42,8 +42,19 @@ public class InventoryManager : MonoBehaviour
                 inventorySlots[i].sprite = item.itemIcon;
                 inventorySlots[i].preserveAspect = true;
                 //inventorySlots[i].GetComponent<Button>().interactable = false;
+                
                 break;
+                
+
             }
         }
+
+    }
+    void Update()
+    {
+        // código para q si están las 5 pistas se muestre un botón para ir al informe//
+
+      
+
     }
 }
