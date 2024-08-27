@@ -24,28 +24,6 @@ public class InventoryItem : MonoBehaviour
         print(itemName);
         InventoryManager.Instance.AddItem(this);
         Destroy(gameObject);
-        
-        
-    }
-
-    void OnDestroy()
-    {
-        contador++;
-        Debug.Log("Objeto destruido.Contador:" + contador);
-    }
-
-
-    private void Update()
-    {
-        if (contador == 5)
-        {
-            botoninforme.enabled = true;
-
-        }
-        else
-        {
-            botoninforme.enabled = false;
-        }
     }
 
 }

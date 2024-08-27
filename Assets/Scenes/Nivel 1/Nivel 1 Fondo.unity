@@ -300,7 +300,6 @@ RectTransform:
   - {fileID: 202189336}
   - {fileID: 936561838}
   - {fileID: 2094014700}
-  - {fileID: 570884427}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -887,7 +886,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &570884427
 RectTransform:
   m_ObjectHideFlags: 0
@@ -895,17 +894,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 570884426}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1907.3538}
+  m_LocalScale: {x: 0.02221503, y: 0.02221503, z: 0.02221503}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 629887938}
-  m_Father: {fileID: 66965208}
+  m_Father: {fileID: 1067148464}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 306.3, y: -196.28}
+  m_AnchoredPosition: {x: 6.258362, y: -4.3654785}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &570884428
@@ -952,14 +951,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2094014699}
-        m_TargetAssemblyTypeName: irainforme, Assembly-CSharp
-        m_MethodName: Botoninforme
-        m_Mode: 1
+      - m_Target: {fileID: 1200806025}
+        m_TargetAssemblyTypeName: CambioEscenas, Assembly-CSharp
+        m_MethodName: CambiarEscena
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2437,6 +2436,7 @@ MonoBehaviour:
   - {fileID: 424622414}
   - {fileID: 1432881339}
   - {fileID: 714132291}
+  changeSceneButton: {fileID: 570884428}
 --- !u!212 &936561842
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2561,6 +2561,7 @@ Transform:
   - {fileID: 1626844824}
   - {fileID: 887312922}
   - {fileID: 842425556}
+  - {fileID: 570884427}
   m_Father: {fileID: 66965208}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1166679793
