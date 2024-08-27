@@ -50,11 +50,5 @@ public class InventoryManager : MonoBehaviour
         }
 
     }
-    void Update()
-    {
-        // código para q si están las 5 pistas se muestre un botón para ir al informe//
-
-      
-
-    }
+   
 }
