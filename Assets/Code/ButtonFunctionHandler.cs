@@ -1,13 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
-using System;
+using UnityEngine.SceneManagement;
 
 public class ButtonFunctionHandler : MonoBehaviour
 {
     public Dropdown myDropdown;
     public Button myButton;
-
-    private Action currentButtonAction;
 
     void Start()
     {
@@ -19,7 +17,7 @@ public class ButtonFunctionHandler : MonoBehaviour
 
     void OnDropdownValueChanged(int index)
     {
-        // Actualiza la acción del botón según la opción seleccionada en el Dropdown
+        // Actualiza la función del botón según la opción seleccionada en el Dropdown
         SetButtonFunction();
     }
 
@@ -32,40 +30,24 @@ public class ButtonFunctionHandler : MonoBehaviour
         switch (myDropdown.value)
         {
             case 0:
-                currentButtonAction = ActionForOption1;
+                myButton.onClick.AddListener(() => LoadScene("Pantalla Derrota")); // Cambia a la escena 3
                 break;
             case 1:
-                currentButtonAction = ActionForOption2;
-                break;
-            case 2:
-                currentButtonAction = ActionForOption3;
+                myButton.onClick.AddListener(() => LoadScene("Pantalla Victoria")); // Cambia a la escena 4
                 break;
             default:
-                currentButtonAction = DefaultAction;
+                myButton.onClick.AddListener(DefaultAction); // Acción predeterminada para otras opciones
                 break;
         }
-
-        // Añade la función al botón
-        myButton.onClick.AddListener(() => currentButtonAction?.Invoke());
-    }
-
-    void ActionForOption1()
-    {
-        Debug.Log("Función para la opción 1 ejecutada.");
-    }
-
-    void ActionForOption2()
-    {
-        Debug.Log("Función para la opción 2 ejecutada.");
-    }
-
-    void ActionForOption3()
-    {
-        Debug.Log("Función para la opción 3 ejecutada.");
     }
 
     void DefaultAction()
     {
         Debug.Log("Función predeterminada ejecutada.");
+    }
+
+    void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }
