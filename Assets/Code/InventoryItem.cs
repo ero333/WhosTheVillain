@@ -10,10 +10,16 @@ public class InventoryItem : MonoBehaviour
     private static int contador;
     public Button botoninforme;
 
+    public Image flashEffect;
+    public float flashDuration = 0.1f;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (flashEffect != null )
+        {
+            flashEffect.gameObject.SetActive( false );
+        }
     }
 
     // Update is called once per frame
@@ -23,6 +29,23 @@ public class InventoryItem : MonoBehaviour
     {
         print(itemName);
         InventoryManager.Instance.AddItem(this);
+
+        if (flashEffect != null)
+        {
+            StartCoroutine(ShowFlashEffect());
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+    }
+
+    private IEnumerator ShowFlashEffect()
+    {
+        flashEffect.gameObject.SetActive ( true );
+        yield return new WaitForSeconds(flashDuration);
+        flashEffect.gameObject.SetActive ( false );
         Destroy(gameObject);
     }
 

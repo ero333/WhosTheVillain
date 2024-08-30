@@ -299,6 +299,7 @@ RectTransform:
   - {fileID: 1315462823}
   - {fileID: 202189336}
   - {fileID: 936561838}
+  - {fileID: 1985124850}
   - {fileID: 2094014700}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -355,6 +356,8 @@ MonoBehaviour:
   itemName: Testamento
   itemIcon: {fileID: -1862828625, guid: 1aece1ea2dcc99547b0a479c5997096a, type: 3}
   botoninforme: {fileID: 0}
+  flashEffect: {fileID: 1985124851}
+  flashDuration: 0.1
 --- !u!61 &113505435
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1066,6 +1069,8 @@ MonoBehaviour:
   itemName: "Pa\xF1uelo"
   itemIcon: {fileID: 899176621, guid: 1aece1ea2dcc99547b0a479c5997096a, type: 3}
   botoninforme: {fileID: 0}
+  flashEffect: {fileID: 1985124851}
+  flashDuration: 0.1
 --- !u!61 &589285968
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2265,6 +2270,8 @@ MonoBehaviour:
   itemName: Vaso de Whisky
   itemIcon: {fileID: 1576330757, guid: 1aece1ea2dcc99547b0a479c5997096a, type: 3}
   botoninforme: {fileID: 570884428}
+  flashEffect: {fileID: 1985124851}
+  flashDuration: 0.1
 --- !u!1 &887312921
 GameObject:
   m_ObjectHideFlags: 0
@@ -3377,6 +3384,8 @@ MonoBehaviour:
   itemName: Carta
   itemIcon: {fileID: 108571535, guid: 1aece1ea2dcc99547b0a479c5997096a, type: 3}
   botoninforme: {fileID: 0}
+  flashEffect: {fileID: 1985124851}
+  flashDuration: 0.1
 --- !u!61 &1469668086
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4623,6 +4632,81 @@ Transform:
   - {fileID: 713924856}
   m_Father: {fileID: 66965208}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1985124849
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1985124850}
+  - component: {fileID: 1985124852}
+  - component: {fileID: 1985124851}
+  m_Layer: 5
+  m_Name: FlashEffect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1985124850
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985124849}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 66965208}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000015259, y: -0.00091553}
+  m_SizeDelta: {x: 800, y: 450.14}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1985124851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985124849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.4117647}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1985124852
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985124849}
+  m_CullTransparentMesh: 1
 --- !u!1 &2004979776
 GameObject:
   m_ObjectHideFlags: 0
@@ -5037,6 +5121,8 @@ MonoBehaviour:
   itemName: Reloj
   itemIcon: {fileID: -306995447, guid: 1aece1ea2dcc99547b0a479c5997096a, type: 3}
   botoninforme: {fileID: 0}
+  flashEffect: {fileID: 1985124851}
+  flashDuration: 0.1
 --- !u!61 &2142293449
 BoxCollider2D:
   m_ObjectHideFlags: 0
