@@ -6,10 +6,11 @@ using UnityEngine.UI;
 public class InventoryItem : MonoBehaviour
 {
     public string itemName;
+    [TextArea(4, 6)] public string itemdescrip;
     public Sprite itemIcon;
     private static int contador;
     public Button botoninforme;
-
+    
     public Image flashEffect;
     public float flashDuration = 0.1f;
 
