@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class InventoryItem : MonoBehaviour
 {
     public string itemName;
-    [TextArea(4, 6)] public string itemdescrip;
+    [TextArea(4, 6)] public string itemDescrip;
     public Sprite itemIcon;
     private static int contador;
     public Button botoninforme;
