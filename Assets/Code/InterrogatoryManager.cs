@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class InterrogatoryManager : MonoBehaviour
 {
-    public List<Personaje> personajes; // Lista de personajes que puedes asignar desde el inspector
+    public List<Personaje> personajes; // Lista de personajes 
     public Image imagenCajaPreguntas;
     public GameObject[] botonesPreguntas; // Los botones para las preguntas
     public GameObject[] cajasTextoRespuestas; // Los GameObjects para mostrar respuestas
