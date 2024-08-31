@@ -8,6 +8,11 @@ public class InventoryItem : MonoBehaviour
     public string itemName;
     [TextArea(4, 6)] public string itemDescrip;
     public Sprite itemIcon;
+    public GameObject infoPanel;
+    public Image itemImage;
+    public Text itemText;
+    public Button closeButton;
+
     private static int contador;
     public Button botoninforme;
     
@@ -21,6 +26,14 @@ public class InventoryItem : MonoBehaviour
         {
             flashEffect.gameObject.SetActive( false );
         }
+        if (closeButton != null )
+        {
+            closeButton.onClick.AddListener(CloseInfoPanel);
+        }
+        if (infoPanel != null )
+        {
+            infoPanel.SetActive( false );
+        }
     }
 
     // Update is called once per frame
@@ -33,6 +46,7 @@ public class InventoryItem : MonoBehaviour
 
         if (flashEffect != null)
         {
+            ShowInfoPanel();
             StartCoroutine(ShowFlashEffect());
         }
         else
@@ -49,5 +63,31 @@ public class InventoryItem : MonoBehaviour
         flashEffect.gameObject.SetActive ( false );
         Destroy(gameObject);
     }
+
+    private void ShowInfoPanel()
+    {
+        if (infoPanel != null)
+        {
+            if (itemImage != null)
+            {
+                itemImage.sprite = itemIcon;
+            }
+            if (itemText != null)
+            {
+                itemText.text = itemName;
+            }
+
+            infoPanel.SetActive(true);
+        }
+    }
+
+    private void CloseInfoPanel()
+    {
+        if (infoPanel != null)
+        {
+            infoPanel.SetActive(false);
+        }
+    }
+
 
 }
