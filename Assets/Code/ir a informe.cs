@@ -19,6 +19,6 @@ public class irainforme : MonoBehaviour
 
     public void Botoninforme()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
 }
