@@ -26,6 +26,10 @@ public class CambioEscenas : MonoBehaviour
         SceneManager.LoadScene(nivelActual.buildIndex + 1);
     }
 
+    public void Menu()
+    {
+        SceneManager.LoadScene("MenuPrincipal");
+    }
     public void Selector()
     {
         SceneManager.LoadScene("Selector de niveles");
@@ -61,8 +65,17 @@ public class CambioEscenas : MonoBehaviour
         SceneManager.LoadScene("Nivel 1 villano");
     }
 
+    public void LogrosDetective()
+    {
+        SceneManager.LoadScene("Logros Detective");
+    }
 
-    
+    public void LogrosVillano()
+    {
+        SceneManager.LoadScene("Logros Villano");
+    }
+
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
