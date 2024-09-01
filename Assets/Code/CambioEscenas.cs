@@ -26,6 +26,12 @@ public class CambioEscenas : MonoBehaviour
         SceneManager.LoadScene(nivelActual.buildIndex + 1);
     }
 
+    public void Selector()
+    {
+        SceneManager.LoadScene("Selector de niveles");
+    }
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         SiguienteNivel();
