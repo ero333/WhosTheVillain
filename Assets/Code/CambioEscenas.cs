@@ -31,6 +31,38 @@ public class CambioEscenas : MonoBehaviour
         SceneManager.LoadScene("Selector de niveles");
     }
 
+    public void DNivel1()
+    {
+        SceneManager.LoadScene("Nivel 1 Oficina");
+    }
+
+    public void DNivel2()
+    {
+        SceneManager.LoadScene("Nivel 2 Oficina detective");
+    }
+
+    public void DNivel3()
+    {
+        SceneManager.LoadScene("Nivel 3 Oficina detective");
+    }
+
+    public void VNivel1()
+    {
+        SceneManager.LoadScene("Nivel 1 villano");
+    }
+
+    public void VNivel2()
+    {
+        SceneManager.LoadScene("Nivel 1 villano");
+    }
+
+    public void VNivel3()
+    {
+        SceneManager.LoadScene("Nivel 1 villano");
+    }
+
+
+    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
