@@ -1,90 +1,139 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class InterrogatoryManager : MonoBehaviour
 {
     public List<Personaje> personajes; // Lista de personajes 
-    public Image imagenCajaPreguntas;
+    public GameObject imagenCajaPreguntas;
     public GameObject[] botonesPreguntas; // Los botones para las preguntas
-    public GameObject[] cajasTextoRespuestas; // Los GameObjects para mostrar respuestas
+    // public GameObject[] cajasTextoRespuestas; // Los GameObjects para mostrar respuestas
+    public TMP_Text NombrePersonaje;
+    public Text RespuestaPersonaje;
+    public GameObject CajaRespuesta;
     public Image[] imagenesPersonajes; // Las imágenes para cada personaje
+    public GameObject BotonesSospechos; //Los botones para los sospechosos
+    public GameObject BotonCambioEscena;
 
     private Personaje personajeActual;
-    private int preguntasRestantes = 3;
+    public int preguntasRestantes = 3;
 
     void Start()
     {
         // Configura el estado inicial del juego
         imagenCajaPreguntas.gameObject.SetActive(false);
-        foreach (var boton in botonesPreguntas)
-        {
-            boton.GetComponent<Button>().onClick.AddListener(() => HacerPregunta(boton.GetComponentInChildren<Text>().text));
-        }
-        foreach (var caja in cajasTextoRespuestas)
-        {
-            caja.SetActive(false);
-        }
     }
 
-    public void SeleccionarPersonaje(Personaje personaje)
+    private void Update()
     {
-        personajeActual = personaje;
-        preguntasRestantes = 3; // Reiniciar el número de preguntas
-        MostrarImagenPersonaje(personaje);
+        TerminarEntrevista();
+    }
+
+    public void SeleccionarPersonaje(int personaje)
+    {
+        DesactivarBotones();
+       
+        if (personaje == 0)
+        {
+            personajeActual = personajes[0];
+            preguntasRestantes = 3;
+            MostrarImagenPersonaje(personajeActual);
+        }
+        else if (personaje == 1)
+        {
+            personajeActual = personajes[1];
+            preguntasRestantes = 3;
+            MostrarImagenPersonaje(personajeActual);
+        }
+        else
+        {
+            personajeActual = personajes[2];
+            preguntasRestantes = 3;
+            MostrarImagenPersonaje(personajeActual);
+        }
+
         MostrarCajaPreguntas();
+
+    }
+
+    public void ActivarRespuesta(int preguntas)
+    {
+        for (int i = 0; i < botonesPreguntas.Length; i++)
+        {
+            botonesPreguntas[i].gameObject.SetActive(false);
+            imagenCajaPreguntas.gameObject.SetActive(false);
+        }
+        foreach (Personaje x in personajes)
+        {
+            if (personajeActual == x)
+            {
+                CajaRespuesta.SetActive(true);
+                NombrePersonaje.text = x.nombre;
+                RespuestaPersonaje.text = x.preguntas[preguntas].respuesta;
+            }
+        }
+        preguntasRestantes--;
+    }
+
+    private void DesactivarBotones()
+    {
+        BotonesSospechos.SetActive(false);
     }
 
     private void MostrarImagenPersonaje(Personaje personaje)
     {
-        for (int i = 0; i < imagenesPersonajes.Length; i++)
+        if (preguntasRestantes > 0)
         {
-            imagenesPersonajes[i].gameObject.SetActive(personajes[i] == personaje);
-        }
-    }
-
-    private void MostrarCajaPreguntas()
-    {
-        imagenCajaPreguntas.gameObject.SetActive(true);
-    }
-
-    private void HacerPregunta(string preguntaTexto)
-    {
-        if (preguntasRestantes > 0 && personajeActual != null)
-        {
-            foreach (var pregunta in personajeActual.preguntas)
+            for (int i = 0; i < imagenesPersonajes.Length; i++)
             {
-                if (pregunta.texto == preguntaTexto)
-                {
-                    MostrarRespuesta(pregunta.respuesta);
-                    preguntasRestantes--;
-                    break;
-                }
+                imagenesPersonajes[i].gameObject.SetActive(personajes[i] == personaje);
             }
-            if (preguntasRestantes <= 0)
+        }
+        else
+        {
+            imagenCajaPreguntas.gameObject.SetActive(false);
+            for (int i = 0; i < imagenesPersonajes.Length; i++)
             {
-                TerminarEntrevista();
+                if (imagenesPersonajes[i].gameObject.activeSelf)
+                    imagenesPersonajes[i].gameObject.SetActive(false);
             }
         }
     }
 
-    private void MostrarRespuesta(string respuesta)
+    public void MostrarCajaPreguntas()
     {
-        foreach (var caja in cajasTextoRespuestas)
+        if (preguntasRestantes > 0)
         {
-            if (!caja.activeSelf)
+            imagenCajaPreguntas.gameObject.SetActive(true);
+            for (int i = 0; i < botonesPreguntas.Length; i++)
             {
-                caja.SetActive(true);
-                caja.GetComponentInChildren<Text>().text = respuesta;
-                break;
+                botonesPreguntas[i].gameObject.SetActive(true);
             }
+        }
+        else
+        {
+            Entrevistas++;
+            MostrarImagenPersonaje(personajeActual);
+            //imagenCajaPreguntas.gameObject.SetActive(false);
+            personajeActual = null;
+            BotonesSospechos.SetActive(true);
         }
     }
 
     private void TerminarEntrevista()
     {
-        imagenCajaPreguntas.gameObject.SetActive(false);
-        personajeActual = null;
+        if (Entrevistas == 3)
+        {
+            BotonCambioEscena.SetActive(true);
+        }
+    }
+
+    public int Entrevistas;
+
+    public void PersonajeSeleccionado(Button PersonajeBoton)
+    {
+        PersonajeBoton.GetComponent<Button>().interactable = false;
     }
 }
 
