@@ -23,12 +23,8 @@ public class ObjetoBarra : MonoBehaviour
     {
         if (barravillano != null) 
         {
-            barravillano.StartFilling();
+            barravillano.StartFilling(this.gameObject);
 
-        }
-        else
-        {
-            Destroy(gameObject);
         }
     }
 

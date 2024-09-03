@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class BarraVillano : MonoBehaviour
 {
     public Image progressBar;
-    public float fillSpeed = 0.5f;
+    public float fillSpeed = 0.1f;
     public bool isFilling = false;
+    public GameObject pista;
 
     // Start is called before the first frame update
     void Start()
@@ -25,16 +27,16 @@ public class BarraVillano : MonoBehaviour
             {
                 progressBar.fillAmount = 0;
                 isFilling = false;
-                //Destroy(gameObject);
+                Destroy(pista);
             }
         }
        
     }
 
-    public void StartFilling()
+    public void StartFilling(GameObject objetoPista)
     {
+        pista = objetoPista;
         isFilling = true;
-
     }
 
     public void StopFilling()
