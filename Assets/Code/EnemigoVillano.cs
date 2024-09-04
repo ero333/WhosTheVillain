@@ -39,4 +39,9 @@ public class EnemigoVillano : MonoBehaviour
             anim.SetBool("EnemigoSeVa", false);
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+    }
 }
