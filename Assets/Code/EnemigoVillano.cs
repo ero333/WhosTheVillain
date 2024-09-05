@@ -12,19 +12,13 @@ public class EnemigoVillano : MonoBehaviour
     public Animator anim;
     public bool Entrada;
     public bool Salida;
-    public string PantallaDerrotaVillano;
-    private bool clickPres;
-
-    public BarraVillano barravillano;
-    public ObjetoBarra objetoClick;
+    //public string PantallaDerrotaVillano;
 
     // Start is called before the first frame update
     void Start()
     {
         Entrada = true;
         cronometro = Vigilar;
-        clickPres = false;
-
     }
 
     // Update is called once per frame
@@ -45,27 +39,10 @@ public class EnemigoVillano : MonoBehaviour
             cronometro = Vigilar;
             anim.SetBool("EnemigoSeVa", false);
         }
-
-        if (clickPres) 
-        {
-            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit))
-            {
-                if (hit.collider != null && hit.collider.gameObject == gameObject)
-                {
-                    SceneManager.LoadScene("Pantalla Derrota Villano");
-                }
-            }
-        }
     }
 
     private void OnMouseDown()
     {
-       clickPres = true;
+        SceneManager.LoadScene(9);
     }
-
-    private void OnMouseUp() 
-    {
-        clickPres = false;
-    }
-
 }
