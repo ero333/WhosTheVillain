@@ -2,7 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement; 
+using UnityEngine.SceneManagement;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
+using JetBrains.Annotations;
 
 public class EnemigoVillano : MonoBehaviour
 {
@@ -12,6 +15,10 @@ public class EnemigoVillano : MonoBehaviour
     public Animator anim;
     public bool Entrada;
     public bool Salida;
+
+    public GameObject[] Pistas;
+
+    public bool isHolding = false;
     //public string PantallaDerrotaVillano;
 
     // Start is called before the first frame update
@@ -19,6 +26,7 @@ public class EnemigoVillano : MonoBehaviour
     {
         Entrada = true;
         cronometro = Vigilar;
+        isHolding = false;
     }
 
     // Update is called once per frame
@@ -39,10 +47,51 @@ public class EnemigoVillano : MonoBehaviour
             cronometro = Vigilar;
             anim.SetBool("EnemigoSeVa", false);
         }
+
+        isHolding = false;
+        List<GameObject> pistasValidas = new List<GameObject>();
+
+        foreach (GameObject pista in Pistas)
+        {
+            if (pista != null)
+            {
+                pistasValidas.Add(pista);
+
+                if (pista.GetComponent<Collider2D>() != null && Input.GetMouseButton(0))
+                {
+                    Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    if (pista.GetComponent<Collider2D>().OverlapPoint(mousePos))
+                    {
+                        ObjetoBarra script = pista.GetComponent<ObjetoBarra>();
+                        if (script != null)
+                        {
+                            Debug.Log(pista.name + " isTrue " + script.isTrue);
+                            if (script.isTrue)
+                            {
+                                isHolding = true;
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        Pistas = pistasValidas.ToArray();
+
+        if (Entrada && isHolding)
+        {
+            Debug.Log("Cambiando a la escena 9");
+            SceneManager.LoadScene(9);
+        }
     }
 
-    private void OnMouseDown()
+    public void DestroyPista(GameObject pista)
     {
-        SceneManager.LoadScene(9);
+        List<GameObject> pistaList = new List<GameObject>(Pistas);
+        pistaList.Remove(pista);
+        Pistas = pistaList.ToArray();
+
+        Destroy(pista);
     }
 }

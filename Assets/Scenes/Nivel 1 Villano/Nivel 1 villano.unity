@@ -442,6 +442,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barravillano: {fileID: 153053081}
+  OnHold:
+    m_PersistentCalls:
+      m_Calls: []
+  isHolding: 0
+  isTrue: 1
 --- !u!61 &194625353
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -658,6 +663,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barravillano: {fileID: 153053081}
+  OnHold:
+    m_PersistentCalls:
+      m_Calls: []
+  isHolding: 0
+  isTrue: 1
 --- !u!61 &555677389
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -838,6 +848,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barravillano: {fileID: 153053081}
+  OnHold:
+    m_PersistentCalls:
+      m_Calls: []
+  isHolding: 0
+  isTrue: 1
 --- !u!61 &593501772
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1137,6 +1152,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barravillano: {fileID: 153053081}
+  OnHold:
+    m_PersistentCalls:
+      m_Calls: []
+  isHolding: 0
+  isTrue: 1
 --- !u!61 &829574343
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1377,7 +1397,6 @@ GameObject:
   - component: {fileID: 1334289387}
   - component: {fileID: 1334289390}
   - component: {fileID: 1334289386}
-  - component: {fileID: 1334289389}
   m_Layer: 5
   m_Name: EnemigoAnim
   m_TagString: Untagged
@@ -1463,51 +1482,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1334289384}
   m_CullTransparentMesh: 1
---- !u!61 &1334289389
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1334289384}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -235.236, y: -1.5119629}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 13.793518, y: 1119.1548}
-  m_EdgeRadius: 0
 --- !u!114 &1334289390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1526,6 +1500,13 @@ MonoBehaviour:
   anim: {fileID: 1334289386}
   Entrada: 0
   Salida: 0
+  Pistas:
+  - {fileID: 829574337}
+  - {fileID: 555677384}
+  - {fileID: 1940517866}
+  - {fileID: 194625348}
+  - {fileID: 593501767}
+  isHolding: 0
 --- !u!1 &1653760557
 GameObject:
   m_ObjectHideFlags: 0
@@ -1692,6 +1673,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barravillano: {fileID: 153053081}
+  OnHold:
+    m_PersistentCalls:
+      m_Calls: []
+  isHolding: 0
+  isTrue: 1
 --- !u!61 &1940517871
 BoxCollider2D:
   m_ObjectHideFlags: 0
