@@ -365,6 +365,7 @@ GameObject:
   - component: {fileID: 194625352}
   - component: {fileID: 194625353}
   - component: {fileID: 194625354}
+  - component: {fileID: 194625355}
   m_Layer: 5
   m_Name: Pelo
   m_TagString: Untagged
@@ -536,6 +537,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &194625355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194625348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac27f1d66aeaa7d468fbb12f2cd30dc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &209957084
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,6 +585,50 @@ Transform:
   - {fileID: 593501768}
   m_Father: {fileID: 958817110}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &259356383
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 259356385}
+  - component: {fileID: 259356384}
+  m_Layer: 0
+  m_Name: Destroy manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &259356384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259356383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac27f1d66aeaa7d468fbb12f2cd30dc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &259356385
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259356383}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.4350546, y: -0.74484897, z: 0.016200095}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &555677384
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,6 +643,7 @@ GameObject:
   - component: {fileID: 555677388}
   - component: {fileID: 555677389}
   - component: {fileID: 555677390}
+  - component: {fileID: 555677391}
   m_Layer: 5
   m_Name: Guantes
   m_TagString: Untagged
@@ -757,6 +815,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &555677391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555677384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac27f1d66aeaa7d468fbb12f2cd30dc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &593501767
 GameObject:
   m_ObjectHideFlags: 0
@@ -771,6 +841,7 @@ GameObject:
   - component: {fileID: 593501771}
   - component: {fileID: 593501772}
   - component: {fileID: 593501773}
+  - component: {fileID: 593501774}
   m_Layer: 5
   m_Name: Veneno
   m_TagString: Untagged
@@ -942,6 +1013,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &593501774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593501767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac27f1d66aeaa7d468fbb12f2cd30dc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &624118929
 GameObject:
   m_ObjectHideFlags: 0
@@ -1031,6 +1114,7 @@ GameObject:
   - component: {fileID: 829574342}
   - component: {fileID: 829574339}
   - component: {fileID: 829574343}
+  - component: {fileID: 829574344}
   m_Layer: 5
   m_Name: Llave
   m_TagString: Untagged
@@ -1202,6 +1286,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 439.19354, y: 1034.5275}
   m_EdgeRadius: 0
+--- !u!114 &829574344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829574337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac27f1d66aeaa7d468fbb12f2cd30dc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &858191886
 GameObject:
   m_ObjectHideFlags: 0
@@ -1596,6 +1692,7 @@ GameObject:
   - component: {fileID: 1940517870}
   - component: {fileID: 1940517871}
   - component: {fileID: 1940517872}
+  - component: {fileID: 1940517873}
   m_Layer: 5
   m_Name: Jeringa
   m_TagString: Untagged
@@ -1767,6 +1864,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1940517873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940517866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac27f1d66aeaa7d468fbb12f2cd30dc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1965800000
 GameObject:
   m_ObjectHideFlags: 0
@@ -1843,3 +1952,4 @@ SceneRoots:
   - {fileID: 958817110}
   - {fileID: 113453299}
   - {fileID: 1965800003}
+  - {fileID: 259356385}
