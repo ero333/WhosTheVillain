@@ -75,6 +75,11 @@ public class CambioEscenas : MonoBehaviour
         SceneManager.LoadScene("Logros Villano");
     }
 
+    public void PantallaDerrotaVillano()
+    {
+        SceneManager.LoadScene("Pantalla Derrota Villano");
+    }
+
 
 
     private void OnTriggerEnter2D(Collider2D collision)

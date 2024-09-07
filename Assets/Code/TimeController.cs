@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TimeController : MonoBehaviour
 {
@@ -26,7 +27,7 @@ public class TimeController : MonoBehaviour
             if(restante < 1)
             {
                 enMarcha = false;
-                //cambio de escena
+                SceneManager.LoadScene("Pantalla Derrota Villano");
             }
             int tempMin = Mathf.FloorToInt(restante / 60);
             int TempSeg = Mathf.FloorToInt(restante % 60);
