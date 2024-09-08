@@ -502,7 +502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   progressBar: {fileID: 153053079}
-  fillSpeed: 0.5
+  fillSpeed: 0.7
   isFilling: 0
   pista: {fileID: 0}
 --- !u!1 &194625348
@@ -517,6 +517,7 @@ GameObject:
   - component: {fileID: 194625351}
   - component: {fileID: 194625350}
   - component: {fileID: 194625352}
+  - component: {fileID: 194625356}
   - component: {fileID: 194625353}
   - component: {fileID: 194625354}
   - component: {fileID: 194625355}
@@ -597,7 +598,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barravillano: {fileID: 153053081}
-  enemigo: {fileID: 1334289390}
   OnHold:
     m_PersistentCalls:
       m_Calls: []
@@ -704,6 +704,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac27f1d66aeaa7d468fbb12f2cd30dc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &194625356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194625348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93c6d9dc4810b9b4f911ef858250d7eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalObjects: 5
+  button: {fileID: 1986654187}
 --- !u!1 &209957084
 GameObject:
   m_ObjectHideFlags: 0
@@ -930,6 +944,7 @@ GameObject:
   - component: {fileID: 555677387}
   - component: {fileID: 555677386}
   - component: {fileID: 555677388}
+  - component: {fileID: 555677392}
   - component: {fileID: 555677389}
   - component: {fileID: 555677390}
   - component: {fileID: 555677391}
@@ -1010,7 +1025,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barravillano: {fileID: 153053081}
-  enemigo: {fileID: 1334289390}
   OnHold:
     m_PersistentCalls:
       m_Calls: []
@@ -1117,6 +1131,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac27f1d66aeaa7d468fbb12f2cd30dc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &555677392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555677384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93c6d9dc4810b9b4f911ef858250d7eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalObjects: 5
+  button: {fileID: 1986654187}
 --- !u!1 &593501767
 GameObject:
   m_ObjectHideFlags: 0
@@ -1129,6 +1157,7 @@ GameObject:
   - component: {fileID: 593501770}
   - component: {fileID: 593501769}
   - component: {fileID: 593501771}
+  - component: {fileID: 593501775}
   - component: {fileID: 593501772}
   - component: {fileID: 593501773}
   - component: {fileID: 593501774}
@@ -1209,7 +1238,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barravillano: {fileID: 153053081}
-  enemigo: {fileID: 1334289390}
   OnHold:
     m_PersistentCalls:
       m_Calls: []
@@ -1316,6 +1344,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac27f1d66aeaa7d468fbb12f2cd30dc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &593501775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593501767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93c6d9dc4810b9b4f911ef858250d7eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalObjects: 5
+  button: {fileID: 1986654187}
 --- !u!1 &624118929
 GameObject:
   m_ObjectHideFlags: 0
@@ -1403,6 +1445,7 @@ GameObject:
   - component: {fileID: 829574341}
   - component: {fileID: 829574340}
   - component: {fileID: 829574342}
+  - component: {fileID: 829574345}
   - component: {fileID: 829574339}
   - component: {fileID: 829574343}
   - component: {fileID: 829574344}
@@ -1527,7 +1570,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barravillano: {fileID: 153053081}
-  enemigo: {fileID: 1334289390}
   OnHold:
     m_PersistentCalls:
       m_Calls: []
@@ -1590,6 +1632,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac27f1d66aeaa7d468fbb12f2cd30dc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &829574345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829574337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93c6d9dc4810b9b4f911ef858250d7eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalObjects: 5
+  button: {fileID: 1986654187}
 --- !u!1 &858191886
 GameObject:
   m_ObjectHideFlags: 0
@@ -1897,9 +1953,6 @@ MonoBehaviour:
   - {fileID: 194625348}
   - {fileID: 593501767}
   isHolding: 0
-  botonCambioEscena: {fileID: 1986654190}
-  cantidadObjetos: 5
-  objetosDestruidos: 0
 --- !u!1 &1638352272
 GameObject:
   m_ObjectHideFlags: 0
@@ -2080,6 +2133,7 @@ GameObject:
   - component: {fileID: 1940517869}
   - component: {fileID: 1940517868}
   - component: {fileID: 1940517870}
+  - component: {fileID: 1940517874}
   - component: {fileID: 1940517871}
   - component: {fileID: 1940517872}
   - component: {fileID: 1940517873}
@@ -2160,7 +2214,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barravillano: {fileID: 153053081}
-  enemigo: {fileID: 1334289390}
   OnHold:
     m_PersistentCalls:
       m_Calls: []
@@ -2267,6 +2320,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac27f1d66aeaa7d468fbb12f2cd30dc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1940517874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940517866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93c6d9dc4810b9b4f911ef858250d7eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalObjects: 5
+  button: {fileID: 1986654187}
 --- !u!1 &1965800000
 GameObject:
   m_ObjectHideFlags: 0
@@ -2434,10 +2501,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 113453298}
         m_TargetAssemblyTypeName: CambioEscenas, Assembly-CSharp
-        m_MethodName: CambiarEscena
-        m_Mode: 3
+        m_MethodName: VNivel1pt2
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
