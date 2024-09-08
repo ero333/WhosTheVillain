@@ -19,6 +19,10 @@ public class EnemigoVillano : MonoBehaviour
     public GameObject[] Pistas;
 
     public bool isHolding = false;
+
+    public Button botonCambioEscena;
+    public int cantidadObjetos = 5;
+    public int objetosDestruidos = 0;
     //public string PantallaDerrotaVillano;
 
     // Start is called before the first frame update
@@ -27,6 +31,11 @@ public class EnemigoVillano : MonoBehaviour
         Entrada = true;
         cronometro = Vigilar;
         isHolding = false;
+
+        if (botonCambioEscena != null )
+        {
+            botonCambioEscena.gameObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -85,7 +94,6 @@ public class EnemigoVillano : MonoBehaviour
             SceneManager.LoadScene("Pantalla Derrota Villano");
         }
     }
-
     public void DestroyPista(GameObject pista)
     {
         List<GameObject> pistaList = new List<GameObject>(Pistas);
@@ -93,5 +101,15 @@ public class EnemigoVillano : MonoBehaviour
         Pistas = pistaList.ToArray();
 
         Destroy(pista);
+
+        objetosDestruidos++;
+        Debug.Log("Objetos destruidos: " + objetosDestruidos);
+
+        if (objetosDestruidos >= cantidadObjetos && botonCambioEscena != null)
+        {
+            Debug.Log("Activando botón de cambio de escena");
+            botonCambioEscena.gameObject.SetActive(true);
+        }
     }
+
 }
