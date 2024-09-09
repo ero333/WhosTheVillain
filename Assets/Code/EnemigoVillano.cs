@@ -9,6 +9,10 @@ using JetBrains.Annotations;
 
 public class EnemigoVillano : MonoBehaviour
 {
+    public float AparicionMin;
+    public float AparicionMax;
+    public float VigilarMin;
+    public float VigilarMax;
     public float Aparicion;
     public float Vigilar;
     public float cronometro;
@@ -24,6 +28,8 @@ public class EnemigoVillano : MonoBehaviour
     void Start()
     {
         Entrada = true;
+        Aparicion = Random.Range(AparicionMin, AparicionMax);
+        Vigilar = Random.Range(VigilarMin, VigilarMax);
         cronometro = Vigilar;
         isHolding = false;
     }
@@ -36,6 +42,7 @@ public class EnemigoVillano : MonoBehaviour
         {
             Entrada = false;
             Salida = true;
+            Aparicion = Random.Range(AparicionMin, AparicionMax);
             cronometro = Aparicion;
             anim.SetBool("EnemigoSeVa",true);
         }
@@ -43,6 +50,7 @@ public class EnemigoVillano : MonoBehaviour
         {
             Entrada = true;
             Salida = false;
+            Vigilar = Random.Range(VigilarMin,VigilarMax);
             cronometro = Vigilar;
             anim.SetBool("EnemigoSeVa", false);
         }
