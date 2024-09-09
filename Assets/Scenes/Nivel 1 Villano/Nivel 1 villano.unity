@@ -754,50 +754,6 @@ Transform:
   - {fileID: 593501768}
   m_Father: {fileID: 958817110}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &259356383
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 259356385}
-  - component: {fileID: 259356384}
-  m_Layer: 0
-  m_Name: Destroy manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &259356384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 259356383}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac27f1d66aeaa7d468fbb12f2cd30dc8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &259356385
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 259356383}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4350546, y: -0.74484897, z: 0.016200095}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &338414176
 GameObject:
   m_ObjectHideFlags: 0
@@ -2563,4 +2519,3 @@ SceneRoots:
   - {fileID: 958817110}
   - {fileID: 113453299}
   - {fileID: 1965800003}
-  - {fileID: 259356385}
