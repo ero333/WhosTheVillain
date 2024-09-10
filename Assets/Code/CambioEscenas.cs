@@ -90,6 +90,11 @@ public class CambioEscenas : MonoBehaviour
         SceneManager.LoadScene("Nivel 1 Villano Interrogatorio");
     }
 
+    public void PantallaDerrotaDetective()
+    {
+        SceneManager.LoadScene("Pantalla Derrota");
+    }
+
 
 
     private void OnTriggerEnter2D(Collider2D collision)

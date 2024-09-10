@@ -30,7 +30,7 @@ public class ButtonFunctionHandler : MonoBehaviour
         switch (myDropdown.value)
         {
             case 0:
-                myButton.onClick.AddListener(() => LoadScene("Pantalla Derrota")); // Cambia a la escena 3
+                myButton.onClick.AddListener(() => LoadScene("Cutscene Derrota D")); // Cambia a la escena 3
                 break;
             case 1:
                 myButton.onClick.AddListener(() => LoadScene("Pantalla Victoria")); // Cambia a la escena 4
