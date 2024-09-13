@@ -6,13 +6,8 @@ using UnityEngine.SceneManagement;
 public class MenuPausa : MonoBehaviour
 {
     [SerializeField] private GameObject menuPausa;
+    [SerializeField] private GameObject Enemigo;
     private bool JuegoPausado = false;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -35,12 +30,21 @@ public class MenuPausa : MonoBehaviour
         JuegoPausado = true;
         Time.timeScale = 0f;
         menuPausa.SetActive(true);
+        if (Enemigo != null)
+        {
+            Enemigo.GetComponent<EnemigoVillano>().enabled = false; // Desactivar el script del enemigo
+        }
     }
 
     public void Reanudar()
     {
         JuegoPausado = false;
-        Time .timeScale = 1f;
+        Time.timeScale = 1f;
         menuPausa.SetActive(false);
+        if (Enemigo != null)
+        {
+            Enemigo.GetComponent<EnemigoVillano>().enabled = true; // Reactivar el script del enemigo
+        }
     }
 }
+

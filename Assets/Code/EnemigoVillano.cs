@@ -29,6 +29,11 @@ public class EnemigoVillano : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Time.timeScale == 0)
+        {
+            return;
+        }
+
         cronometro -= Time.deltaTime;
 
         // Check if the enemy is in the entrance, exit, or vigilance animation
