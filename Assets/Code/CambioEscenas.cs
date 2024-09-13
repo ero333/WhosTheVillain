@@ -50,6 +50,12 @@ public class CambioEscenas : MonoBehaviour
         SceneManager.LoadScene("Nivel 3 Oficina detective");
     }
 
+    public void CineV1()
+    {
+        SceneManager.LoadScene("Cutscene intro villano");
+    }
+
+
     public void VNivel1()
     {
         SceneManager.LoadScene("Nivel 1 villano");
