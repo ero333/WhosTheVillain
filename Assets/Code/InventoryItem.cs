@@ -12,6 +12,10 @@ public class InventoryItem : MonoBehaviour
     public Image itemImage;
     public Text itemText;
     public Button closeButton;
+    public Button backbuttom;
+
+    public GameObject subScenario;
+    public GameObject mainScenario;
 
     private static int contador;
     public Button botoninforme;
@@ -34,10 +38,11 @@ public class InventoryItem : MonoBehaviour
         {
             infoPanel.SetActive( false );
         }
+        if (backbuttom != null)
+        {
+            backbuttom.onClick.AddListener(OnBackButtonClicked);
+        }
     }
-
-    // Update is called once per frame
-  
 
     private void OnMouseDown()
     {
@@ -78,6 +83,20 @@ public class InventoryItem : MonoBehaviour
             }
 
             infoPanel.SetActive(true);
+        }
+    }
+
+    public void OnBackButtonClicked()
+    {
+        Debug.Log("Back button clicked");
+        CloseInfoPanel();
+        if (subScenario != null)
+        {
+            subScenario.SetActive(false);
+        }
+        if (mainScenario != null)
+        {
+            mainScenario.SetActive(true);
         }
     }
 

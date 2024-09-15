@@ -596,6 +596,9 @@ MonoBehaviour:
   itemImage: {fileID: 234866102}
   itemText: {fileID: 1893053174}
   closeButton: {fileID: 1441524230}
+  backbuttom: {fileID: 1479103207}
+  subScenario: {fileID: 366450032}
+  mainScenario: {fileID: 1067148463}
   botoninforme: {fileID: 0}
   flashEffect: {fileID: 1985124851}
   flashDuration: 0.1
@@ -1462,8 +1465,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 465754623}
-  - {fileID: 1479103206}
   - {fileID: 113505433}
+  - {fileID: 1479103206}
   m_Father: {fileID: 66965208}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &424622412
@@ -2287,6 +2290,9 @@ MonoBehaviour:
   itemImage: {fileID: 561968857}
   itemText: {fileID: 174471118}
   closeButton: {fileID: 124300807}
+  backbuttom: {fileID: 0}
+  subScenario: {fileID: 0}
+  mainScenario: {fileID: 0}
   botoninforme: {fileID: 0}
   flashEffect: {fileID: 1985124851}
   flashDuration: 0.1
@@ -4068,6 +4074,9 @@ MonoBehaviour:
   itemImage: {fileID: 482553669}
   itemText: {fileID: 886890311}
   closeButton: {fileID: 668639311}
+  backbuttom: {fileID: 0}
+  subScenario: {fileID: 0}
+  mainScenario: {fileID: 0}
   botoninforme: {fileID: 570884428}
   flashEffect: {fileID: 1985124851}
   flashDuration: 0.1
@@ -5970,6 +5979,9 @@ MonoBehaviour:
   itemImage: {fileID: 690624983}
   itemText: {fileID: 1005397815}
   closeButton: {fileID: 564256848}
+  backbuttom: {fileID: 0}
+  subScenario: {fileID: 0}
+  mainScenario: {fileID: 0}
   botoninforme: {fileID: 0}
   flashEffect: {fileID: 1985124851}
   flashDuration: 0.1
@@ -6116,6 +6128,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 113505434}
+        m_TargetAssemblyTypeName: InventoryItem, Assembly-CSharp
+        m_MethodName: OnBackButtonClicked
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -9061,6 +9085,9 @@ MonoBehaviour:
   itemImage: {fileID: 1257683107}
   itemText: {fileID: 701109197}
   closeButton: {fileID: 1745257233}
+  backbuttom: {fileID: 0}
+  subScenario: {fileID: 0}
+  mainScenario: {fileID: 0}
   botoninforme: {fileID: 0}
   flashEffect: {fileID: 1985124851}
   flashDuration: 0.1
