@@ -12,6 +12,7 @@ public class DestruirPistasVillano : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        objectsDestroyed = 0;
         button.SetActive(false);
     }
 
