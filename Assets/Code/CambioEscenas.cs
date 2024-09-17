@@ -106,6 +106,10 @@ public class CambioEscenas : MonoBehaviour
         SceneManager.LoadScene("Pantalla Victoria");
     }
 
+    public void CutsceneDerrotaDetective()
+    {
+        SceneManager.LoadScene("Cutscene Derrota D");
+    }
 
 
     private void OnTriggerEnter2D(Collider2D collision)

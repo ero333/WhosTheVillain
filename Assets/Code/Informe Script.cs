@@ -10,6 +10,7 @@ public class InformeScript : MonoBehaviour
     // Evidencias
     public Image[] evidenceImages;
     public Sprite[] evidenceSprites;
+    public string[] evidenceNames;
     public Sprite placeholderSprite; // Sprite de signo de interrogación
     private int[] evidenceIndices;
 
@@ -17,6 +18,7 @@ public class InformeScript : MonoBehaviour
     public Image suspectImage;
     public Text suspectDescription;
     public Sprite[] suspectSprites;
+    public string[] suspectNames;
     public string[] suspectDescriptions;
     public Sprite suspectPlaceholderSprite; // Sprite de signo de interrogación
     private int suspectIndex = 0;
@@ -75,9 +77,13 @@ public class InformeScript : MonoBehaviour
 
     void UpdateHypothesis()
     {
-        hypothesisText.text = $"Evidencias: {evidenceImages[0].sprite.name}, {evidenceImages[1].sprite.name}, {evidenceImages[2].sprite.name}\n" +
-                              $"Sospechoso: {suspectImage.sprite.name} - {suspectDescription.text}\n" +
-                              $"Motivo: {motiveText.text}";
+        string evidence1 = evidenceImages[0].sprite.name != placeholderSprite.name ? evidenceNames[evidenceIndices[0]] : "evidencia no seleccionada";
+        string evidence2 = evidenceImages[1].sprite.name != placeholderSprite.name ? evidenceNames[evidenceIndices[1]] : "evidencia no seleccionada";
+        string evidence3 = evidenceImages[2].sprite.name != placeholderSprite.name ? evidenceNames[evidenceIndices[2]] : "evidencia no seleccionada";
+        string suspect = suspectImage.sprite.name != suspectPlaceholderSprite.name ? suspectNames[suspectIndex] : "sospechoso no seleccionado";
+        string motive = motiveText.text != initialMotiveText ? motiveText.text : "motivo no seleccionado";
+
+        hypothesisText.text = $"El sospechoso {suspect} fue identificado como el culpable. Las evidencias encontradas en su contra son: {evidence1}, {evidence2}, y {evidence3}. Pienso que motivo del crimen fue porque: {motive}";
     }
 
     public void OnSubmit()
@@ -88,11 +94,11 @@ public class InformeScript : MonoBehaviour
             suspectImage.sprite.name == correctSuspect &&
             motiveText.text == correctMotive)
         {
-            SceneManager.LoadScene("VictoryScene");
+            SceneManager.LoadScene("Pantalla Victoria");
         }
         else
         {
-            SceneManager.LoadScene("DefeatScene");
+            SceneManager.LoadScene("Cutscene Derrota D");
         }
     }
 }

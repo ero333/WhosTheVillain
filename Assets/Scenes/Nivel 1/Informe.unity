@@ -182,7 +182,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: eeee87f97daa2ed4eaeb2969b3b01eda, type: 3}
-    m_FontSize: 27
+    m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -1263,6 +1263,12 @@ MonoBehaviour:
   - {fileID: 1576330757, guid: 1aece1ea2dcc99547b0a479c5997096a, type: 3}
   - {fileID: -306995447, guid: 1aece1ea2dcc99547b0a479c5997096a, type: 3}
   - {fileID: 108571535, guid: 1aece1ea2dcc99547b0a479c5997096a, type: 3}
+  evidenceNames:
+  - "Pa\xF1uelo con sangre"
+  - Testamento
+  - Vaso con whisky
+  - Reloj de bolsillo
+  - Carta escrita por un socio
   placeholderSprite: {fileID: 21300000, guid: e706ae4f8c704c446ae82aca30e969d7, type: 3}
   suspectImage: {fileID: 1495505288}
   suspectDescription: {fileID: 2121140458}
@@ -1270,6 +1276,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: e058d3327737bad4484fd1e689724871, type: 3}
   - {fileID: 21300000, guid: 8c1a0c72ed9c6a84d9d9b3626f8e2a9d, type: 3}
   - {fileID: 21300000, guid: bb4088e86a033574c9fd151fa8b9de6c, type: 3}
+  suspectNames:
+  - Jacob O'Neill
+  - Ava brown
+  - Oscar Jones
   suspectDescriptions:
   - 'Jacob O''Neill: Hijo de la victima y heredero de la fortuna de su padre.'
   - "Ava Brown: Era la ama de llaves de la mansi\xF3n del Se\xF1or O'Neill."
@@ -3108,7 +3118,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1315085951}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 456718004}
+        m_TargetAssemblyTypeName: InformeScript, Assembly-CSharp
+        m_MethodName: OnSubmit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1315085951
 MonoBehaviour:
   m_ObjectHideFlags: 0
