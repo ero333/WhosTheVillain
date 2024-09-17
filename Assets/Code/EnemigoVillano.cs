@@ -68,8 +68,8 @@ public class EnemigoVillano : MonoBehaviour
 
         if (Entrada && isHolding)
         {
-            Debug.Log("Cambiando a la escena Pantalla Derrota Villano");
-            SceneManager.LoadScene("Pantalla Derrota Villano");
+            Debug.Log("Cambiando a la escena CutsceneDerrotaVillano B");
+            SceneManager.LoadScene("CutsceneDerrotaVillano B");
         }
     }
 
