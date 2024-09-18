@@ -8,10 +8,11 @@ using Unity.VisualScripting;
 public class InformeScript : MonoBehaviour
 {
     // Evidencias
+    [Header("Evidencias")]
     public Image[] evidenceImages;
     public Sprite[] evidenceSprites;
     public string[] evidenceNames;
-    public Sprite placeholderSprite; // Sprite de signo de interrogación
+    public Sprite placeholderSprite; //Sprite de signo de interrogación
     private int[] evidenceIndices;
 
     // Sospechosos
@@ -20,14 +21,14 @@ public class InformeScript : MonoBehaviour
     public Sprite[] suspectSprites;
     public string[] suspectNames;
     public string[] suspectDescriptions;
-    public Sprite suspectPlaceholderSprite; // Sprite de signo de interrogación
+    public Sprite suspectPlaceholderSprite; //Sprite de signo de interrogación
     private int suspectIndex = 0;
 
     // Motivos
     public Text motiveText;
     public string[] motives;
     private int motiveIndex = 0;
-    private string initialMotiveText = "¿Por qué lo hizo?"; // Texto inicial
+    private string initialMotiveText = "¿Por qué lo hizo?"; //Texto inicial
 
     // Hipótesis
     public Text hypothesisText;
@@ -39,18 +40,46 @@ public class InformeScript : MonoBehaviour
     public string correctSuspect;
     public string correctMotive;
 
+    public bool Evidencia1Correcta;
+    public bool Evidencia2Correcta;
+    public bool Evidencia3Correcta;
+    public bool SospechosoCorrecto;
+    public bool MotivoCorrecto;
+
+    public string TresOpcionesCorrectas;
+
     void Start()
     {
         evidenceIndices = new int[evidenceImages.Length];
         for (int i = 0; i < evidenceImages.Length; i++)
         {
-            evidenceImages[i].sprite = placeholderSprite; // Imagen inicial
+            evidenceImages[i].sprite = placeholderSprite; //Imagen inicial
             evidenceIndices[i] = 0;
         }
-        suspectImage.sprite = suspectPlaceholderSprite; // Imagen inicial
+        suspectImage.sprite = suspectPlaceholderSprite; //Imagen inicial
         suspectDescription.text = ""; // Descripción vacía
         motiveText.text = initialMotiveText; // Texto inicial
+
         UpdateHypothesis();
+    }
+
+    void Update()
+    {
+        TresOpcionesCorrectas = correctEvidence1 + correctEvidence2 + correctEvidence3;
+        /*Evidencia1Correcta = (evidenceImages[0].sprite.name == correctEvidence1) || evidenceImages[1].sprite.name == correctEvidence2 || evidenceImages[2].sprite.name == correctEvidence3;
+        Evidencia2Correcta = (evidenceImages[0].sprite.name == correctEvidence1) || evidenceImages[1].sprite.name == correctEvidence2 || evidenceImages[2].sprite.name == correctEvidence3;
+        Evidencia3Correcta = (evidenceImages[0].sprite.name == correctEvidence1) || evidenceImages[1].sprite.name == correctEvidence2 || evidenceImages[2].sprite.name == correctEvidence3;*/
+        Evidencia1Correcta = (TresOpcionesCorrectas.Contains(evidenceImages[0].sprite.name));
+        if (Evidencia1Correcta) TresOpcionesCorrectas = TresOpcionesCorrectas.Replace(evidenceImages[0].sprite.name, " ");
+
+        Evidencia2Correcta = (TresOpcionesCorrectas.Contains(evidenceImages[1].sprite.name));
+        if (Evidencia2Correcta) TresOpcionesCorrectas = TresOpcionesCorrectas.Replace(evidenceImages[1].sprite.name, " ");
+
+        Evidencia3Correcta = (TresOpcionesCorrectas.Contains(evidenceImages[2].sprite.name));
+        if (Evidencia3Correcta) TresOpcionesCorrectas = TresOpcionesCorrectas.Replace(evidenceImages[2].sprite.name, " ");
+
+        SospechosoCorrecto = suspectImage.sprite.name == correctSuspect;
+        MotivoCorrecto = motiveText.text == correctMotive;
     }
 
     public void OnEvidenceClick(int index)
@@ -88,9 +117,13 @@ public class InformeScript : MonoBehaviour
 
     public void OnSubmit()
     {
-        if (evidenceImages[0].sprite.name == correctEvidence1 &&
-            evidenceImages[1].sprite.name == correctEvidence2 &&
-            evidenceImages[2].sprite.name == correctEvidence3 &&
+        /*Debug.Log("Evidence 1: " + evidenceImages[0].sprite.name);
+        Debug.Log("Evidence 2: " + evidenceImages[1].sprite.name);
+        Debug.Log("Evidence 3: " + evidenceImages[2].sprite.name);
+        Debug.Log("Suspect: " + suspectImage.sprite.name);
+        Debug.Log("Motive: " + motiveText.text);*/
+
+        if (Evidencia1Correcta && Evidencia2Correcta && Evidencia3Correcta &&
             suspectImage.sprite.name == correctSuspect &&
             motiveText.text == correctMotive)
         {
