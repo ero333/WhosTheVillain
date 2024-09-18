@@ -42,7 +42,7 @@ public class CambioEscenas : MonoBehaviour
 
     public void DNivel2()
     {
-        SceneManager.LoadScene("Nivel 2 Oficina detective");
+        SceneManager.LoadScene("Nivel 2 Oficina D");
     }
 
     public void DNivel3()
