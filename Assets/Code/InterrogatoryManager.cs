@@ -18,6 +18,7 @@ public class InterrogatoryManager : MonoBehaviour
 
     private Personaje personajeActual;
     public int preguntasRestantes = 3;
+    public int entrevistasRequeridas = 3;
 
     void Start()
     {
@@ -46,11 +47,17 @@ public class InterrogatoryManager : MonoBehaviour
             preguntasRestantes = 3;
             MostrarImagenPersonaje(personajeActual);
         }
-        else
+        else if (personaje == 2)
         {
             personajeActual = personajes[2];
             preguntasRestantes = 3;
             MostrarImagenPersonaje(personajeActual);
+        }
+        else if (personaje == 3)
+        {
+            personajeActual = personajes[3];
+            preguntasRestantes = 3;
+            MostrarImagenPersonaje (personajeActual);
         }
 
         MostrarCajaPreguntas();
@@ -123,7 +130,7 @@ public class InterrogatoryManager : MonoBehaviour
 
     private void TerminarEntrevista()
     {
-        if (Entrevistas == 3)
+        if (Entrevistas == entrevistasRequeridas) //Poner variable en el inspector
         {
             BotonCambioEscena.SetActive(true);
         }
