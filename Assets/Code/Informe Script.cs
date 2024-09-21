@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Unity.VisualScripting;
+using UnityEditor;
 
 public class InformeScript : MonoBehaviour
 {
@@ -47,6 +48,9 @@ public class InformeScript : MonoBehaviour
     public bool MotivoCorrecto;
 
     public string TresOpcionesCorrectas;
+
+    public SceneAsset victoryScene;
+    public SceneAsset defeatScene;
 
     void Start()
     {
@@ -117,21 +121,19 @@ public class InformeScript : MonoBehaviour
 
     public void OnSubmit()
     {
-        /*Debug.Log("Evidence 1: " + evidenceImages[0].sprite.name);
-        Debug.Log("Evidence 2: " + evidenceImages[1].sprite.name);
-        Debug.Log("Evidence 3: " + evidenceImages[2].sprite.name);
-        Debug.Log("Suspect: " + suspectImage.sprite.name);
-        Debug.Log("Motive: " + motiveText.text);*/
+        string victorySceneName = victoryScene.name;
+        string defeatSceneName = defeatScene.name;
 
         if (Evidencia1Correcta && Evidencia2Correcta && Evidencia3Correcta &&
             suspectImage.sprite.name == correctSuspect &&
             motiveText.text == correctMotive)
         {
-            SceneManager.LoadScene("Pantalla Victoria");
+            SceneManager.LoadScene(victorySceneName);
         }
         else
         {
-            SceneManager.LoadScene("Cutscene Derrota D");
+            SceneManager.LoadScene(defeatSceneName);
         }
     }
+
 }
