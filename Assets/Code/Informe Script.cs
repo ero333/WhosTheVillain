@@ -119,7 +119,7 @@ public class InformeScript : MonoBehaviour
         hypothesisText.text = $"El sospechoso {suspect} fue identificado como el culpable. Las evidencias encontradas en su contra son: {evidence1}, {evidence2}, y {evidence3}. Pienso que motivo del crimen fue porque: {motive}";
     }
 
-    public void OnSubmit()
+    public void OnSubmit(int X)
     {
         string victorySceneName = victoryScene.name;
         string defeatSceneName = defeatScene.name;
@@ -129,6 +129,7 @@ public class InformeScript : MonoBehaviour
             motiveText.text == correctMotive)
         {
             SceneManager.LoadScene(victorySceneName);
+            GuardarDatos.Instancia.GuardarProgreso(X);
         }
         else
         {

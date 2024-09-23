@@ -22,6 +22,8 @@ public class Cuestionario : MonoBehaviour
     private int preguntaActual = 0;
     private int respuestasCorrectas = 0;
 
+    public int NivelAGuardar;
+
     void Start()
     {
         MostrarPregunta();
@@ -71,6 +73,7 @@ public class Cuestionario : MonoBehaviour
         if (respuestasCorrectas == preguntas.Length)
         {
             SceneManager.LoadScene("Pantalla Victoria Villano");
+            GuardarDatos.Instancia.GuardarProgreso(NivelAGuardar);
         }
         else
         {
