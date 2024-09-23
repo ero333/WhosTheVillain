@@ -77,7 +77,7 @@ public class Cuestionario : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("Pantalla Derrota Villano");
+            SceneManager.LoadScene("Pantalla Derrota Villano Interrogatorio");
         }
     }
 }
