@@ -851,8 +851,8 @@ MonoBehaviour:
   SospechosoCorrecto: 0
   MotivoCorrecto: 0
   TresOpcionesCorrectas: 
-  victoryScene: {fileID: 102900000, guid: ed82fe3329fc8a74f85b813a64c03a2a, type: 3}
-  defeatScene: {fileID: 102900000, guid: 7bf69a920cde92141a73d46f90e57abd, type: 3}
+  victoryScene: Pantalla Victoria
+  defeatScene: Cutscene Derrota D
 --- !u!4 &456718005
 Transform:
   m_ObjectHideFlags: 0
@@ -2385,6 +2385,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NivelesDesbloqueados: 0
+  NivelActual:
+    m_Handle: 0
 --- !u!1 &1728029069
 GameObject:
   m_ObjectHideFlags: 0

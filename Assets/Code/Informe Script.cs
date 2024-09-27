@@ -49,8 +49,10 @@ public class InformeScript : MonoBehaviour
 
     public string TresOpcionesCorrectas;
 
-    public SceneAsset victoryScene;
-    public SceneAsset defeatScene;
+    /*public SceneAsset victoryScene;
+    public SceneAsset defeatScene;*/
+    public string victoryScene;
+    public string defeatScene;
 
     void Start()
     {
@@ -121,8 +123,8 @@ public class InformeScript : MonoBehaviour
 
     public void OnSubmit(int X)
     {
-        string victorySceneName = victoryScene.name;
-        string defeatSceneName = defeatScene.name;
+        string victorySceneName = victoryScene;
+        string defeatSceneName = defeatScene;
 
         if (Evidencia1Correcta && Evidencia2Correcta && Evidencia3Correcta &&
             suspectImage.sprite.name == correctSuspect &&
@@ -136,5 +138,4 @@ public class InformeScript : MonoBehaviour
             SceneManager.LoadScene(defeatSceneName);
         }
     }
-
 }
