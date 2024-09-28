@@ -427,6 +427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalObjects: 1
   button: {fileID: 1202514574}
+  objectCounterText: {fileID: 0}
 --- !u!114 &164065713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1615,6 +1616,7 @@ GameObject:
   - component: {fileID: 1202514577}
   - component: {fileID: 1202514576}
   - component: {fileID: 1202514575}
+  - component: {fileID: 1202514579}
   m_Layer: 5
   m_Name: "Bot\xF3nContinuar"
   m_TagString: Untagged
@@ -1736,6 +1738,21 @@ RectTransform:
   m_AnchoredPosition: {x: 289.32, y: -172.46}
   m_SizeDelta: {x: 171.36, y: 39.09}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1202514579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202514574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
+  m_EffectDistance: {x: 3, y: -3}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1213997499
 GameObject:
   m_ObjectHideFlags: 0

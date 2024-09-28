@@ -1370,7 +1370,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 8.21, y: 142.5}
+  m_AnchoredPosition: {x: 8.209991, y: 142.5}
   m_SizeDelta: {x: -25.44, y: -399.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &844131919
@@ -2742,6 +2742,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalObjects: 1
   button: {fileID: 2032698341}
+  objectCounterText: {fileID: 0}
 --- !u!1 &1895556800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2882,6 +2883,7 @@ GameObject:
   - component: {fileID: 2032698346}
   - component: {fileID: 2032698345}
   - component: {fileID: 2032698344}
+  - component: {fileID: 2032698347}
   m_Layer: 5
   m_Name: "Bot\xF3nContinuar"
   m_TagString: Untagged
@@ -3003,6 +3005,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2032698341}
   m_CullTransparentMesh: 1
+--- !u!114 &2032698347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032698341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
+  m_EffectDistance: {x: 3, y: -3}
+  m_UseGraphicAlpha: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
