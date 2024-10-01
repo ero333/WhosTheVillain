@@ -268,6 +268,51 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &71467888
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 71467890}
+  - component: {fileID: 71467889}
+  m_Layer: 0
+  m_Name: Desbloqueador
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &71467889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71467888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f21c74e3604025748b69cc8cb36eeba6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  achievementManager: {fileID: 559461708}
+--- !u!4 &71467890
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71467888}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.42487308, y: 0.17506894, z: -0.0013506028}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &143424569
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,6 +571,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 431459560}
   m_CullTransparentMesh: 1
+--- !u!1 &559461707
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 559461709}
+  - component: {fileID: 559461708}
+  m_Layer: 0
+  m_Name: Achievement Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &559461708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559461707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1df6097f042d784fbf062c40f4ba557, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  achievements:
+  - title: Amante de los detalles Caso 1
+    description: 
+    isUnlocked: 0
+  - title: Interrogador nato Caso 1
+    description: 
+    isUnlocked: 0
+  - title: Amante de los detalles Caso 2
+    description: 
+    isUnlocked: 0
+  - title: Interrogador nato Caso 2
+    description: 
+    isUnlocked: 0
+--- !u!4 &559461709
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559461707}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.42487308, y: 0.17506894, z: -0.0013506028}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &564274314
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,16 +653,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 564274314}
-  m_LocalRotation: {x: -0, y: -0, z: 0.012467206, w: 0.9999223}
+  m_LocalRotation: {x: -0, y: -0, z: 0.009246919, w: 0.99995726}
   m_LocalPosition: {x: 0, y: 0, z: 89.985146}
   m_LocalScale: {x: 0.013979994, y: 0.013979994, z: 0.0139799975}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 710379780}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.429}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.06}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.23999977, y: 2.520012}
+  m_AnchoredPosition: {x: 0, y: 2.42}
   m_SizeDelta: {x: 535.71, y: 83.58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &564274316
@@ -583,7 +685,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Amante de los detalles Caso 1: Inspecciona todo el escenario.'
+  m_text: 'Interrogador nato caso 1: Selecciona todas las preguntas correctas en
+    un interrogatorio.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0cbf046871fd81d4c93ec347781be586, type: 2}
   m_sharedMaterial: {fileID: 4204418577910296832, guid: 0cbf046871fd81d4c93ec347781be586, type: 2}
@@ -592,8 +695,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4280618526
+  m_fontColor: {r: 0.11764706, g: 0.05490196, b: 0.14509805, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -610,8 +713,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22
-  m_fontSizeBase: 22
+  m_fontSize: 17
+  m_fontSizeBase: 17
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -646,7 +749,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -98.37164, w: 0}
+  m_margin: {x: 0, y: 0, z: 18.931854, w: 38.17759}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -670,7 +773,7 @@ GameObject:
   m_Component:
   - component: {fileID: 658868075}
   m_Layer: 0
-  m_Name: Logro 1 (3)
+  m_Name: Logro 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -685,7 +788,7 @@ Transform:
   m_GameObject: {fileID: 658868074}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.566885, y: 0.20708466, z: -4048.086}
+  m_LocalPosition: {x: 34.4, y: -260.4, z: -4048.086}
   m_LocalScale: {x: 44.986156, y: 44.986156, z: 44.986156}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -717,7 +820,7 @@ Transform:
   m_GameObject: {fileID: 710379779}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.566885, y: 0.20708466, z: -4048.086}
+  m_LocalPosition: {x: 26.1, y: -112.6, z: -4048.086}
   m_LocalScale: {x: 44.986156, y: 44.986156, z: 44.986156}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1076,7 +1179,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1132832081}
   m_Layer: 0
-  m_Name: Logro 1 (2)
+  m_Name: Logro 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1091,7 +1194,7 @@ Transform:
   m_GameObject: {fileID: 1132832080}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.566885, y: 0.20708466, z: -4048.086}
+  m_LocalPosition: {x: -6.9, y: -186.8, z: -4048.086}
   m_LocalScale: {x: 44.986156, y: 44.986156, z: 44.986156}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1166,51 +1269,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1766634907
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1766634909}
-  - component: {fileID: 1766634908}
-  m_Layer: 0
-  m_Name: Manager de logros
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1766634908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1766634907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f21c74e3604025748b69cc8cb36eeba6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  achievementManager: {fileID: 0}
---- !u!4 &1766634909
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1766634907}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.3022631, y: 0.08962656, z: 0.014850325}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1802133182
 GameObject:
   m_ObjectHideFlags: 0
@@ -1277,8 +1335,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4280618526
+  m_fontColor: {r: 0.11764707, g: 0.054901965, b: 0.14509805, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1301,7 +1359,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1370,16 +1428,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1973611766}
-  m_LocalRotation: {x: -0, y: -0, z: 0.012467206, w: 0.9999223}
+  m_LocalRotation: {x: -0, y: -0, z: 0.015944524, w: 0.9998729}
   m_LocalPosition: {x: 0, y: 0, z: 89.985146}
   m_LocalScale: {x: 0.013979994, y: 0.013979994, z: 0.0139799975}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 658868075}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.429}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.827}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.23999977, y: 2.520012}
+  m_AnchoredPosition: {x: 0.21, y: 2.36}
   m_SizeDelta: {x: 535.71, y: 83.58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1973611768
@@ -1402,7 +1460,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Amante de los detalles Caso 1: Inspecciona todo el escenario.'
+  m_text: 'Interrogador nato caso 2: Selecciona todas las preguntas correctas en
+    un interrogatorio.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0cbf046871fd81d4c93ec347781be586, type: 2}
   m_sharedMaterial: {fileID: 4204418577910296832, guid: 0cbf046871fd81d4c93ec347781be586, type: 2}
@@ -1411,8 +1470,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4280618526
+  m_fontColor: {r: 0.11764706, g: 0.05490196, b: 0.14509805, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1429,8 +1488,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22
-  m_fontSizeBase: 22
+  m_fontSize: 15.1
+  m_fontSizeBase: 15.1
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1465,7 +1524,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -98.37164, w: 0}
+  m_margin: {x: -9.348724, y: 0, z: 89.382904, w: 39.064983}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1504,16 +1563,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2126579008}
-  m_LocalRotation: {x: -0, y: -0, z: 0.012467206, w: 0.9999223}
+  m_LocalRotation: {x: -0, y: -0, z: 0.0093524335, w: 0.9999563}
   m_LocalPosition: {x: 0, y: 0, z: 89.985146}
-  m_LocalScale: {x: 0.013979994, y: 0.013979994, z: 0.0139799975}
+  m_LocalScale: {x: 0.014474886, y: 0.014474886, z: 0.01447489}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1132832081}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.429}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.072}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.23999977, y: 2.520012}
+  m_AnchoredPosition: {x: 0.41, y: 2.33}
   m_SizeDelta: {x: 535.71, y: 83.58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2126579010
@@ -1536,7 +1595,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Amante de los detalles Caso 1: Inspecciona todo el escenario.'
+  m_text: 'Amante de los detalles Caso 2: Inspecciona todo el escenario.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0cbf046871fd81d4c93ec347781be586, type: 2}
   m_sharedMaterial: {fileID: 4204418577910296832, guid: 0cbf046871fd81d4c93ec347781be586, type: 2}
@@ -1545,8 +1604,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4280618526
+  m_fontColor: {r: 0.11764706, g: 0.05490196, b: 0.14509805, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1563,8 +1622,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22
-  m_fontSizeBase: 22
+  m_fontSize: 16.1
+  m_fontSizeBase: 16.1
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1599,7 +1658,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -98.37164, w: 0}
+  m_margin: {x: 0, y: 0, z: -156.85803, w: 28.179537}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1620,5 +1679,6 @@ SceneRoots:
   - {fileID: 143424572}
   - {fileID: 51665034}
   - {fileID: 1399187390}
-  - {fileID: 1766634909}
   - {fileID: 916985476}
+  - {fileID: 559461709}
+  - {fileID: 71467890}
