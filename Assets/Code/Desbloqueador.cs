@@ -12,7 +12,21 @@ public class Desbloqueador : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space)) // Simula recoger un objeto al presionar la barra espaciadora
         {
-            achievementManager.UnlockAchievement("Amante de los detalles Caso 1"); // Desbloquea el logro "Recolector"
+            achievementManager.UnlockAchievement("Amante de los detalles Caso 1"); 
+
+        if (Input.GetKeyDown(KeyCode.Space)) 
+        {
+            achievementManager.UnlockAchievement("Interrogador nato Caso 1"); 
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space)) 
+        {
+            achievementManager.UnlockAchievement("Amante de los detalles Caso 2"); 
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space)) 
+        {
+            achievementManager.UnlockAchievement("Interrogador nato Caso 2"); 
         }
     }
 }
