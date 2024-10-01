@@ -793,6 +793,7 @@ GameObject:
   - component: {fileID: 133235186}
   - component: {fileID: 133235185}
   - component: {fileID: 133235184}
+  - component: {fileID: 133235187}
   m_Layer: 5
   m_Name: BotonFlorero
   m_TagString: Untagged
@@ -925,6 +926,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 133235182}
   m_CullTransparentMesh: 1
+--- !u!114 &133235187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133235182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f2eaa2d923376d48af3bb78cf3ca3b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desbloqueador: {fileID: 1633893237}
+  botonID: BotonFlorero
 --- !u!1 &174471116
 GameObject:
   m_ObjectHideFlags: 0
@@ -3470,6 +3485,7 @@ GameObject:
   - component: {fileID: 720466361}
   - component: {fileID: 720466360}
   - component: {fileID: 720466359}
+  - component: {fileID: 720466362}
   m_Layer: 5
   m_Name: BotonCajon3
   m_TagString: Untagged
@@ -3602,6 +3618,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 720466357}
   m_CullTransparentMesh: 1
+--- !u!114 &720466362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720466357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f2eaa2d923376d48af3bb78cf3ca3b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desbloqueador: {fileID: 1633893237}
+  botonID: BotonCajon3
 --- !u!1 &776914172
 GameObject:
   m_ObjectHideFlags: 0
@@ -4173,6 +4203,7 @@ GameObject:
   - component: {fileID: 887312925}
   - component: {fileID: 887312924}
   - component: {fileID: 887312923}
+  - component: {fileID: 887312926}
   m_Layer: 5
   m_Name: BotonSilla
   m_TagString: Untagged
@@ -4305,6 +4336,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 887312921}
   m_CullTransparentMesh: 1
+--- !u!114 &887312926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887312921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f2eaa2d923376d48af3bb78cf3ca3b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desbloqueador: {fileID: 1633893237}
+  botonID: BotonSilla
 --- !u!1 &936561837
 GameObject:
   m_ObjectHideFlags: 0
@@ -5494,6 +5539,7 @@ GameObject:
   - component: {fileID: 1399492665}
   - component: {fileID: 1399492664}
   - component: {fileID: 1399492663}
+  - component: {fileID: 1399492666}
   m_Layer: 5
   m_Name: BotonTacho
   m_TagString: Untagged
@@ -5626,6 +5672,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1399492661}
   m_CullTransparentMesh: 1
+--- !u!114 &1399492666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399492661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f2eaa2d923376d48af3bb78cf3ca3b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desbloqueador: {fileID: 1633893237}
+  botonID: BotonTacho
 --- !u!1 &1407987916
 GameObject:
   m_ObjectHideFlags: 0
@@ -6542,6 +6602,7 @@ GameObject:
   - component: {fileID: 1535688482}
   - component: {fileID: 1535688481}
   - component: {fileID: 1535688480}
+  - component: {fileID: 1535688483}
   m_Layer: 5
   m_Name: BotonCajon2
   m_TagString: Untagged
@@ -6674,6 +6735,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1535688478}
   m_CullTransparentMesh: 1
+--- !u!114 &1535688483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535688478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f2eaa2d923376d48af3bb78cf3ca3b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desbloqueador: {fileID: 1633893237}
+  botonID: BotonCajon2
 --- !u!1 &1539094526
 GameObject:
   m_ObjectHideFlags: 0
@@ -6991,6 +7066,7 @@ GameObject:
   - component: {fileID: 1626844827}
   - component: {fileID: 1626844826}
   - component: {fileID: 1626844825}
+  - component: {fileID: 1626844828}
   m_Layer: 5
   m_Name: BotonEstantes
   m_TagString: Untagged
@@ -7123,6 +7199,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1626844823}
   m_CullTransparentMesh: 1
+--- !u!114 &1626844828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626844823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f2eaa2d923376d48af3bb78cf3ca3b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desbloqueador: {fileID: 1633893237}
+  botonID: BotonEstantes
 --- !u!1 &1633227118
 GameObject:
   m_ObjectHideFlags: 0
@@ -7272,6 +7362,51 @@ MonoBehaviour:
   m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
   m_EffectDistance: {x: 3, y: -3}
   m_UseGraphicAlpha: 1
+--- !u!1 &1633893236
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1633893238}
+  - component: {fileID: 1633893237}
+  m_Layer: 0
+  m_Name: Desbloqueador
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1633893237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633893236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f21c74e3604025748b69cc8cb36eeba6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  achievementManager: {fileID: 1763012329}
+--- !u!4 &1633893238
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633893236}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.0541121, y: -1.9633307, z: 4.735113}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1641757829
 GameObject:
   m_ObjectHideFlags: 0
@@ -7556,6 +7691,7 @@ GameObject:
   - component: {fileID: 1719594290}
   - component: {fileID: 1719594289}
   - component: {fileID: 1719594288}
+  - component: {fileID: 1719594291}
   m_Layer: 5
   m_Name: BotonCortinas
   m_TagString: Untagged
@@ -7688,6 +7824,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1719594286}
   m_CullTransparentMesh: 1
+--- !u!114 &1719594291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719594286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f2eaa2d923376d48af3bb78cf3ca3b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desbloqueador: {fileID: 1633893237}
+  botonID: BotonCortinas
 --- !u!1 &1738887914
 GameObject:
   m_ObjectHideFlags: 0
@@ -7892,6 +8042,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1745257231}
   m_CullTransparentMesh: 1
+--- !u!1 &1763012328
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1763012330}
+  - component: {fileID: 1763012329}
+  m_Layer: 0
+  m_Name: AchivementManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1763012329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763012328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1df6097f042d784fbf062c40f4ba557, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  achievements: []
+--- !u!4 &1763012330
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763012328}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.44277182, y: -0.6888592, z: 4.7404094}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1764736025
 GameObject:
   m_ObjectHideFlags: 0
@@ -8937,6 +9132,7 @@ GameObject:
   - component: {fileID: 2009938264}
   - component: {fileID: 2009938263}
   - component: {fileID: 2009938262}
+  - component: {fileID: 2009938265}
   m_Layer: 5
   m_Name: BotonCajon1
   m_TagString: Untagged
@@ -9069,6 +9265,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2009938260}
   m_CullTransparentMesh: 1
+--- !u!114 &2009938265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009938260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f2eaa2d923376d48af3bb78cf3ca3b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desbloqueador: {fileID: 1633893237}
+  botonID: BotonCajon1
 --- !u!1 &2029557469
 GameObject:
   m_ObjectHideFlags: 0
@@ -9407,3 +9617,5 @@ SceneRoots:
   - {fileID: 66965208}
   - {fileID: 1691935297}
   - {fileID: 1200806024}
+  - {fileID: 1633893238}
+  - {fileID: 1763012330}
