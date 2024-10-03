@@ -4,6 +4,7 @@ using UnityEngine;
 public class AchievementManager : MonoBehaviour
 {
     public List<Achievement> achievements = new List<Achievement>(); // Lista de logros
+    public static AchievementManager instance;
 
     private void Start()
     {

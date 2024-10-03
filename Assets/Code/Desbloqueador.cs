@@ -6,6 +6,7 @@ public class Desbloqueador : MonoBehaviour
 {
     public AchievementManager achievementManager;
     private HashSet<string> botonesClickeados = new HashSet<string>();
+    private HashSet<string> Nato1Clickeados = new HashSet<string>();
     private int totalBotonesDetalles = 8; // Cambia esto al número total de botones para "Amante de los detalles"
     private int totalBotonesNato = 3; // Cambia esto al número total de botones para "Nato1"
 
@@ -16,7 +17,17 @@ public class Desbloqueador : MonoBehaviour
         {
             botonesClickeados.Add(botonID);
             VerificarLogroDetalles();
+          
+        }
+    }
+
+    public void BotonClickeadoNato(string botonID)
+    {
+        if (!Nato1Clickeados.Contains(botonID))
+        {
+            Nato1Clickeados.Add(botonID);
             VerificarLogroNato();
+
         }
     }
 
@@ -35,7 +46,7 @@ public class Desbloqueador : MonoBehaviour
     {
         if (botonesClickeados.Count == totalBotonesNato)
         {
-            achievementManager.UnlockAchievement("Nato1");
+            achievementManager.UnlockAchievement("Interrogador nato Caso 1");
             Debug.Log("Logro desbloqueado: Nato1");
         }
     }
