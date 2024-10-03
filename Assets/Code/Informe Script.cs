@@ -49,13 +49,17 @@ public class InformeScript : MonoBehaviour
 
     public string TresOpcionesCorrectas;
 
-    /*public SceneAsset victoryScene;
-    public SceneAsset defeatScene;*/
     public string victoryScene;
     public string defeatScene;
 
+    private SaveSystem saveSystem;
+    private LevelUnlocker levelUnlocker;
+
     void Start()
     {
+        saveSystem = FindObjectOfType<SaveSystem>();
+        levelUnlocker = FindObjectOfType<LevelUnlocker>();
+
         evidenceIndices = new int[evidenceImages.Length];
         for (int i = 0; i < evidenceImages.Length; i++)
         {
@@ -72,9 +76,6 @@ public class InformeScript : MonoBehaviour
     void Update()
     {
         TresOpcionesCorrectas = correctEvidence1 + correctEvidence2 + correctEvidence3;
-        /*Evidencia1Correcta = (evidenceImages[0].sprite.name == correctEvidence1) || evidenceImages[1].sprite.name == correctEvidence2 || evidenceImages[2].sprite.name == correctEvidence3;
-        Evidencia2Correcta = (evidenceImages[0].sprite.name == correctEvidence1) || evidenceImages[1].sprite.name == correctEvidence2 || evidenceImages[2].sprite.name == correctEvidence3;
-        Evidencia3Correcta = (evidenceImages[0].sprite.name == correctEvidence1) || evidenceImages[1].sprite.name == correctEvidence2 || evidenceImages[2].sprite.name == correctEvidence3;*/
         Evidencia1Correcta = (TresOpcionesCorrectas.Contains(evidenceImages[0].sprite.name));
         if (Evidencia1Correcta) TresOpcionesCorrectas = TresOpcionesCorrectas.Replace(evidenceImages[0].sprite.name, " ");
 
@@ -121,17 +122,19 @@ public class InformeScript : MonoBehaviour
         hypothesisText.text = $"El sospechoso {suspect} fue identificado como el culpable. Las evidencias encontradas en su contra son: {evidence1}, {evidence2}, y {evidence3}. Pienso que motivo del crimen fue porque: {motive}";
     }
 
-    public void OnSubmit(int X)
+    public void OnSubmit(int currentDetectiveLevel)
     {
         string victorySceneName = victoryScene;
         string defeatSceneName = defeatScene;
-
         if (Evidencia1Correcta && Evidencia2Correcta && Evidencia3Correcta &&
             suspectImage.sprite.name == correctSuspect &&
             motiveText.text == correctMotive)
         {
+            // Guardar el progreso y desbloquear niveles
+            saveSystem.SaveProgress(currentDetectiveLevel, 0); // Asumiendo que el nivel del villano es 0 aquí
+            levelUnlocker.UnlockLevels(currentDetectiveLevel, 0);
+
             SceneManager.LoadScene(victorySceneName);
-            GuardarDatos.Instancia.GuardarProgreso(X);
         }
         else
         {

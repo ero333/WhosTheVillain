@@ -22,10 +22,14 @@ public class Cuestionario : MonoBehaviour
     private int preguntaActual = 0;
     private int respuestasCorrectas = 0;
 
-    public int NivelAGuardar;
+    private SaveSystem saveSystem;
+    private LevelUnlocker levelUnlocker;
 
     void Start()
     {
+        saveSystem = FindObjectOfType<SaveSystem>();
+        levelUnlocker = FindObjectOfType<LevelUnlocker>();
+
         MostrarPregunta();
         botonSiguiente.onClick.AddListener(MostrarRespuestas);
     }
@@ -72,15 +76,32 @@ public class Cuestionario : MonoBehaviour
     {
         if (respuestasCorrectas == preguntas.Length)
         {
+            // Guardar progreso y desbloquear niveles
+            int currentVillainLevel = GetCurrentVillainLevel();
+            int currentDetectiveLevel = GetCurrentDetectiveLevel();
+
+            saveSystem.SaveProgress(currentDetectiveLevel, currentVillainLevel);
+            levelUnlocker.UnlockLevels(currentDetectiveLevel, currentVillainLevel);
+
             SceneManager.LoadScene("Pantalla Victoria Villano");
-            GuardarDatos.Instancia.GuardarProgreso(NivelAGuardar);
         }
         else
         {
             SceneManager.LoadScene("Pantalla Derrota Villano Interrogatorio");
         }
     }
+
+    private int GetCurrentVillainLevel()
+    {
+        // Lógica para obtener el nivel actual del villano
+        // Esto puede variar según tu implementación
+        return 1; // Ejemplo
+    }
+
+    private int GetCurrentDetectiveLevel()
+    {
+        // Lógica para obtener el nivel actual del detective
+        // Esto puede variar según tu implementación
+        return 1; // Ejemplo
+    }
 }
-
-
-

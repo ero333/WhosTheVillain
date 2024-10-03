@@ -365,12 +365,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 101105392}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 642b21a4ea57cda41b1e86bcc3fdccd9, type: 3}
+  m_Script: {fileID: 11500000, guid: 67cd323fe5ca3fc41acfba2ef21695d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NivelesDesbloqueados: 0
-  NivelActual:
-    m_Handle: 0
 --- !u!1 &143424569
 GameObject:
   m_ObjectHideFlags: 0
@@ -1051,6 +1048,7 @@ GameObject:
   - component: {fileID: 528335569}
   - component: {fileID: 528335568}
   - component: {fileID: 528335567}
+  - component: {fileID: 528335571}
   m_Layer: 5
   m_Name: "Bot\xF3nContinuar"
   m_TagString: Untagged
@@ -1137,9 +1135,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 101105395}
-        m_TargetAssemblyTypeName: GuardarDatos, Assembly-CSharp
-        m_MethodName: ContinuarPartida
+      - m_Target: {fileID: 528335571}
+        m_TargetAssemblyTypeName: ContinueButton, Assembly-CSharp
+        m_MethodName: Continue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1187,6 +1185,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 528335565}
   m_CullTransparentMesh: 1
+--- !u!114 &528335571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528335565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9a186a48a4c6b24caa38a08358af8c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &586768782
 GameObject:
   m_ObjectHideFlags: 0
@@ -5141,7 +5151,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 101105395}
-        m_TargetAssemblyTypeName: GuardarDatos, Assembly-CSharp
+        m_TargetAssemblyTypeName: SaveSystem, Assembly-CSharp
         m_MethodName: BorrarProgreso
         m_Mode: 1
         m_Arguments:
