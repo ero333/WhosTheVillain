@@ -53,7 +53,6 @@ public class Cuestionario : MonoBehaviour
             botonesRespuestas[i].onClick.AddListener(() => VerificarRespuesta(index));
         }
     }
-
     void VerificarRespuesta(int index)
     {
         if (index == preguntas[preguntaActual].respuestaCorrecta)
@@ -93,15 +92,11 @@ public class Cuestionario : MonoBehaviour
 
     private int GetCurrentVillainLevel()
     {
-        // Lógica para obtener el nivel actual del villano
-        // Esto puede variar según tu implementación
-        return 1; // Ejemplo
+        return PlayerPrefs.GetInt("VillainLevel", 0);
     }
 
     private int GetCurrentDetectiveLevel()
     {
-        // Lógica para obtener el nivel actual del detective
-        // Esto puede variar según tu implementación
-        return 1; // Ejemplo
+        return PlayerPrefs.GetInt("DetectiveLevel", 0);
     }
 }

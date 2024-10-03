@@ -121,7 +121,6 @@ public class InformeScript : MonoBehaviour
 
         hypothesisText.text = $"El sospechoso {suspect} fue identificado como el culpable. Las evidencias encontradas en su contra son: {evidence1}, {evidence2}, y {evidence3}. Pienso que motivo del crimen fue porque: {motive}";
     }
-
     public void OnSubmit(int currentDetectiveLevel)
     {
         string victorySceneName = victoryScene;

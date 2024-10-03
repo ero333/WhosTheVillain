@@ -53,25 +53,32 @@ public class LevelUnlocker : MonoBehaviour
 
     private void UpdateLevelButtons()
     {
+        Debug.Log("Actualizando botones de nivel");
+
         if (detectiveLevelButtons.Length > 1)
         {
             detectiveLevelButtons[1].interactable = IsLevelUnlocked("DetectiveLevel2Unlocked");
+            Debug.Log($"DetectiveLevel2Unlocked: {IsLevelUnlocked("DetectiveLevel2Unlocked")}");
         }
         if (detectiveLevelButtons.Length > 2)
         {
             detectiveLevelButtons[2].interactable = IsLevelUnlocked("DetectiveLevel3Unlocked");
+            Debug.Log($"DetectiveLevel3Unlocked: {IsLevelUnlocked("DetectiveLevel3Unlocked")}");
         }
         if (villainLevelButtons.Length > 0)
         {
             villainLevelButtons[0].interactable = IsLevelUnlocked("VillainLevel1Unlocked");
+            Debug.Log($"VillainLevel1Unlocked: {IsLevelUnlocked("VillainLevel1Unlocked")}");
         }
         if (villainLevelButtons.Length > 1)
         {
             villainLevelButtons[1].interactable = IsLevelUnlocked("VillainLevel2Unlocked");
+            Debug.Log($"VillainLevel2Unlocked: {IsLevelUnlocked("VillainLevel2Unlocked")}");
         }
         if (villainLevelButtons.Length > 2)
         {
             villainLevelButtons[2].interactable = IsLevelUnlocked("VillainLevel3Unlocked");
+            Debug.Log($"VillainLevel3Unlocked: {IsLevelUnlocked("VillainLevel3Unlocked")}");
         }
     }
 }
