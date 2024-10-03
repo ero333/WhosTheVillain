@@ -8,6 +8,15 @@ public class AchievementManager : MonoBehaviour
     private void Start()
     {
         LoadAchievements(); // Cargar logros al inicio
+
+
+
+        // CON ESTE CODIGO DE ACÁ ABAJO HACE Q SE REINICIE LA INFO DE LOS LOGROS TODAS LA VECES. NO SE GUARDA NADA.
+
+        PlayerPrefs.DeleteAll(); // Reiniciar PlayerPrefs para pruebas
+        LoadAchievements();
+  
+        // AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
     }
 
     public void UnlockAchievement(string title)
@@ -37,4 +46,5 @@ public class AchievementManager : MonoBehaviour
             achievement.isUnlocked = PlayerPrefs.GetInt(achievement.title, 0) == 1; // Cargar estado
         }
     }
+
 }
