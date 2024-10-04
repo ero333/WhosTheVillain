@@ -52,13 +52,13 @@ public class InformeScript : MonoBehaviour
     public string victoryScene;
     public string defeatScene;
 
-    private SaveSystem saveSystem;
-    private LevelUnlocker levelUnlocker;
+    //private SaveSystem saveSystem;
+    //private LevelUnlocker levelUnlocker;
 
     void Start()
     {
-        saveSystem = FindObjectOfType<SaveSystem>();
-        levelUnlocker = FindObjectOfType<LevelUnlocker>();
+        //saveSystem = FindObjectOfType<SaveSystem>();
+        //levelUnlocker = FindObjectOfType<LevelUnlocker>();
 
         evidenceIndices = new int[evidenceImages.Length];
         for (int i = 0; i < evidenceImages.Length; i++)
@@ -130,8 +130,8 @@ public class InformeScript : MonoBehaviour
             motiveText.text == correctMotive)
         {
             // Guardar el progreso y desbloquear niveles
-            saveSystem.SaveProgress(currentDetectiveLevel, 0); // Asumiendo que el nivel del villano es 0 aquí
-            levelUnlocker.UnlockLevels(currentDetectiveLevel, 0);
+            //saveSystem.SaveProgress(currentDetectiveLevel, 0); // Asumiendo que el nivel del villano es 0 aquí
+            //levelUnlocker.UnlockLevels(currentDetectiveLevel, 0);
 
             SceneManager.LoadScene(victorySceneName);
         }

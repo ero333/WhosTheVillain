@@ -1369,6 +1369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1df6097f042d784fbf062c40f4ba557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  achievementText: {fileID: 0}
   achievements: []
 --- !u!4 &672003334
 Transform:
@@ -1620,7 +1621,6 @@ GameObject:
   m_Component:
   - component: {fileID: 708623227}
   - component: {fileID: 708623226}
-  - component: {fileID: 708623228}
   m_Layer: 0
   m_Name: Level Manager
   m_TagString: Untagged
@@ -1655,18 +1655,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &708623228
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 708623225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67cd323fe5ca3fc41acfba2ef21695d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &776496906
 GameObject:
   m_ObjectHideFlags: 0
@@ -2521,6 +2509,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f21c74e3604025748b69cc8cb36eeba6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Achievement:
+    title: 
+    description: 
+    isUnlocked: 0
+  objectToActivate: {fileID: 0}
+  objectToDeactivate: {fileID: 0}
   achievementManager: {fileID: 672003333}
 --- !u!1 &1122335656
 GameObject:
@@ -3068,6 +3062,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f21c74e3604025748b69cc8cb36eeba6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Achievement:
+    title: 
+    description: 
+    isUnlocked: 0
+  objectToActivate: {fileID: 0}
+  objectToDeactivate: {fileID: 0}
   achievementManager: {fileID: 672003333}
 --- !u!4 &1318350222
 Transform:

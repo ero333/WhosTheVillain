@@ -22,13 +22,13 @@ public class Cuestionario : MonoBehaviour
     private int preguntaActual = 0;
     private int respuestasCorrectas = 0;
 
-    private SaveSystem saveSystem;
-    private LevelUnlocker levelUnlocker;
+    //private SaveSystem saveSystem;
+    //private LevelUnlocker levelUnlocker;
 
     void Start()
     {
-        saveSystem = FindObjectOfType<SaveSystem>();
-        levelUnlocker = FindObjectOfType<LevelUnlocker>();
+        //saveSystem = FindObjectOfType<SaveSystem>();
+        //levelUnlocker = FindObjectOfType<LevelUnlocker>();
 
         MostrarPregunta();
         botonSiguiente.onClick.AddListener(MostrarRespuestas);
@@ -79,8 +79,8 @@ public class Cuestionario : MonoBehaviour
             int currentVillainLevel = GetCurrentVillainLevel();
             int currentDetectiveLevel = GetCurrentDetectiveLevel();
 
-            saveSystem.SaveProgress(currentDetectiveLevel, currentVillainLevel);
-            levelUnlocker.UnlockLevels(currentDetectiveLevel, currentVillainLevel);
+            //saveSystem.SaveProgress(currentDetectiveLevel, currentVillainLevel);
+            //levelUnlocker.UnlockLevels(currentDetectiveLevel, currentVillainLevel);
 
             SceneManager.LoadScene("Pantalla Victoria Villano");
         }
