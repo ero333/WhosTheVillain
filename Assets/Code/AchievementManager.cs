@@ -1,34 +1,50 @@
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class AchievementManager : MonoBehaviour
 {
-    public List<Achievement> achievements = new List<Achievement>(); // Lista de logros
+    public TextMeshProUGUI achievementText;
+    public List<Achievement> achievements = new List<Achievement>();
     public static AchievementManager instance;
+
 
     private void Start()
     {
-        LoadAchievements(); // Cargar logros al inicio
+        //  PlayerPrefs.DeleteAll(); 
+        // LoadAchievements();
 
 
 
-        // CON ESTE CODIGO DE ACÁ ABAJO HACE Q SE REINICIE LA INFO DE LOS LOGROS TODAS LA VECES. NO SE GUARDA NADA.
 
-        PlayerPrefs.DeleteAll(); // Reiniciar PlayerPrefs para pruebas
-        LoadAchievements();
-  
-        // AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        // Actualizar el texto para logros desbloqueados al iniciar
+        foreach (var achievement in achievements)
+        {
+            if (achievement.isUnlocked)
+            {
+                UnlockAchievement(achievement.title);
+            }
+        }
     }
+
+
+
 
     public void UnlockAchievement(string title)
     {
-        Achievement achievement = achievements.Find(a => a.title == title); // Buscar el logro
+        Achievement achievement = achievements.Find(a => a.title == title);
         if (achievement != null && !achievement.isUnlocked)
         {
-            achievement.isUnlocked = true; // Desbloquear el logro
+            achievement.isUnlocked = true;
             Debug.Log($"Logro desbloqueado: {achievement.title}");
-            SaveAchievements(); // Guardar el estado de los logros
+            SaveAchievements();
+
+
+
+
         }
+
+
     }
 
     public void SaveAchievements()
@@ -45,7 +61,9 @@ public class AchievementManager : MonoBehaviour
         foreach (var achievement in achievements)
         {
             achievement.isUnlocked = PlayerPrefs.GetInt(achievement.title, 0) == 1; // Cargar estado
+            Debug.Log($"Logro: {achievement.title}, Desbloqueado: {achievement.isUnlocked}"); // Verifica que esto se imprima
         }
     }
+
 
 }

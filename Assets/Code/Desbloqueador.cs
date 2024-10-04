@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Desbloqueador : MonoBehaviour
 {
+    public Achievement Achievement;
+    public GameObject objectToActivate; // Referencia al GameObject que quieres activar
+    public GameObject objectToDeactivate;
     public AchievementManager achievementManager;
     private HashSet<string> botonesClickeados = new HashSet<string>();
     private HashSet<string> Nato1Clickeados = new HashSet<string>();
@@ -17,7 +21,7 @@ public class Desbloqueador : MonoBehaviour
         {
             botonesClickeados.Add(botonID);
             VerificarLogroDetalles();
-          
+
         }
     }
 
@@ -38,7 +42,13 @@ public class Desbloqueador : MonoBehaviour
         {
             achievementManager.UnlockAchievement("Amante de los detalles Caso 1");
             Debug.Log("Logro desbloqueado: Amante de los detalles Caso 1");
+
+
+
+            
         }
+
+
     }
 
     // Verificar si todos los botones han sido clickeados para "Nato1"
@@ -51,9 +61,19 @@ public class Desbloqueador : MonoBehaviour
         }
     }
 
+
+
+
+
     // Update is called once per frame
     void Update()
     {
-        // Puedes agregar más lógica aquí si es necesario
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            achievementManager.UnlockAchievement("Interrogador nato Caso 1");
+            Debug.Log("¡Se presionó la barra espaciadora!");
+
+         
+        }
     }
 }

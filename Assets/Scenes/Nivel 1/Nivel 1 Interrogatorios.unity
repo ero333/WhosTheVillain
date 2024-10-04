@@ -2397,6 +2397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1573d02203ae0a14ca1943bd0611f0c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  achievementManager: {fileID: 672003333}
   personajes:
   - nombre: Oscar
     preguntas:
@@ -2434,13 +2435,13 @@ MonoBehaviour:
         calidad, teniendo preferencia por el whisky irlandes. Sin embargo, pese a
         no excederse o beber en horas laborales, lo he visto aceptar alg\xFAn trago
         en cuanto le ofreciera alguien de su entorno."
-      esCorrecta: 0
+      esCorrecta: 1
     - texto: "El se\xF1or O\u2019Neill gozaba de buena salud \xBFHa notado alg\xFAn
         s\xEDntoma de lo contrario en el tiempo previo a su fallecimiento?"
       respuesta: "Mi padre, en efecto, ten\xEDa una salud privilegiada. Luego de
         su \xFAltimo chequeo m\xE9dico, salimos a cenar para festejar las felicitaciones
         del doctor por llegar a su edad en perfectas condiciones."
-      esCorrecta: 0
+      esCorrecta: 1
     - texto: "\xBFSabe si el se\xF1or O\u2019Neill ten\xEDa alg\xFAn conflicto con
         alg\xFAn socio que pudiera desembocar en un problema m\xE1s serio? "
       respuesta: "Mi padre era alguien muy respetado entre sus semejantes. Pese a
@@ -2452,7 +2453,7 @@ MonoBehaviour:
     - texto: "\xBFQu\xE9 me puede decir de este reloj?"
       respuesta: "No me suena de nada ese reloj\u2026 Pero definitivamente no era
         de mi padre."
-      esCorrecta: 0
+      esCorrecta: 1
     - texto: "\xBFQu\xE9 sabe sobre el testamento que dej\xF3 recientemente el se\xF1or
         O\u2019Neill?"
       respuesta: "Tuvimos una reuni\xF3n hac\xEDa unos meses atr\xE1s con un comerciante
@@ -2468,12 +2469,12 @@ MonoBehaviour:
       respuesta: "Pues, el amo George beb\xEDa moderadamente, en entornos sociales
         o cuando verdaderamente se le antojaba. Aunque de vez en cuando, Oscar le
         ofrec\xEDa un trago si lo ve\xEDa demasiado tenso."
-      esCorrecta: 0
+      esCorrecta: 1
     - texto: "El se\xF1or O\u2019Neill gozaba de buena salud \xBFHa notado alg\xFAn
         s\xEDntoma de lo contrario en el tiempo previo a su fallecimiento?"
       respuesta: "Para mi, el amo George se ve\xEDa saludable. Quiz\xE1s algo cansado,
         pero solo eso."
-      esCorrecta: 0
+      esCorrecta: 1
     - texto: "\xBFSabe si el se\xF1or O\u2019Neill ten\xEDa alg\xFAn conflicto con
         alg\xFAn socio que pudiera desembocar en un problema m\xE1s serio? "
       respuesta: "No se nada de lo que ocurr\xEDa entre sus negocios."
@@ -2482,7 +2483,7 @@ MonoBehaviour:
       respuesta: "Oh, sin duda es de Oscar. Tiene la costumbre de mirar la hora cada
         20 minutos\u2026 Aunque ayer\u2026 sent\xED que lo miraba incluso m\xE1s
         frecuentemente."
-      esCorrecta: 0
+      esCorrecta: 1
     - texto: "\xBFQu\xE9 sabe sobre el testamento que dej\xF3 recientemente el se\xF1or
         O\u2019Neill?"
       respuesta: El joven amo Jacob siempre ha sido muy dedicado a seguir los pasos

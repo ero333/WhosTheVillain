@@ -123,6 +123,57 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &76940585
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 76940586}
+  - component: {fileID: 76940587}
+  m_Layer: 0
+  m_Name: Desbloqueador
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &76940586
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76940585}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.6039825, y: 0.24143063, z: 6.6337676}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &76940587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76940585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f21c74e3604025748b69cc8cb36eeba6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Achievement:
+    title: 
+    description: 
+    isUnlocked: 0
+  objectToActivate: {fileID: 0}
+  objectToDeactivate: {fileID: 0}
+  achievementManager: {fileID: 1232984461}
 --- !u!1 &86569614
 GameObject:
   m_ObjectHideFlags: 0
@@ -1162,91 +1213,108 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1573d02203ae0a14ca1943bd0611f0c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  achievementManager: {fileID: 1232984461}
   personajes:
   - nombre: Olivia
-    imagen: {fileID: 1472986194}
     preguntas:
     - texto: "\xBFQu\xE9 puedes decirme sobre este boleto?"
       respuesta: "Estoy segura de que no es mio. Yo tengo mi boleto conmigo\u2026
         Si quieres, te lo ense\xF1o."
+      esCorrecta: 0
     - texto: "\xBFSabes de quien es este guante negro? Estaba en la escena del crimen."
       respuesta: "Lo siento, detective, no s\xE9 nada sobre eso\u2026 "
+      esCorrecta: 1
     - texto: "\xBFSabes algo de esta cinta de rollo que contiene una escena eliminada
         del montaje?"
       respuesta: "No ten\xEDa idea que la cortar\xEDan\u2026 Aunque, debido a que
         Harry era algo celoso, quiz\xE1s haya sido posible."
+      esCorrecta: 0
     - texto: "Encontr\xE9 esta bala en la escena del crimen, \xBFSabes de alguien
         que tenga un arma?"
       respuesta: "Es un desastre\u2026 Estoy destrozada\u2026 \xBFQui\xE9n le har\xEDa
         algo as\xED a Harry? Mi amado Harry\u2026"
+      esCorrecta: 1
     - texto: "\xBFQu\xE9 puedes decirme sobre esta lista de asistencia?"
       respuesta: "Soy la actriz principal de la pel\xEDcula. Es obvio que voy a estar
         en esa lista."
+      esCorrecta: 1
   - nombre: Tommy
-    imagen: {fileID: 1459402591}
     preguntas:
     - texto: "\xBFQu\xE9 puedes decirme sobre este boleto?"
       respuesta: "Todos los que vinimos invitados trajimos nuestros boletos. No dudo
         que a alguien se le hubiese ca\xEDdo. "
+      esCorrecta: 0
     - texto: "\xBFSabes de quien es este guante negro? Estaba en la escena del crimen."
       respuesta: "No s\xE9 de qui\xE9n sea. Pero parece ser de alguien que trabaja
         en algo t\xE9cnico o en algo parecido."
+      esCorrecta: 1
     - texto: "\xBFSabes algo de esta cinta de rollo que contiene una escena eliminada
         del montaje?"
       respuesta: "\xBFC-... CORTARON MI ESCENA?  \xA1ESOS MALDITOS! Luego de esto
         ire a hablar con la producci\xF3n."
+      esCorrecta: 0
     - texto: "Encontr\xE9 esta bala en la escena del crimen, \xBFSabes de alguien
         que tenga un arma?"
       respuesta: "Honestamente no, compa\xF1ero. Es incre\xEDble, pudieron haber
         matado a cualquiera. La seguridad de este cine deja mucho que desear.  "
+      esCorrecta: 1
     - texto: "\xBFQu\xE9 puedes decirme sobre esta lista de asistencia?"
       respuesta: "\xA1Obvio que estoy en esa lista! Soy parte del cast de la pel\xEDcula."
+      esCorrecta: 1
   - nombre: Jimmy
-    imagen: {fileID: 1121467615}
     preguntas:
     - texto: "\xBFQu\xE9 puedes decirme sobre este boleto?"
       respuesta: Todos los asistentes trajeron sus boletos. De eso no me cabe duda. 
         Tal vez se le cayo a alguien.
+      esCorrecta: 0
     - texto: "\xBFSabes de quien es este guante negro? Estaba en la escena del crimen."
       respuesta: "Ah, ese guante es de Anthony. \xC9l estuvo durante gran parte de
         la pel\xEDcula, pero luego se fue a la sala de al lado a proyectar otra cinta,
         porque... Bueno, es el proyeccionista. Heh"
+      esCorrecta: 1
     - texto: "\xBFSabes algo de esta cinta de rollo que contiene una escena eliminada
         del montaje?"
       respuesta: "Yo no s\xE9 de esas cosas. Solo acomodo a las personas que vienen
         al cine. Est\xE1s hablando con la persona equivocada, detective."
+      esCorrecta: 0
     - texto: "Encontr\xE9 esta bala en la escena del crimen, \xBFSabes de alguien
         que tenga un arma?"
       respuesta: "El disparo ocurri\xF3 a mitad de la pel\xEDcula y honestamente
         no pude ver de d\xF3nde vino, pero tuvo que ser desde alg\xFAn lugar elevado\u2026
         Quiz\xE1s las butacas m\xE1s altas. Los actores estaban sentados junto al
         director."
+      esCorrecta: 1
     - texto: "\xBFQu\xE9 puedes decirme sobre esta lista de asistencia?"
       respuesta: Usualmente, los asistentes a la premiere son personas invitadas,
         como actores de renombre o gente cercana al director.
+      esCorrecta: 1
   - nombre: Anthony
-    imagen: {fileID: 1194087444}
     preguntas:
     - texto: "\xBFQu\xE9 puedes decirme sobre este boleto?"
       respuesta: "No es mio. Como proyeccionista, no necesito boleto para ninguna
         pel\xEDcula.  "
+      esCorrecta: 0
     - texto: "\xBFSabes de quien es este guante negro? Estaba en la escena del crimen."
       respuesta: "Uh\u2026 \xBFd\xF3nde lo encontraste? Me muevo en varias salas
         durante las proyecciones, as\xED que no estaba seguro de d\xF3nde se me habr\xEDa
         ca\xEDdo. "
+      esCorrecta: 1
     - texto: "\xBFSabes algo de esta cinta de rollo que contiene una escena eliminada
         del montaje?"
       respuesta: "Ah\u2026 Supongo que el director crey\xF3 que esa escena de romance
         era\u2026 Innecesaria. Seguro que el montajista lo cort\xF3 a \xFAltimo momento
         \xBFQui\xE9n sabe? Tampoco es como que Tommy me agrade."
+      esCorrecta: 0
     - texto: "Encontr\xE9 esta bala en la escena del crimen, \xBFSabes de alguien
         que tenga un arma?"
       respuesta: "Hoy en d\xEDa esas pistolas son muy comunes. La gente las lleva
         encima a todos lados. Son un peligro, deber\xEDan controlar mejor la seguridad
         del cine, es muy precaria."
+      esCorrecta: 1
     - texto: "\xBFQu\xE9 puedes decirme sobre esta lista de asistencia?"
       respuesta: "Mi nombre no figura en esas listas. Yo trabajo en todas las salas,
         as\xED que, se supone que tengo libre acceso."
+      esCorrecta: 1
   imagenCajaPreguntas: {fileID: 1026484087}
   botonesPreguntas:
   - {fileID: 2061597360}
@@ -1267,6 +1335,7 @@ MonoBehaviour:
   preguntasRestantes: 3
   entrevistasRequeridas: 4
   Entrevistas: 0
+  desbloqueador: {fileID: 0}
 --- !u!4 &601083955
 Transform:
   m_ObjectHideFlags: 0
@@ -2967,6 +3036,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1211120919}
   m_CullTransparentMesh: 1
+--- !u!1 &1232984460
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1232984462}
+  - component: {fileID: 1232984461}
+  m_Layer: 0
+  m_Name: Achievement Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1232984461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232984460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1df6097f042d784fbf062c40f4ba557, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  achievementText: {fileID: 0}
+  achievements: []
+--- !u!4 &1232984462
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232984460}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.6039825, y: 0.24143063, z: 6.6337676}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1330663500
 GameObject:
   m_ObjectHideFlags: 0
@@ -5236,3 +5351,5 @@ SceneRoots:
   - {fileID: 1460232086}
   - {fileID: 1330663502}
   - {fileID: 601083955}
+  - {fileID: 1232984462}
+  - {fileID: 76940586}
