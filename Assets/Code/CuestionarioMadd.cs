@@ -76,13 +76,13 @@ public class Cuestionario : MonoBehaviour
         if (respuestasCorrectas == preguntas.Length)
         {
             // Guardar progreso y desbloquear niveles
-            int currentVillainLevel = GetCurrentVillainLevel();
-            int currentDetectiveLevel = GetCurrentDetectiveLevel();
+            //int currentVillainLevel = GetCurrentVillainLevel();
+            //int currentDetectiveLevel = GetCurrentDetectiveLevel();
 
             //saveSystem.SaveProgress(currentDetectiveLevel, currentVillainLevel);
             //levelUnlocker.UnlockLevels(currentDetectiveLevel, currentVillainLevel);
 
-            SceneManager.LoadScene("Pantalla Victoria Villano");
+            SceneManager.LoadScene("Cutscene Victoria Villano");
         }
         else
         {
@@ -90,7 +90,7 @@ public class Cuestionario : MonoBehaviour
         }
     }
 
-    private int GetCurrentVillainLevel()
+    /*private int GetCurrentVillainLevel()
     {
         return PlayerPrefs.GetInt("VillainLevel", 0);
     }
@@ -98,5 +98,5 @@ public class Cuestionario : MonoBehaviour
     private int GetCurrentDetectiveLevel()
     {
         return PlayerPrefs.GetInt("DetectiveLevel", 0);
-    }
+    }*/
 }
