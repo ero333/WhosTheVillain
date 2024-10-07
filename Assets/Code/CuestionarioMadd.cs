@@ -22,6 +22,8 @@ public class Cuestionario : MonoBehaviour
     private int preguntaActual = 0;
     private int respuestasCorrectas = 0;
 
+    public int NivelAGuardar;
+
     //private SaveSystem saveSystem;
     //private LevelUnlocker levelUnlocker;
 
@@ -81,8 +83,8 @@ public class Cuestionario : MonoBehaviour
 
             //saveSystem.SaveProgress(currentDetectiveLevel, currentVillainLevel);
             //levelUnlocker.UnlockLevels(currentDetectiveLevel, currentVillainLevel);
-
             SceneManager.LoadScene("Cutscene Victoria Villano");
+            GuardarDatos.Instancia.GuardarProgreso(NivelAGuardar);
         }
         else
         {

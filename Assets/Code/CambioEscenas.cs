@@ -67,7 +67,7 @@ public class CambioEscenas : MonoBehaviour
 
     public void DNivel3()
     {
-        SceneManager.LoadScene("Nivel 3 Oficina detective");
+        SceneManager.LoadScene("Nivel 3 Oficina D");
     }
 
     public void CineV1()
