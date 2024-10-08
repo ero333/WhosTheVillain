@@ -23,7 +23,7 @@ public class InterrogatoryManager : MonoBehaviour
     public int entrevistasRequeridas = 3;
     public int Entrevistas;
 
-    public Desbloqueador desbloqueador; // Referencia al Desbloqueador
+    //public Desbloqueador desbloqueador; // Referencia al Desbloqueador
 
     void Start()
     {
