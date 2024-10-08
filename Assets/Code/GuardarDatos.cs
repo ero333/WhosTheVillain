@@ -59,6 +59,17 @@ public class GuardarDatos : MonoBehaviour
             case 14: break;
             case 15: break;
             case 16: break;
+            case 24: break;
+            case 25: break;
+            case 26: break;
+            case 27: break;
+            case 28: break;
+            case 29: break;
+            case 30: break;
+            case 31: break;
+            case 34: break;
+            case 36: break;
+            case 37: break;
             default: PlayerPrefs.SetInt("UltimoNivel", x); break;
         }
     }
