@@ -44,6 +44,11 @@ public class InterrogatoryManager : MonoBehaviour
         preguntasRestantes = 3;
         MostrarImagenPersonaje(personajeActual);
         MostrarCajaPreguntas();
+
+        for (int i = 0; i < botonesPreguntas.Length; i++)
+        {
+            botonesPreguntas[i].GetComponent<Button>().interactable = true;
+        }
     }
 
     public void ActivarRespuesta(int preguntaIndex)
@@ -61,6 +66,8 @@ public class InterrogatoryManager : MonoBehaviour
                 CajaRespuesta.SetActive(true);
                 NombrePersonaje.text = x.nombre;
                 RespuestaPersonaje.text = x.preguntas[preguntaIndex].respuesta;
+
+                DesactivarBotonPregunta(preguntaIndex);
 
                 // Verificar si la respuesta es correcta
                 if (x.preguntas[preguntaIndex].esCorrecta)
@@ -136,6 +143,12 @@ public class InterrogatoryManager : MonoBehaviour
             personajeActual = null;
             BotonesSospechos.SetActive(true);
         }
+    }
+
+    private void DesactivarBotonPregunta(int preguntaIndex)
+    {
+        // Desactiva el botón de la pregunta correspondiente
+        botonesPreguntas[preguntaIndex].GetComponent<Button>().interactable = false;
     }
 
     private void TerminarEntrevista()
