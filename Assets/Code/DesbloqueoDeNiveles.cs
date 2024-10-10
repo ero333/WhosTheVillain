@@ -25,6 +25,19 @@ public class DesbloqueoDeNiveles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            DesbloquearTodosLosNiveles();
+        }
+    }
 
+    void DesbloquearTodosLosNiveles()
+    {
+        foreach (Button Boton in BotonesNiveles)
+        {
+            Boton.interactable = true;
+        }
+        PlayerPrefs.SetInt("Niveles Ganados", BotonesNiveles.Length - 1);
+        PlayerPrefs.Save();
     }
 }

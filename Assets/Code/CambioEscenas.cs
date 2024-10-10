@@ -15,26 +15,7 @@ public class CambioEscenas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Y))
-        {
-            SceneManager.LoadScene(1);
-        }
-        else if (Input.GetKeyDown(KeyCode.U))
-        {
-            SceneManager.LoadScene(8);
-        }
-        else if (Input.GetKeyDown(KeyCode.I))
-        {
-            SceneManager.LoadScene(17);
-        }
-        else if (Input.GetKeyDown(KeyCode.O))
-        {
-            SceneManager.LoadScene(21);
-        }
-        else if (Input.GetKeyDown(KeyCode.P))
-        {
-            SceneManager.LoadScene(32);
-        }
+
     }
 
     public void CambiarEscena(int a)
