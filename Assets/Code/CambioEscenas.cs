@@ -5,11 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class CambioEscenas : MonoBehaviour
 {
+    public string levelName;
+    public string initialSceneName;
+    public bool isInitialScene;
     Scene nivelActual;
     // Start is called before the first frame update
     void Start()
     {
         nivelActual = SceneManager.GetActiveScene();
+
+        if (isInitialScene && !string.IsNullOrEmpty(initialSceneName))
+        {
+            Debug.Log("Configurando escena inicial: " + initialSceneName + " para el nivel: " + levelName);
+            GameManager.instance.SetInitialScene(levelName, initialSceneName);
+        }
+        else
+        {
+            Debug.Log("Esta escena no es la inicial o no tiene nombre de escena inicial configurado.");
+        }
     }
 
     // Update is called once per frame
