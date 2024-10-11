@@ -262,6 +262,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a769440bb5f30e74aab65f75080fadd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelName: 
+  initialSceneName: 
+  isInitialScene: 0
 --- !u!4 &101105394
 Transform:
   m_ObjectHideFlags: 0
@@ -1116,12 +1119,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 101105393}
         m_TargetAssemblyTypeName: CambioEscenas, Assembly-CSharp
-        m_MethodName: VNivel3
-        m_Mode: 1
+        m_MethodName: CambiarEscena
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 41
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3524,12 +3527,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 101105393}
         m_TargetAssemblyTypeName: CambioEscenas, Assembly-CSharp
-        m_MethodName: CineV1
-        m_Mode: 1
+        m_MethodName: CambiarEscena
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 14
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

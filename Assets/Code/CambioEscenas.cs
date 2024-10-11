@@ -14,14 +14,18 @@ public class CambioEscenas : MonoBehaviour
     {
         nivelActual = SceneManager.GetActiveScene();
 
+        if (GameManager.instance == null)
+        {
+            // Crear el GameManager si no existe
+            GameObject gameManager = new GameObject("GameManager");
+            gameManager.AddComponent<GameManager>();
+            Debug.Log("GameManager creado en la escena: " + SceneManager.GetActiveScene().name);
+        }
+
         if (isInitialScene && !string.IsNullOrEmpty(initialSceneName))
         {
             Debug.Log("Configurando escena inicial: " + initialSceneName + " para el nivel: " + levelName);
             GameManager.instance.SetInitialScene(levelName, initialSceneName);
-        }
-        else
-        {
-            Debug.Log("Esta escena no es la inicial o no tiene nombre de escena inicial configurado.");
         }
     }
 
