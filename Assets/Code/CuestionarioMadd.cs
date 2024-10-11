@@ -22,6 +22,9 @@ public class Cuestionario : MonoBehaviour
     private int preguntaActual = 0;
     private int respuestasCorrectas = 0;
 
+    public string victoryScene;
+    public string defeatScene;
+
     public int NivelAGuardar;
 
     //private SaveSystem saveSystem;
@@ -75,6 +78,9 @@ public class Cuestionario : MonoBehaviour
 
     void EvaluarResultado()
     {
+        string victorySceneName = victoryScene;
+        string defeatSceneName = defeatScene;
+
         if (respuestasCorrectas == preguntas.Length)
         {
             // Guardar progreso y desbloquear niveles
@@ -83,12 +89,12 @@ public class Cuestionario : MonoBehaviour
 
             //saveSystem.SaveProgress(currentDetectiveLevel, currentVillainLevel);
             //levelUnlocker.UnlockLevels(currentDetectiveLevel, currentVillainLevel);
-            SceneManager.LoadScene("Cutscene Victoria Villano");
+            SceneManager.LoadScene(victorySceneName);
             GuardarDatos.Instancia.GuardarProgreso(NivelAGuardar);
         }
         else
         {
-            SceneManager.LoadScene("Pantalla Derrota Villano Interrogatorio");
+            SceneManager.LoadScene(defeatSceneName);
         }
     }
 

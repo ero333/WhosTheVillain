@@ -2196,7 +2196,7 @@ MonoBehaviour:
     - "Honestamente, me han dado pesadillas\u2026"
     - "Creo que merezco un aumento\u2026"
     - Estoy bien, no es para tanto.
-    respuestaCorrecta: 2
+    respuestaCorrecta: 0
   - textoPregunta: "Jaja\u2026 Ya veo. Pero bueno, h\xE1blame de lo que nos compete\u2026
       \xBFDescubriste algo de utilidad?"
     respuestas:
@@ -2231,6 +2231,8 @@ MonoBehaviour:
   - {fileID: 1445488920}
   preguntaPanel: {fileID: 1903346159}
   respuestaPanel: {fileID: 385615062}
+  victoryScene: Cutscene Victoria Villano N3
+  defeatScene: Pantalla Derrota Villano Interrogatorio
   NivelAGuardar: 6
 --- !u!4 &941837254
 Transform:
@@ -2792,7 +2794,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 2.1, y: -32.199997}
+  m_AnchoredPosition: {x: 2.1, y: -32.200012}
   m_SizeDelta: {x: 408.89, y: 28.33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1508681486
