@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class InterrogatoryManager : MonoBehaviour
 {
 
-    public AchievementManager achievementManager;
+    
     public List<Personaje> personajes; // Lista de personajes 
     public GameObject imagenCajaPreguntas;
     public GameObject[] botonesPreguntas; // Los botones para las preguntas
@@ -76,20 +76,7 @@ public class InterrogatoryManager : MonoBehaviour
                     Debug.Log("Respuesta correcta para " + x.nombre);
 
                     // Desbloquear logro si se cumplen las condiciones
-                    if (x.CorrectAnswers >= 3 && SceneManager.GetActiveScene().name == "Nivel 1 Interrogatorios")
-                    {
-                        achievementManager.UnlockAchievement("Interrogador nato Caso 1");
-                        Debug.Log("Logro desbloqueado: Nato1");
-                        
-                       
-                    }
-                    if (x.CorrectAnswers >= 3 && SceneManager.GetActiveScene().name == "Nivel 2 Interrogatorio")
-                    {
-                        achievementManager.UnlockAchievement("Interrogador nato Caso 2");
-                        Debug.Log("Logro desbloqueado: Nato2");
-
-
-                    }
+                   
                 }
                 else
                 {
