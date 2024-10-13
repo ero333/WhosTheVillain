@@ -1340,52 +1340,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 637216806}
   m_CullTransparentMesh: 1
---- !u!1 &672003332
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 672003334}
-  - component: {fileID: 672003333}
-  m_Layer: 0
-  m_Name: Achievement Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &672003333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 672003332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1df6097f042d784fbf062c40f4ba557, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  achievementText: {fileID: 0}
-  achievements: []
---- !u!4 &672003334
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 672003332}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.13229713, y: -0.074696615, z: 6.7860184}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &681971009
 GameObject:
   m_ObjectHideFlags: 0
@@ -1643,6 +1597,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: D Nivel 1
   initialSceneName: 
+  isInitialScene: 0
 --- !u!4 &708623227
 Transform:
   m_ObjectHideFlags: 0
@@ -1819,7 +1774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e0a34c69bb506a49a4e0a16ad4ef115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  desbloqueador: {fileID: 1318350221}
+  desbloqueador: {fileID: 0}
   botonID: "Pa\xF1uelo"
 --- !u!1 &848071192
 GameObject:
@@ -2356,7 +2311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e0a34c69bb506a49a4e0a16ad4ef115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  desbloqueador: {fileID: 1318350221}
+  desbloqueador: {fileID: 0}
   botonID: reloj
 --- !u!1 &1034116844
 GameObject:
@@ -2403,7 +2358,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1573d02203ae0a14ca1943bd0611f0c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  achievementManager: {fileID: 672003333}
   personajes:
   - nombre: Oscar
     preguntas:
@@ -2532,7 +2486,7 @@ MonoBehaviour:
     isUnlocked: 0
   objectToActivate: {fileID: 0}
   objectToDeactivate: {fileID: 0}
-  achievementManager: {fileID: 672003333}
+  achievementManager: {fileID: 0}
 --- !u!1 &1122335656
 GameObject:
   m_ObjectHideFlags: 0
@@ -3050,57 +3004,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1294510658}
   m_CullTransparentMesh: 1
---- !u!1 &1318350220
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1318350222}
-  - component: {fileID: 1318350221}
-  m_Layer: 0
-  m_Name: Desbloqueador
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1318350221
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1318350220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f21c74e3604025748b69cc8cb36eeba6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Achievement:
-    title: 
-    description: 
-    isUnlocked: 0
-  objectToActivate: {fileID: 0}
-  objectToDeactivate: {fileID: 0}
-  achievementManager: {fileID: 672003333}
---- !u!4 &1318350222
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1318350220}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.13229713, y: -0.074696615, z: 6.7860184}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1331200264
 GameObject:
   m_ObjectHideFlags: 0
@@ -4680,7 +4583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e0a34c69bb506a49a4e0a16ad4ef115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  desbloqueador: {fileID: 1318350221}
+  desbloqueador: {fileID: 0}
   botonID: Whiskey
 --- !u!1 &1970643204
 GameObject:
@@ -5332,5 +5235,3 @@ SceneRoots:
   - {fileID: 1034116846}
   - {fileID: 1341922578}
   - {fileID: 708623227}
-  - {fileID: 1318350222}
-  - {fileID: 672003334}

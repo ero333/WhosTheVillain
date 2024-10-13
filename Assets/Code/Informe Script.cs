@@ -46,11 +46,13 @@ public class InformeScript : MonoBehaviour
     public bool Evidencia3Correcta;
     public bool SospechosoCorrecto;
     public bool MotivoCorrecto;
-
     public string TresOpcionesCorrectas;
 
     public string victoryScene;
     public string defeatScene;
+
+    // Botón enviar informe
+    public Button submitButton;
 
     //private SaveSystem saveSystem;
     //private LevelUnlocker levelUnlocker;
@@ -70,6 +72,8 @@ public class InformeScript : MonoBehaviour
         suspectDescription.text = ""; // Descripción vacía
         motiveText.text = initialMotiveText; // Texto inicial
 
+        submitButton.interactable = false; // Bloquear el botón al inicio
+
         UpdateHypothesis();
     }
 
@@ -78,15 +82,26 @@ public class InformeScript : MonoBehaviour
         TresOpcionesCorrectas = correctEvidence1 + correctEvidence2 + correctEvidence3;
         Evidencia1Correcta = (TresOpcionesCorrectas.Contains(evidenceImages[0].sprite.name));
         if (Evidencia1Correcta) TresOpcionesCorrectas = TresOpcionesCorrectas.Replace(evidenceImages[0].sprite.name, " ");
-
         Evidencia2Correcta = (TresOpcionesCorrectas.Contains(evidenceImages[1].sprite.name));
         if (Evidencia2Correcta) TresOpcionesCorrectas = TresOpcionesCorrectas.Replace(evidenceImages[1].sprite.name, " ");
-
         Evidencia3Correcta = (TresOpcionesCorrectas.Contains(evidenceImages[2].sprite.name));
         if (Evidencia3Correcta) TresOpcionesCorrectas = TresOpcionesCorrectas.Replace(evidenceImages[2].sprite.name, " ");
-
         SospechosoCorrecto = suspectImage.sprite.name == correctSuspect;
         MotivoCorrecto = motiveText.text == correctMotive;
+
+        CheckIfFieldsAreComplete(); // Verificar si todos los campos están completos
+    }
+
+    void CheckIfFieldsAreComplete()
+    {
+        bool allFieldsComplete =
+            evidenceImages[0].sprite != placeholderSprite &&
+            evidenceImages[1].sprite != placeholderSprite &&
+            evidenceImages[2].sprite != placeholderSprite &&
+            suspectImage.sprite != suspectPlaceholderSprite &&
+            motiveText.text != initialMotiveText;
+
+        submitButton.interactable = allFieldsComplete; // Habilitar o deshabilitar el botón según sea necesario
     }
 
     public void OnEvidenceClick(int index)
@@ -118,9 +133,9 @@ public class InformeScript : MonoBehaviour
         string evidence3 = evidenceImages[2].sprite.name != placeholderSprite.name ? evidenceNames[evidenceIndices[2]] : "evidencia no seleccionada";
         string suspect = suspectImage.sprite.name != suspectPlaceholderSprite.name ? suspectNames[suspectIndex] : "sospechoso no seleccionado";
         string motive = motiveText.text != initialMotiveText ? motiveText.text : "motivo no seleccionado";
-
-        hypothesisText.text = $"El sospechoso {suspect} fue identificado como el culpable. Las evidencias encontradas en su contra son: {evidence1}, {evidence2}, y {evidence3}. Pienso que motivo del crimen fue porque: {motive}";
+        hypothesisText.text = $"El sospechoso {suspect} fue identificado como el culpable. Las evidencias encontradas en su contra son: {evidence1}, {evidence2}, y {evidence3}. Pienso que el motivo del crimen fue porque: {motive}";
     }
+
     public void OnSubmit(int X)
     {
         string victorySceneName = victoryScene;

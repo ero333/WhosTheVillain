@@ -938,7 +938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f2eaa2d923376d48af3bb78cf3ca3b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  desbloqueador: {fileID: 1633893237}
+  desbloqueador: {fileID: 0}
   botonID: BotonFlorero
 --- !u!1 &174471116
 GameObject:
@@ -3630,7 +3630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f2eaa2d923376d48af3bb78cf3ca3b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  desbloqueador: {fileID: 1633893237}
+  desbloqueador: {fileID: 0}
   botonID: BotonCajon3
 --- !u!1 &776914172
 GameObject:
@@ -4348,7 +4348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f2eaa2d923376d48af3bb78cf3ca3b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  desbloqueador: {fileID: 1633893237}
+  desbloqueador: {fileID: 0}
   botonID: BotonSilla
 --- !u!1 &936561837
 GameObject:
@@ -4553,7 +4553,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.480011, y: 206.6}
+  m_AnchoredPosition: {x: -1.4799805, y: 206.6}
   m_SizeDelta: {x: -496.04, y: -399.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &942620970
@@ -5687,7 +5687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f2eaa2d923376d48af3bb78cf3ca3b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  desbloqueador: {fileID: 1633893237}
+  desbloqueador: {fileID: 0}
   botonID: BotonTacho
 --- !u!1 &1407987916
 GameObject:
@@ -6750,7 +6750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f2eaa2d923376d48af3bb78cf3ca3b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  desbloqueador: {fileID: 1633893237}
+  desbloqueador: {fileID: 0}
   botonID: BotonCajon2
 --- !u!1 &1539094526
 GameObject:
@@ -7214,7 +7214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f2eaa2d923376d48af3bb78cf3ca3b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  desbloqueador: {fileID: 1633893237}
+  desbloqueador: {fileID: 0}
   botonID: BotonEstantes
 --- !u!1 &1633227118
 GameObject:
@@ -7365,57 +7365,6 @@ MonoBehaviour:
   m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
   m_EffectDistance: {x: 3, y: -3}
   m_UseGraphicAlpha: 1
---- !u!1 &1633893236
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1633893238}
-  - component: {fileID: 1633893237}
-  m_Layer: 0
-  m_Name: Desbloqueador
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1633893237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1633893236}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f21c74e3604025748b69cc8cb36eeba6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Achievement:
-    title: 
-    description: 
-    isUnlocked: 0
-  objectToActivate: {fileID: 0}
-  objectToDeactivate: {fileID: 0}
-  achievementManager: {fileID: 1763012329}
---- !u!4 &1633893238
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1633893236}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.0541121, y: -1.9633307, z: 4.735113}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1641757829
 GameObject:
   m_ObjectHideFlags: 0
@@ -7845,7 +7794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f2eaa2d923376d48af3bb78cf3ca3b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  desbloqueador: {fileID: 1633893237}
+  desbloqueador: {fileID: 0}
   botonID: BotonCortinas
 --- !u!1 &1738887914
 GameObject:
@@ -8051,52 +8000,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1745257231}
   m_CullTransparentMesh: 1
---- !u!1 &1763012328
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1763012330}
-  - component: {fileID: 1763012329}
-  m_Layer: 0
-  m_Name: AchivementManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1763012329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1763012328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1df6097f042d784fbf062c40f4ba557, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  achievementText: {fileID: 0}
-  achievements: []
---- !u!4 &1763012330
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1763012328}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.44277182, y: -0.6888592, z: 4.7404094}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1764736025
 GameObject:
   m_ObjectHideFlags: 0
@@ -9287,7 +9190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f2eaa2d923376d48af3bb78cf3ca3b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  desbloqueador: {fileID: 1633893237}
+  desbloqueador: {fileID: 0}
   botonID: BotonCajon1
 --- !u!1 &2029557469
 GameObject:
@@ -9627,5 +9530,3 @@ SceneRoots:
   - {fileID: 66965208}
   - {fileID: 1691935297}
   - {fileID: 1200806024}
-  - {fileID: 1633893238}
-  - {fileID: 1763012330}
