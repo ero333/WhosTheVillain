@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class StarRating : MonoBehaviour
 {
+    public Button reviewButton;
     public Sprite emptyStar; // Asigna la imagen de la estrella vacía en el Inspector
     public Sprite filledStar; // Asigna la imagen de la estrella llena en el Inspector
     public Button submitButton; // Asigna el botón de enviar en el Inspector
@@ -10,6 +11,13 @@ public class StarRating : MonoBehaviour
 
     void Start()
     {
+        reviewButton.gameObject.SetActive(false);
+
+        if (PlayerPrefs.GetInt("Level1Completed", 0) == 1)
+        {
+            reviewButton.gameObject.SetActive(true);
+        }
+
         // Añadir el listener al botón de enviar
         if (submitButton != null)
         {

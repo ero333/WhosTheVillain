@@ -145,6 +145,9 @@ public class InformeScript : MonoBehaviour
             suspectImage.sprite.name == correctSuspect &&
             motiveText.text == correctMotive)
         {
+            PlayerPrefs.SetInt("Level1Completed", 1);
+            PlayerPrefs.Save();
+
             // Guardar el progreso y desbloquear niveles
             //saveSystem.SaveProgress(currentDetectiveLevel, 0); // Asumiendo que el nivel del villano es 0 aquí
             //levelUnlocker.UnlockLevels(currentDetectiveLevel, 0);
