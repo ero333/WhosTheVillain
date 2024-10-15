@@ -521,7 +521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   progressBar: {fileID: 153053079}
-  fillSpeed: 0.5
+  fillSpeed: 0.2
   isFilling: 0
   pista: {fileID: 0}
 --- !u!1 &194625348
@@ -2478,11 +2478,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AparicionMin: 4
-  AparicionMax: 12
-  VigilarMin: 4
-  VigilarMax: 14
-  Aparicion: 8
-  Vigilar: 10
+  AparicionMax: 8
+  VigilarMin: 3
+  VigilarMax: 13
+  Aparicion: 4
+  Vigilar: 12
   cronometro: 0
   anim: {fileID: 1334289386}
   Entrada: 0
@@ -2718,8 +2718,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cba2a8ea471e54347b3f68284bd1ddc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  min: 5
-  seg: 50
+  min: 4
+  seg: 30
   tiempo: {fileID: 125850752}
 --- !u!1 &1653760557
 GameObject:

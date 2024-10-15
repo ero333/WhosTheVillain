@@ -1377,7 +1377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   progressBar: {fileID: 815401969}
-  fillSpeed: 0.7
+  fillSpeed: 0.05
   isFilling: 0
   pista: {fileID: 0}
 --- !u!114 &815401969
@@ -2207,12 +2207,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f96f165251f2cb84c8c62cc454946110, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AparicionMin: 2
-  AparicionMax: 12
-  VigilarMin: 4
-  VigilarMax: 14
-  Aparicion: 8
-  Vigilar: 10
+  AparicionMin: 4
+  AparicionMax: 8
+  VigilarMin: 3
+  VigilarMax: 12
+  Aparicion: 4
+  Vigilar: 12
   cronometro: 0
   anim: {fileID: 1238936504}
   Entrada: 0
@@ -2814,8 +2814,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cba2a8ea471e54347b3f68284bd1ddc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  min: 2
-  seg: 25
+  min: 3
+  seg: 35
   tiempo: {fileID: 616671236}
 --- !u!114 &1774257515
 MonoBehaviour:
