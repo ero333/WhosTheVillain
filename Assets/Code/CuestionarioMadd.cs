@@ -7,13 +7,15 @@ public class Cuestionario : MonoBehaviour
     [System.Serializable]
     public class Pregunta
     {
+        public string textoDescripcion;
         public string textoPregunta;
         public string[] respuestas;
         public int respuestaCorrecta;
     }
 
     public Pregunta[] preguntas;
-    public Text textoPregunta;
+    public Text textoDescripcion; //caja de preguntas
+    public Text textoPreguntaRespuesta; //caja de respuestas
     public Button botonSiguiente;
     public Button[] botonesRespuestas;
     public GameObject preguntaPanel;
@@ -43,13 +45,16 @@ public class Cuestionario : MonoBehaviour
     {
         preguntaPanel.SetActive(true);
         respuestaPanel.SetActive(false);
-        textoPregunta.text = preguntas[preguntaActual].textoPregunta;
+        textoDescripcion.text = preguntas[preguntaActual].textoDescripcion;
     }
 
     void MostrarRespuestas()
     {
         preguntaPanel.SetActive(false);
         respuestaPanel.SetActive(true);
+
+        textoPreguntaRespuesta.text = preguntas[preguntaActual].textoPregunta;
+
         for (int i = 0; i < botonesRespuestas.Length; i++)
         {
             botonesRespuestas[i].GetComponentInChildren<Text>().text = preguntas[preguntaActual].respuestas[i];
