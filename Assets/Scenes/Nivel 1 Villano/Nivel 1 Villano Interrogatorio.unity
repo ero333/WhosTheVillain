@@ -198,6 +198,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 24071701}
   m_CullTransparentMesh: 1
+--- !u!1 &44163635
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 44163636}
+  - component: {fileID: 44163638}
+  - component: {fileID: 44163637}
+  m_Layer: 5
+  m_Name: TextoPreguntaRespuesta
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &44163636
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44163635}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -228.39177}
+  m_LocalScale: {x: 0.022214927, y: 0.022214927, z: 0.022214927}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1306891314}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.38733435, y: -3.0631}
+  m_SizeDelta: {x: 579.71, y: 18.1193}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &44163637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44163635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 50d86020f700b46408c77ee7d8ef54e7, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &44163638
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44163635}
+  m_CullTransparentMesh: 1
 --- !u!1 &204802336
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,8 +461,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4.4999695, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.36999512, y: 0}
+  m_SizeDelta: {x: -9.74, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &278758738
 MonoBehaviour:
@@ -1720,8 +1799,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.8057, y: -5.1946}
-  m_SizeDelta: {x: 571.3082, y: 31.446}
+  m_AnchoredPosition: {x: -0.4537, y: -5.2184}
+  m_SizeDelta: {x: 602.995, y: 29.0159}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1032165717
 MonoBehaviour:
@@ -1940,8 +2019,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.7996, y: -4.2711}
-  m_SizeDelta: {x: 571.8557, y: 32.7907}
+  m_AnchoredPosition: {x: -0.4473, y: -4.4284}
+  m_SizeDelta: {x: 603.5729, y: 29.6535}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1056716867
 MonoBehaviour:
@@ -2682,6 +2761,7 @@ Transform:
   - {fileID: 1149773881}
   - {fileID: 879839809}
   - {fileID: 819440462}
+  - {fileID: 44163636}
   - {fileID: 1308234073}
   - {fileID: 1056716866}
   - {fileID: 1032165716}
@@ -2723,8 +2803,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.7996, y: -3.3052}
-  m_SizeDelta: {x: 571.8558, y: 31.1688}
+  m_AnchoredPosition: {x: -0.4473, y: -3.63}
+  m_SizeDelta: {x: 603.5729, y: 28.9442}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1308234074
 MonoBehaviour:
@@ -3253,8 +3333,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4.4999695, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.36999512, y: 0}
+  m_SizeDelta: {x: -8.12, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1554273440
 MonoBehaviour:
@@ -3411,8 +3491,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4.5, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.44000244, y: 0}
+  m_SizeDelta: {x: -8.12, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1693505875
 MonoBehaviour:
@@ -3683,32 +3763,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   preguntas:
-  - textoPregunta: "Buenas tardes... \xBFQu\xE9 tal te fue con el caso? Tengo entendido
-      que le dedicaste varias horas a investigar la escena del crimen... \xBFTe importa
-      si charlamos un poco? Toma asiento. Quiero hacerte algunas preguntas. \xBFCu\xE1ntas
-      pistas encontraste en la escena del crimen?"
+  - textoDescripcion: "Buenas tardes... \xBFQu\xE9 tal te fue con el caso? Tengo
+      entendido que le dedicaste varias horas a investigar la escena del crimen...
+      \xBFTe importa si charlamos un poco? Toma asiento. Quiero hacerte algunas preguntas."
+    textoPregunta: "\xBFCu\xE1ntas pistas encontraste en la escena del crimen?"
     respuestas:
     - Tres.
     - Diez.
     - Cinco.
     respuestaCorrecta: 2
-  - textoPregunta: "Mmh... Ya veo... El forense mencion\xF3 haber visto una jeringa...
-      \xBFQu\xE9 me podr\xEDas contar sobre eso?"
+  - textoDescripcion: "Mmh... Ya veo... El forense mencion\xF3 haber visto una jeringa..."
+    textoPregunta: "\xBFQu\xE9 me podr\xEDas contar sobre eso?"
     respuestas:
-    - "No se nada sobre eso. Al revisar la escena, no encontr\xE9 ninguna jeringa"
+    - "No se nada sobre eso. Al revisar la escena, no encontr\xE9 ninguna jeringa."
     - "El se\xF1or O'Neill ser\xEDa diab\xE9tico..."
     - "\xBFUna jeringa? Seguramente se le habr\xE1 ca\xEDdo a alguno de los forenses
       que vinieron antes que nosotros."
     respuestaCorrecta: 0
-  - textoPregunta: "Uhjm... Entiendo... Hablaste con los miembros de la casa \xBFVerdad?...
-      \xBFNotaste algo raro?"
+  - textoDescripcion: " Uhjm... Entiendo... Hablaste con los miembros de la casa
+      \xBFVerdad?..."
+    textoPregunta: "\xBFNotaste algo raro?"
     respuestas:
     - "Nada fuera de lo com\xFAn."
     - El mayordomo se me hizo sospechoso... Es una de las pocas personas con acceso
       regular al despacho.
     - Para mi que el ama de llaves era su amante.
     respuestaCorrecta: 1
-  textoPregunta: {fileID: 1559424641}
+  textoDescripcion: {fileID: 1559424641}
+  textoPreguntaRespuesta: {fileID: 44163637}
   botonSiguiente: {fileID: 341396346}
   botonesRespuestas:
   - {fileID: 1308234074}
