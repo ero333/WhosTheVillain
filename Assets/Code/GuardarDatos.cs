@@ -9,11 +9,20 @@ public class GuardarDatos : MonoBehaviour
     public int NivelesDesbloqueados;
     public Scene NivelActual;
 
-    // Start is called before the first frame update
+    // Diccionario para mapear niveles a sus respectivas escenas en ambas campañas
+    private Dictionary<int, string> levelScenes = new Dictionary<int, string>();
 
     private void Awake()
     {
         Instancia = this;
+        // Inicializar el mapeo de niveles a escenas
+        InitializeLevelScenes();
+
+        // Asegurarse de inicializar el progreso si es la primera vez
+        if (!PlayerPrefs.HasKey("CurrentLevel"))
+        {
+            PlayerPrefs.SetInt("CurrentLevel", 1); // Iniciar desde el primer nivel
+        }
     }
 
     void Start()
@@ -25,7 +34,6 @@ public class GuardarDatos : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
     }
 
     public void GuardarProgreso(int NW)
@@ -33,7 +41,7 @@ public class GuardarDatos : MonoBehaviour
         if (NW >= NivelesDesbloqueados)
         {
             PlayerPrefs.SetInt("Niveles Ganados", NW);
-            print(NW + "niveles guardados");
+            print(NW + " niveles guardados");
         }
     }
 
@@ -48,8 +56,7 @@ public class GuardarDatos : MonoBehaviour
         int x = NivelActual.buildIndex;
         switch (x)
         {
-            case 0:
-                break;
+            case 0: break;
             case 5: break;
             case 6: break;
             case 7: break;
@@ -79,5 +86,34 @@ public class GuardarDatos : MonoBehaviour
     public void ContinuarPartida()
     {
         SceneManager.LoadScene(PlayerPrefs.GetInt("UltimoNivel"));
+    }
+
+    private void InitializeLevelScenes()
+    {
+        levelScenes.Add(1, "Cutscene Intro Detective");
+        levelScenes.Add(2, "Cutscene intro villano");
+        levelScenes.Add(3, "Cutscene Intro Detective N2");
+        levelScenes.Add(4, "Cutscene intro villano2");
+        levelScenes.Add(5, "Nivel 3 Oficina D");
+    }
+
+    public void LoadNextCase()
+    {
+        int currentLevel = PlayerPrefs.GetInt("CurrentLevel", 1);
+
+        if (levelScenes.ContainsKey(currentLevel + 1))
+        {
+            currentLevel++;
+            PlayerPrefs.SetInt("CurrentLevel", currentLevel);
+            string nextLevelSceneName = levelScenes[currentLevel];
+            Debug.Log("Cargando siguiente caso: " + nextLevelSceneName);
+
+            // Cargar el siguiente nivel
+            SceneManager.LoadScene(nextLevelSceneName);
+        }
+        else
+        {
+            Debug.LogError("No hay una escena configurada para el siguiente nivel.");
+        }
     }
 }

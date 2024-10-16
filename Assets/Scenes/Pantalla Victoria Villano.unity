@@ -651,6 +651,7 @@ GameObject:
   m_Component:
   - component: {fileID: 660407227}
   - component: {fileID: 660407226}
+  - component: {fileID: 660407228}
   m_Layer: 0
   m_Name: Level Manager
   m_TagString: Untagged
@@ -672,6 +673,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: 
   initialSceneName: 
+  isInitialScene: 0
 --- !u!4 &660407227
 Transform:
   m_ObjectHideFlags: 0
@@ -687,6 +689,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &660407228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660407225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9fc1db2a82f65742b334ab5cdf104e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NivelesDesbloqueados: 0
+  NivelActual:
+    m_Handle: 0
 --- !u!1 &807536895
 GameObject:
   m_ObjectHideFlags: 0
@@ -1766,6 +1783,7 @@ GameObject:
   - component: {fileID: 2044581698}
   - component: {fileID: 2044581697}
   - component: {fileID: 2044581696}
+  - component: {fileID: 2044581699}
   - component: {fileID: 2044581695}
   m_Layer: 5
   m_Name: Boton 2
@@ -1852,19 +1870,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2044581697}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 660407226}
-        m_TargetAssemblyTypeName: CambioEscenas, Assembly-CSharp
-        m_MethodName: VNivel2
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &2044581697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1903,6 +1909,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2044581693}
   m_CullTransparentMesh: 1
+--- !u!114 &2044581699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044581693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2a086f9e0a68aa45aa75c1267a5ba78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextCaseButton: {fileID: 2044581696}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
