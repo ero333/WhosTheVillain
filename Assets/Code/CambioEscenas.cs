@@ -8,6 +8,7 @@ public class CambioEscenas : MonoBehaviour
     public string levelName;
     public string initialSceneName;
     public bool isInitialScene;
+    public string numberLevel;
     Scene nivelActual;
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,61 @@ public class CambioEscenas : MonoBehaviour
         {
             Debug.Log("Configurando escena inicial: " + initialSceneName + " para el nivel: " + levelName);
             GameManager.instance.SetInitialScene(levelName, initialSceneName);
+        }
+
+        if (SceneManager.GetActiveScene().name == "Cutscene Intro Detective")
+        {
+            Debug.Log("LevelStart: " + SceneManager.GetActiveScene().name);
+        }
+
+        if (SceneManager.GetActiveScene().name == "Cutscene Intro Detective N2")
+        {
+            Debug.Log("LevelStart: " + SceneManager.GetActiveScene().name);
+        }
+
+        if (SceneManager.GetActiveScene().name == "Cutscene Intro Detective 3")
+        {
+            Debug.Log("LevelStart: " + SceneManager.GetActiveScene().name);
+        }
+
+        if (SceneManager.GetActiveScene().name == "Cutscene intro villano")
+        {
+            Debug.Log("LevelStart: " + SceneManager.GetActiveScene().name);
+        }
+
+        if (SceneManager.GetActiveScene().name == "Cutscene intro villano2")
+        {
+            Debug.Log("LevelStart: " + SceneManager.GetActiveScene().name);
+        }
+
+        if (SceneManager.GetActiveScene().name == "Cutscene Intro Villano 3")
+        {
+            Debug.Log("LevelStart: " + SceneManager.GetActiveScene().name);
+        }
+
+        if (SceneManager.GetActiveScene().name == "Pantalla Derrota")
+        {
+            Debug.Log("GameOver: " + SceneManager.GetActiveScene().name);
+        }
+
+        if (SceneManager.GetActiveScene().name == "Pantalla Derrota Villano")
+        {
+            Debug.Log("GameOver: " + SceneManager.GetActiveScene().name);
+        }
+
+        if (SceneManager.GetActiveScene().name == "Pantalla Derrota Villano Interrogatorio")
+        {
+            Debug.Log("GameOver: " + SceneManager.GetActiveScene().name);
+        }
+
+        if (SceneManager.GetActiveScene().name == "Pantalla Victoria Villano")
+        {
+            Debug.Log("LevelComplete: " + SceneManager.GetActiveScene().name);
+        }
+
+        if (SceneManager.GetActiveScene().name == "Pantalla Victoria")
+        {
+            Debug.Log("LevelComplete: " + SceneManager.GetActiveScene().name);
         }
     }
 
@@ -134,6 +190,10 @@ public class CambioEscenas : MonoBehaviour
         SceneManager.LoadScene("Cutscene Derrota D");
     }
 
+    public void C1D ()
+    {
+        SceneManager.LoadScene("Cutscene Intro Detective");
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
