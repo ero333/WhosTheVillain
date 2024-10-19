@@ -35,7 +35,7 @@ public class StarRating : MonoBehaviour
     {
         foreach (RatingSection section in ratingSections)
         {
-            Debug.Log(section.sectionName + " Puntuación: " + section.rating);
+            Debug.Log("Rate:" + section.sectionName + " Puntuación: " + section.rating);
             // Aquí puedes añadir el código para enviar la puntuación a un servidor o guardarla localmente.
         }
     }
