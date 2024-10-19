@@ -59,6 +59,8 @@ public class InterrogatoryManager : MonoBehaviour
             imagenCajaPreguntas.gameObject.SetActive(false);
         }
 
+        Debug.Log("Question: " + preguntaIndex);
+
         foreach (Personaje x in personajes)
         {
             if (personajeActual == x)
