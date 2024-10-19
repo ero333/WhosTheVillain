@@ -46,7 +46,7 @@ public class InventoryItem : MonoBehaviour
 
     private void OnMouseDown()
     {
-        print(itemName);
+        Debug.Log("FindClue:" + itemName);
         InventoryManager.Instance.AddItem(this);
 
         if (flashEffect != null)
