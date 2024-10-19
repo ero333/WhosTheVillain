@@ -77,6 +77,7 @@ public class InventoryManager : MonoBehaviour
     public TMP_Text descriptionPista;
     public void abrirInfo(int pista)
     {
+        Debug.Log("ClueInventory: " + inventoryName[pista]);
         Info.SetActive(true);
         fotoPista.sprite = inventorySlots[pista].sprite;
    
@@ -84,6 +85,4 @@ public class InventoryManager : MonoBehaviour
         descriptionPista.text = inventoryDescrip[pista];
 
     }
-
 }
-

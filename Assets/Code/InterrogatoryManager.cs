@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class InterrogatoryManager : MonoBehaviour
 {
-
-    
     public List<Personaje> personajes; // Lista de personajes 
     public GameObject imagenCajaPreguntas;
     public GameObject[] botonesPreguntas; // Los botones para las preguntas

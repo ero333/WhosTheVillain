@@ -32,13 +32,13 @@ public class DestruirPistasVillano : MonoBehaviour
     {
         if (objectCounterText != null)
         {
-          objectCounterText.text = objectsDestroyed + "/" + totalObjects;
+            objectCounterText.text = objectsDestroyed + "/" + totalObjects;
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

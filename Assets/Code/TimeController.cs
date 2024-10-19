@@ -24,7 +24,7 @@ public class TimeController : MonoBehaviour
         if (enMarcha)
         {
             restante -= Time.deltaTime;
-            if(restante < 1)
+            if (restante < 1)
             {
                 enMarcha = false;
                 SceneManager.LoadScene("Pantalla Derrota Villano");
