@@ -94,6 +94,7 @@ public class CambioEscenas : MonoBehaviour
     public void CambiarEscena(int a)
     {
         SceneManager.LoadScene(a);
+        Debug.Log("Skip");
     }
     public void SiguienteNivel()
     {
