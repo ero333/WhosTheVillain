@@ -713,6 +713,7 @@ MonoBehaviour:
   initialSceneName: 
   isInitialScene: 0
   numberLevel: 
+  level: 0
 --- !u!4 &404062043
 Transform:
   m_ObjectHideFlags: 0
@@ -2764,7 +2765,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 404062042}
         m_TargetAssemblyTypeName: CambioEscenas, Assembly-CSharp
-        m_MethodName: "EventoSk\xEDp"
+        m_MethodName: EventoSkip
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
