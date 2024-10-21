@@ -88,14 +88,17 @@ public class Cuestionario : MonoBehaviour
 
         if (respuestasCorrectas == preguntas.Length)
         {
+            GuardarDatos.Instancia.GuardarProgreso(NivelAGuardar);
             // Guardar progreso y desbloquear niveles
             //int currentVillainLevel = GetCurrentVillainLevel();
             //int currentDetectiveLevel = GetCurrentDetectiveLevel();
 
+            PlayerPrefs.SetInt("CurrentLevel", NivelAGuardar);
+            PlayerPrefs.Save();
+
             //saveSystem.SaveProgress(currentDetectiveLevel, currentVillainLevel);
             //levelUnlocker.UnlockLevels(currentDetectiveLevel, currentVillainLevel);
             SceneManager.LoadScene(victorySceneName);
-            GuardarDatos.Instancia.GuardarProgreso(NivelAGuardar);
         }
         else
         {

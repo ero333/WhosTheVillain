@@ -101,15 +101,24 @@ public class GuardarDatos : MonoBehaviour
     {
         int currentLevel = PlayerPrefs.GetInt("CurrentLevel", 1);
 
+        // Asegúrate de que el siguiente nivel esté disponible
         if (levelScenes.ContainsKey(currentLevel + 1))
         {
-            currentLevel++;
-            PlayerPrefs.SetInt("CurrentLevel", currentLevel);
-            string nextLevelSceneName = levelScenes[currentLevel];
-            Debug.Log("Cargando siguiente caso: " + nextLevelSceneName);
+            // Aquí deberías verificar que el nivel siguiente esté desbloqueado
+            if (currentLevel + 1 <= NivelesDesbloqueados + 1) // +1 porque los niveles empiezan desde 1
+            {
+                currentLevel++;
+                PlayerPrefs.SetInt("CurrentLevel", currentLevel);
+                string nextLevelSceneName = levelScenes[currentLevel];
+                Debug.Log("Cargando siguiente caso: " + nextLevelSceneName);
 
-            // Cargar el siguiente nivel
-            SceneManager.LoadScene(nextLevelSceneName);
+                // Cargar el siguiente nivel
+                SceneManager.LoadScene(nextLevelSceneName);
+            }
+            else
+            {
+                Debug.LogError("No hay un nivel desbloqueado siguiente.");
+            }
         }
         else
         {
