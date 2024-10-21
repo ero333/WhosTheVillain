@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Services.Core;
+using Unity.Services.Analytics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,6 +12,8 @@ public class CambioEscenas : MonoBehaviour
     public bool isInitialScene;
     public string numberLevel;
     Scene nivelActual;
+
+    public int level;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,35 +33,42 @@ public class CambioEscenas : MonoBehaviour
             GameManager.instance.SetInitialScene(levelName, initialSceneName);
         }
 
-        if (SceneManager.GetActiveScene().name == "Cutscene Intro Detective")
+        switch (SceneManager.GetActiveScene().name)
         {
-            Debug.Log("LevelStart: " + SceneManager.GetActiveScene().name);
+            case "Cutscene Intro Detective":
+                level = 1;
+                break;
+            case "Cutscene intro villano":
+                level = 2;
+                break;
+            case "Cutscene Intro Detective N2":
+                level = 3;
+                break;
+            case "Cutscene intro villano2":
+                level = 4;
+                break;
+            case "Cutscene Intro Detective 3":
+                level = 5;
+                break;
+            case "Cutscene Intro Villano 3":
+                level = 6;
+                break;
+            default:
+                level = 0;
+                break;
         }
 
-        if (SceneManager.GetActiveScene().name == "Cutscene Intro Detective N2")
+        if (level != 0)
         {
             Debug.Log("LevelStart: " + SceneManager.GetActiveScene().name);
+            Debug.Log("level: " + level);
+
+            CustomEvent nombreVariable = new CustomEvent("LevelStart")
+            {
+                { "level", level }
+            };
         }
 
-        if (SceneManager.GetActiveScene().name == "Cutscene Intro Detective 3")
-        {
-            Debug.Log("LevelStart: " + SceneManager.GetActiveScene().name);
-        }
-
-        if (SceneManager.GetActiveScene().name == "Cutscene intro villano")
-        {
-            Debug.Log("LevelStart: " + SceneManager.GetActiveScene().name);
-        }
-
-        if (SceneManager.GetActiveScene().name == "Cutscene intro villano2")
-        {
-            Debug.Log("LevelStart: " + SceneManager.GetActiveScene().name);
-        }
-
-        if (SceneManager.GetActiveScene().name == "Cutscene Intro Villano 3")
-        {
-            Debug.Log("LevelStart: " + SceneManager.GetActiveScene().name);
-        }
 
         if (SceneManager.GetActiveScene().name == "Pantalla Derrota")
         {
@@ -97,7 +108,7 @@ public class CambioEscenas : MonoBehaviour
    
     }
 
-    public void EventoSkíp(int a)
+    public void EventoSkip(int a)
     {
         SceneManager.LoadScene(a);
         Debug.Log("Skip");
