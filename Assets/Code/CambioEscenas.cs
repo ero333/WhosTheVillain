@@ -67,6 +67,7 @@ public class CambioEscenas : MonoBehaviour
             {
                 { "level", level }
             };
+            AnalyticsService.Instance.Flush();
         }
 
 
