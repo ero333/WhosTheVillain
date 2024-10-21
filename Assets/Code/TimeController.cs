@@ -38,4 +38,9 @@ public class TimeController : MonoBehaviour
             tiempo.text = string.Format("{00:00}:{01:00}", tempMin, TempSeg);
         }
     }
+
+    public void DetenerTiempo()
+    {
+        enMarcha = false;
+    }
 }

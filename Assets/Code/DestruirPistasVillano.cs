@@ -10,12 +10,16 @@ public class DestruirPistasVillano : MonoBehaviour
     public GameObject button;
     public Text objectCounterText;
 
+    private TimeController timeController;
+
     // Start is called before the first frame update
     void Start()
     {
         objectsDestroyed = 0;
         button.SetActive(false);
         UpdateObjectCounterText();
+
+        timeController = FindObjectOfType<TimeController>();
     }
 
     void OnDestroy()
@@ -25,6 +29,7 @@ public class DestruirPistasVillano : MonoBehaviour
         if (objectsDestroyed >= totalObjects)
         {
             button.SetActive(true);
+            timeController.DetenerTiempo();
         }
     }
 
