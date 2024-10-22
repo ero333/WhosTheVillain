@@ -18,13 +18,10 @@ public class CharacterButton : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (button.interactable)
-        {
-            Debug.Log("Pointer entered on " + gameObject.name);
-            descriptionText.text = characterDescription;
-            descriptionText.enabled = true;
-            descriptionBackground.enabled = true; // Activar el fondo
-        }
+        Debug.Log("Pointer entered on " + gameObject.name);
+        descriptionText.text = characterDescription;
+        descriptionText.enabled = true;
+        descriptionBackground.enabled = true; // Activar el fondo
     }
 
     public void OnPointerExit(PointerEventData eventData)

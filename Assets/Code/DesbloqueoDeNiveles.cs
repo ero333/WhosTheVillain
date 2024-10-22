@@ -15,7 +15,7 @@ public class DesbloqueoDeNiveles : MonoBehaviour
         {
             Boton.interactable = false;
         }
-        NivelesDesbloqueados = PlayerPrefs.GetInt("Niveles Ganados");
+        NivelesDesbloqueados = PlayerPrefs.GetInt("Niveles Ganados", 0); // Cambia esto para asegurar un valor por defecto
         for (int i = 0; i <= NivelesDesbloqueados; i++)
         {
             BotonesNiveles[i].interactable = true;

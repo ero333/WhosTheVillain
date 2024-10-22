@@ -690,6 +690,7 @@ GameObject:
   m_Component:
   - component: {fileID: 404062043}
   - component: {fileID: 404062042}
+  - component: {fileID: 404062044}
   m_Layer: 0
   m_Name: Level Manager
   m_TagString: Untagged
@@ -713,6 +714,7 @@ MonoBehaviour:
   initialSceneName: 
   isInitialScene: 0
   numberLevel: 
+  level: 0
 --- !u!4 &404062043
 Transform:
   m_ObjectHideFlags: 0
@@ -728,6 +730,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &404062044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404062041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75afa374d3e7f074886344a0517074e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &411102143
 GameObject:
   m_ObjectHideFlags: 0
@@ -2764,7 +2778,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 404062042}
         m_TargetAssemblyTypeName: CambioEscenas, Assembly-CSharp
-        m_MethodName: "EventoSk\xEDp"
+        m_MethodName: EventoSkip
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

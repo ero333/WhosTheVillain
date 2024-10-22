@@ -1350,12 +1350,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2032877069}
         m_TargetAssemblyTypeName: CambioEscenas, Assembly-CSharp
-        m_MethodName: "EventoSk\xEDp"
+        m_MethodName: EventoSkip
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 32
+          m_IntArgument: 31
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1547,7 +1547,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 32
+          m_IntArgument: 31
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2050,6 +2050,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2032877070}
   - component: {fileID: 2032877069}
+  - component: {fileID: 2032877071}
   m_Layer: 0
   m_Name: Level Manager
   m_TagString: Untagged
@@ -2073,6 +2074,7 @@ MonoBehaviour:
   initialSceneName: 
   isInitialScene: 0
   numberLevel: 
+  level: 0
 --- !u!4 &2032877070
 Transform:
   m_ObjectHideFlags: 0
@@ -2088,6 +2090,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2032877071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032877068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75afa374d3e7f074886344a0517074e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

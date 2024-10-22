@@ -78,11 +78,17 @@ public class InventoryManager : MonoBehaviour
     public void abrirInfo(int pista)
     {
         Debug.Log("ClueInventory: " + inventoryName[pista]);
+
+        // Desactivar cualquier objeto `pista recolectada` activo
+        GameObject[] pistaRecolectadas = GameObject.FindGameObjectsWithTag("PistaRecolectada");
+        foreach (GameObject pistaRecolectada in pistaRecolectadas)
+        {
+            pistaRecolectada.SetActive(false);
+        }
+
         Info.SetActive(true);
         fotoPista.sprite = inventorySlots[pista].sprite;
-   
         namePista.text = inventoryName[pista];
         descriptionPista.text = inventoryDescrip[pista];
-
     }
 }

@@ -148,11 +148,14 @@ public class InformeScript : MonoBehaviour
             PlayerPrefs.SetInt("Level1Completed", 1);
             PlayerPrefs.Save();
 
+            GuardarDatos.Instancia.GuardarProgreso(X);
+
+            PlayerPrefs.SetInt("CurrentLevel", X);
+            PlayerPrefs.Save();
             // Guardar el progreso y desbloquear niveles
             //saveSystem.SaveProgress(currentDetectiveLevel, 0); // Asumiendo que el nivel del villano es 0 aquí
             //levelUnlocker.UnlockLevels(currentDetectiveLevel, 0);
             SceneManager.LoadScene(victorySceneName);
-            GuardarDatos.Instancia.GuardarProgreso(X);
         }
         else
         {

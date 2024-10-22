@@ -11,11 +11,13 @@ public class TimeController : MonoBehaviour
 
     private float restante;
     private bool enMarcha;
+    private DestruirPistasVillano pistasVillano;
 
     private void Awake()
     {
         restante = (min * 60) + seg;
         enMarcha = true;
+        pistasVillano = FindObjectOfType<DestruirPistasVillano>();
     }
 
     // Update is called once per frame
@@ -27,11 +29,18 @@ public class TimeController : MonoBehaviour
             if (restante < 1)
             {
                 enMarcha = false;
+                int pistasNoDestruidas = pistasVillano.totalObjects - DestruirPistasVillano.objectsDestroyed;
+                Debug.Log("Pistas no destruidas: " + pistasNoDestruidas);
                 SceneManager.LoadScene("Pantalla Derrota Villano");
             }
             int tempMin = Mathf.FloorToInt(restante / 60);
             int TempSeg = Mathf.FloorToInt(restante % 60);
             tiempo.text = string.Format("{00:00}:{01:00}", tempMin, TempSeg);
         }
+    }
+
+    public void DetenerTiempo()
+    {
+        enMarcha = false;
     }
 }
