@@ -106,7 +106,7 @@ public class CambioEscenas : MonoBehaviour
     public void CambiarEscena(int a)
     {
         SceneManager.LoadScene(a);
-   
+
     }
 
     public void EventoSkip(int a)
@@ -210,7 +210,7 @@ public class CambioEscenas : MonoBehaviour
         SceneManager.LoadScene("Cutscene Derrota D");
     }
 
-    public void C1D ()
+    public void C1D()
     {
         SceneManager.LoadScene("Cutscene Intro Detective");
     }
