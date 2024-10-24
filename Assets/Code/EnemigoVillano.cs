@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Unity.Services.Analytics;
+using Unity.VisualScripting;
 
 public class EnemigoVillano : MonoBehaviour
 {
@@ -66,8 +68,22 @@ public class EnemigoVillano : MonoBehaviour
             ComprobarClics();
         }
 
-        if (Entrada && isHolding)
+        if (Entrada && isHolding && !SceneManager.GetActiveScene().name.Contains("Cutscene"))
         {
+            CambioEscenas cambioEscenas = FindObjectOfType<CambioEscenas>();
+            int nivelActual = cambioEscenas.Nivel;
+            string currentSection = cambioEscenas.section;
+
+            Unity.Services.Analytics.CustomEvent gameOverEvent = new Unity.Services.Analytics.CustomEvent("GameOverVillano")
+            {
+                { "level", nivelActual },
+                { "busted", true },
+                { "section", currentSection }
+            };
+            AnalyticsService.Instance.RecordEvent(gameOverEvent);
+
+            Debug.Log("GameOver: Level " + nivelActual + ", Section: " + currentSection + ", Busted: true");
+
             Debug.Log("Cambiando a la escena CutsceneDerrotaVillano B");
             SceneManager.LoadScene("CutsceneDerrotaVillano B");
         }
@@ -137,5 +153,3 @@ public class EnemigoVillano : MonoBehaviour
         Destroy(pista);
     }
 }
-
-

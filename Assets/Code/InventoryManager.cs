@@ -15,6 +15,8 @@ public class InventoryManager : MonoBehaviour
     public Button changeSceneButton; // Referencia al botón de cambio de escena
     private bool isFull = false;
 
+    public bool InfoClueUsed { get; private set; } = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -75,6 +77,7 @@ public class InventoryManager : MonoBehaviour
     public Image fotoPista;
     public TMP_Text namePista;
     public TMP_Text descriptionPista;
+
     public void abrirInfo(int pista)
     {
         Debug.Log("ClueInventory: " + inventoryName[pista]);
@@ -90,5 +93,7 @@ public class InventoryManager : MonoBehaviour
         fotoPista.sprite = inventorySlots[pista].sprite;
         namePista.text = inventoryName[pista];
         descriptionPista.text = inventoryDescrip[pista];
+
+        InfoClueUsed = true;
     }
 }

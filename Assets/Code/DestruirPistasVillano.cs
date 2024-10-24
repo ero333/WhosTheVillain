@@ -29,9 +29,10 @@ public class DestruirPistasVillano : MonoBehaviour
         if (objectsDestroyed >= totalObjects)
         {
             button.SetActive(true);
-            timeController.DetenerTiempo();
+            //timeController.DetenerTiempo(false); // False para que no registre como Game Over
         }
     }
+
 
     void UpdateObjectCounterText()
     {

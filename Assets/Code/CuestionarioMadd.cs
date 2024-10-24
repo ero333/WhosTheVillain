@@ -1,3 +1,4 @@
+using Unity.Services.Analytics;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -86,22 +87,39 @@ public class Cuestionario : MonoBehaviour
         string victorySceneName = victoryScene;
         string defeatSceneName = defeatScene;
 
-        if (respuestasCorrectas == preguntas.Length)
+        bool levelCompleted = respuestasCorrectas == preguntas.Length;
+
+        if (levelCompleted)
         {
             GuardarDatos.Instancia.GuardarProgreso(NivelAGuardar);
-            // Guardar progreso y desbloquear niveles
-            //int currentVillainLevel = GetCurrentVillainLevel();
-            //int currentDetectiveLevel = GetCurrentDetectiveLevel();
-
             PlayerPrefs.SetInt("CurrentLevel", NivelAGuardar);
             PlayerPrefs.Save();
 
-            //saveSystem.SaveProgress(currentDetectiveLevel, currentVillainLevel);
-            //levelUnlocker.UnlockLevels(currentDetectiveLevel, currentVillainLevel);
+            // Enviar evento LevelComplete
+            Unity.Services.Analytics.CustomEvent nombreVariable = new Unity.Services.Analytics.CustomEvent("LevelComplete")
+            {
+                { "level", NivelAGuardar }, // Asumiendo que NivelAGuardar corresponde al nivel
+            };
+            AnalyticsService.Instance.RecordEvent(nombreVariable);
+            Debug.Log("LevelComplete: " + NivelAGuardar);
+
             SceneManager.LoadScene(victorySceneName);
         }
         else
         {
+            CambioEscenas cambioEscenas = FindObjectOfType<CambioEscenas>();
+            int nivelActual = cambioEscenas.Nivel;
+            string currentSection = cambioEscenas.section;
+
+            Unity.Services.Analytics.CustomEvent gameOverEvent = new Unity.Services.Analytics.CustomEvent("GameOver")
+            {
+                { "level", nivelActual },
+                { "section", currentSection }
+            };
+            AnalyticsService.Instance.RecordEvent(gameOverEvent);
+            Debug.Log("GameOver: Level " + nivelActual + ", Section: " + currentSection);
+
+
             SceneManager.LoadScene(defeatSceneName);
         }
     }
