@@ -12,8 +12,11 @@ public class CambioEscenas : MonoBehaviour
     public bool isInitialScene;
     public string numberLevel;
     Scene nivelActual;
+    public string section;
 
     public int level;
+    public int Nivel;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -63,37 +66,12 @@ public class CambioEscenas : MonoBehaviour
             Debug.Log("LevelStart: " + SceneManager.GetActiveScene().name);
             Debug.Log("level: " + level);
 
-            CustomEvent nombreVariable = new CustomEvent("LevelStart")
+            // Crear y enviar el evento LevelStart
+            CustomEvent levelStartEvent = new CustomEvent("LevelStart")
             {
                 { "level", level }
             };
-            AnalyticsService.Instance.Flush();
-        }
-
-
-        if (SceneManager.GetActiveScene().name == "Pantalla Derrota")
-        {
-            Debug.Log("GameOver: " + SceneManager.GetActiveScene().name);
-        }
-
-        if (SceneManager.GetActiveScene().name == "Pantalla Derrota Villano")
-        {
-            Debug.Log("GameOver: " + SceneManager.GetActiveScene().name);
-        }
-
-        if (SceneManager.GetActiveScene().name == "Pantalla Derrota Villano Interrogatorio")
-        {
-            Debug.Log("GameOver: " + SceneManager.GetActiveScene().name);
-        }
-
-        if (SceneManager.GetActiveScene().name == "Pantalla Victoria Villano")
-        {
-            Debug.Log("LevelComplete: " + SceneManager.GetActiveScene().name);
-        }
-
-        if (SceneManager.GetActiveScene().name == "Pantalla Victoria")
-        {
-            Debug.Log("LevelComplete: " + SceneManager.GetActiveScene().name);
+            AnalyticsService.Instance.RecordEvent(levelStartEvent);
         }
     }
 
