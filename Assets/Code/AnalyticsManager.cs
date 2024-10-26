@@ -25,7 +25,8 @@ public class AnalyticsManager : MonoBehaviour
     {
         await UnityServices.InitializeAsync();
 
-        AnalyticsService.Instance.StopDataCollection();
+        AnalyticsService.Instance.StartDataCollection();
+        //AnalyticsService.Instance.StopDataCollection();
         Debug.Log("Se inicia la recopilación de datos.");
     }
 
