@@ -1072,8 +1072,6 @@ PlayableDirector:
     value: {fileID: 95944726}
   - key: {fileID: -5299011458352550857, guid: a1e8c2448e00cd14681b52fe807a66b5, type: 2}
     value: {fileID: 1252055467}
-  - key: {fileID: 3671347799735268676, guid: a1e8c2448e00cd14681b52fe807a66b5, type: 2}
-    value: {fileID: 1060380738}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &537474023
@@ -1279,7 +1277,6 @@ GameObject:
   - component: {fileID: 1060380737}
   - component: {fileID: 1060380736}
   - component: {fileID: 1060380735}
-  - component: {fileID: 1060380738}
   m_Layer: 5
   m_Name: SaltearCinematica
   m_TagString: Untagged
@@ -1294,7 +1291,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1060380733}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.0000278, y: 1.0000278, z: 1.0000278}
   m_ConstrainProportionsScale: 0
@@ -1304,7 +1301,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -311.7, y: -197.8931}
+  m_AnchoredPosition: {x: -312.60004, y: -198.72}
   m_SizeDelta: {x: 137.3, y: 27.34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1060380735
@@ -1401,27 +1398,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1060380733}
   m_CullTransparentMesh: 1
---- !u!95 &1060380738
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1060380733}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1252055463
 GameObject:
   m_ObjectHideFlags: 0
@@ -2098,9 +2074,7 @@ MonoBehaviour:
   initialSceneName: 
   isInitialScene: 0
   numberLevel: 
-  section: 
   level: 0
-  Nivel: 0
 --- !u!4 &2032877070
 Transform:
   m_ObjectHideFlags: 0

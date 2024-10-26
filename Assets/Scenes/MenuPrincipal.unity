@@ -346,9 +346,7 @@ MonoBehaviour:
   initialSceneName: 
   isInitialScene: 0
   numberLevel: 
-  section: 
   level: 0
-  Nivel: 0
 --- !u!4 &101105394
 Transform:
   m_ObjectHideFlags: 0
@@ -1103,6 +1101,7 @@ GameObject:
   - component: {fileID: 528335569}
   - component: {fileID: 528335568}
   - component: {fileID: 528335567}
+  - component: {fileID: 528335571}
   - component: {fileID: 528335572}
   m_Layer: 5
   m_Name: "Bot\xF3nContinuar"
@@ -1240,6 +1239,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 528335565}
   m_CullTransparentMesh: 1
+--- !u!114 &528335571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528335565}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9a186a48a4c6b24caa38a08358af8c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &528335572
 MonoBehaviour:
   m_ObjectHideFlags: 0
