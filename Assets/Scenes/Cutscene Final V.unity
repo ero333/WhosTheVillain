@@ -1355,6 +1355,7 @@ GameObject:
   - component: {fileID: 669901818}
   - component: {fileID: 669901817}
   - component: {fileID: 669901816}
+  - component: {fileID: 669901819}
   m_Layer: 5
   m_Name: SaltearCinematica
   m_TagString: Untagged
@@ -1369,7 +1370,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 669901814}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.0002632, y: 1.0002632, z: 1.0002632}
   m_ConstrainProportionsScale: 0
@@ -1379,7 +1380,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -312.60007, y: -198.72002}
+  m_AnchoredPosition: {x: -311.7, y: -197.9}
   m_SizeDelta: {x: 137.3, y: 27.34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &669901816
@@ -1476,6 +1477,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 669901814}
   m_CullTransparentMesh: 1
+--- !u!95 &669901819
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669901814}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &759951713
 GameObject:
   m_ObjectHideFlags: 0
@@ -1834,7 +1856,9 @@ MonoBehaviour:
   initialSceneName: 
   isInitialScene: 0
   numberLevel: 
+  section: 
   level: 0
+  Nivel: 0
 --- !u!4 &955040705
 Transform:
   m_ObjectHideFlags: 0
@@ -2786,6 +2810,8 @@ PlayableDirector:
     value: {fileID: 56064890}
   - key: {fileID: -2162694715676806824, guid: eaa1eb5a6ae75b447b1d33bee185a0ec, type: 2}
     value: {fileID: 1768337503}
+  - key: {fileID: -6188039996993378942, guid: eaa1eb5a6ae75b447b1d33bee185a0ec, type: 2}
+    value: {fileID: 669901819}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1575612475
