@@ -56,7 +56,13 @@ public class GuardarDatos : MonoBehaviour
     {
         int currentLevel = PlayerPrefs.GetInt("CurrentLevel", 1);
 
-        if (currentLevel <= NivelesDesbloqueados)
+        // Si currentLevel es mayor a los niveles desbloqueados, cargamos el nivel actual
+        if (currentLevel > NivelesDesbloqueados)
+        {
+            SceneManager.LoadScene(levelScenes[currentLevel]);
+        }
+        // Si currentLevel es menor o igual a los niveles desbloqueados, cargamos el siguiente nivel
+        else
         {
             if (levelScenes.ContainsKey(currentLevel + 1))
             {
@@ -67,10 +73,6 @@ public class GuardarDatos : MonoBehaviour
                 Debug.LogError("No hay una escena configurada para el siguiente nivel.");
             }
         }
-        else
-        {
-            Debug.LogError("No hay un nivel desbloqueado siguiente.");
-        }
     }
 
     private void InitializeLevelScenes()
@@ -80,6 +82,7 @@ public class GuardarDatos : MonoBehaviour
         levelScenes.Add(3, "Cutscene Intro Detective N2");
         levelScenes.Add(4, "Cutscene intro villano2");
         levelScenes.Add(5, "Cutscene Intro Detective 3");
+        levelScenes.Add(6, "Cutscene Intro Villano 3");
     }
 
 
