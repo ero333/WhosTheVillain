@@ -1072,6 +1072,8 @@ PlayableDirector:
     value: {fileID: 95944726}
   - key: {fileID: -5299011458352550857, guid: a1e8c2448e00cd14681b52fe807a66b5, type: 2}
     value: {fileID: 1252055467}
+  - key: {fileID: 2862011585648998980, guid: a1e8c2448e00cd14681b52fe807a66b5, type: 2}
+    value: {fileID: 1060380738}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &537474023
@@ -1277,6 +1279,7 @@ GameObject:
   - component: {fileID: 1060380737}
   - component: {fileID: 1060380736}
   - component: {fileID: 1060380735}
+  - component: {fileID: 1060380738}
   m_Layer: 5
   m_Name: SaltearCinematica
   m_TagString: Untagged
@@ -1398,6 +1401,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1060380733}
   m_CullTransparentMesh: 1
+--- !u!95 &1060380738
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060380733}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1252055463
 GameObject:
   m_ObjectHideFlags: 0
@@ -2074,7 +2098,9 @@ MonoBehaviour:
   initialSceneName: 
   isInitialScene: 0
   numberLevel: 
+  section: 
   level: 0
+  Nivel: 0
 --- !u!4 &2032877070
 Transform:
   m_ObjectHideFlags: 0

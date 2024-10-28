@@ -232,6 +232,7 @@ GameObject:
   - component: {fileID: 156020375}
   - component: {fileID: 156020374}
   - component: {fileID: 156020373}
+  - component: {fileID: 156020376}
   m_Layer: 5
   m_Name: SaltearCinematica
   m_TagString: Untagged
@@ -256,7 +257,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -312.6, y: -198.72}
+  m_AnchoredPosition: {x: -312.6, y: -242.8}
   m_SizeDelta: {x: 137.3, y: 27.34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &156020373
@@ -353,6 +354,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 156020371}
   m_CullTransparentMesh: 1
+--- !u!95 &156020376
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156020371}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &167165483
 GameObject:
   m_ObjectHideFlags: 0
@@ -1056,7 +1078,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 86, y: 45}
+  m_AnchoredPosition: {x: 85.99997, y: 45}
   m_SizeDelta: {x: 67.78, y: 54.350006}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &478529982
@@ -2243,8 +2265,6 @@ PlayableDirector:
     value: {fileID: 1936436553}
   - key: {fileID: -2660012540045823942, guid: 46dff146df6407a4f8e4afe026a6751c, type: 2}
     value: {fileID: 767420903}
-  - key: {fileID: -668367764660135069, guid: 46dff146df6407a4f8e4afe026a6751c, type: 2}
-    value: {fileID: 0}
   - key: {fileID: 5456140015627976030, guid: 46dff146df6407a4f8e4afe026a6751c, type: 2}
     value: {fileID: 478529982}
   - key: {fileID: -5882839604471886911, guid: 46dff146df6407a4f8e4afe026a6751c, type: 2}
@@ -2311,6 +2331,8 @@ PlayableDirector:
     value: {fileID: 1867677206}
   - key: {fileID: -3877245045107852950, guid: 46dff146df6407a4f8e4afe026a6751c, type: 2}
     value: {fileID: 75062603}
+  - key: {fileID: -3537789772365782686, guid: 46dff146df6407a4f8e4afe026a6751c, type: 2}
+    value: {fileID: 156020376}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &931419181
