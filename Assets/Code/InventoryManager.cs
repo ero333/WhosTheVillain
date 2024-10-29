@@ -80,6 +80,12 @@ public class InventoryManager : MonoBehaviour
 
     public void abrirInfo(int pista)
     {
+        if (inventorySlots[pista].sprite == null)
+        {
+            Debug.Log("No hay pista en este slot.");
+            return; // Salir del método si el slot está vacío
+        }
+
         Debug.Log("ClueInventory: " + inventoryName[pista]);
 
         // Desactivar cualquier objeto `pista recolectada` activo
