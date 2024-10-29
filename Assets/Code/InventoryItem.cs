@@ -23,6 +23,8 @@ public class InventoryItem : MonoBehaviour
     public Image flashEffect;
     public float flashDuration = 0.1f;
 
+    private bool isCollected = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,8 +48,11 @@ public class InventoryItem : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (isCollected) return;
+
         Debug.Log("FindClue:" + itemName);
         InventoryManager.Instance.AddItem(this);
+        isCollected = true;
 
         if (flashEffect != null)
         {
@@ -107,6 +112,4 @@ public class InventoryItem : MonoBehaviour
             infoPanel.SetActive(false);
         }
     }
-
-
 }
