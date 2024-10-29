@@ -54,11 +54,11 @@ public class TimeController : MonoBehaviour
 
     public void DetenerTiempo(bool gameOverPorTiempo)
     {
-        Time.timeScale = 0;
+        enMarcha = false; // Detiene la cuenta regresiva sin pausar el juego completo
 
         if (gameOverPorTiempo)
         {
-            RegistrarEventoGameOver(true);
+            RegistrarEventoGameOver(true); // Solo registra Game Over si fue por quedarse sin tiempo
         }
     }
 
