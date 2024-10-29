@@ -11,7 +11,7 @@ public class Cuestionario : MonoBehaviour
         public string textoDescripcion;
         public string textoPregunta;
         public string[] respuestas;
-        public int respuestaCorrecta;
+        public int[] respuestasCorrectas; // Cambiado a un array para múltiples respuestas correctas
     }
 
     public Pregunta[] preguntas;
@@ -30,14 +30,8 @@ public class Cuestionario : MonoBehaviour
 
     public int NivelAGuardar;
 
-    //private SaveSystem saveSystem;
-    //private LevelUnlocker levelUnlocker;
-
     void Start()
     {
-        //saveSystem = FindObjectOfType<SaveSystem>();
-        //levelUnlocker = FindObjectOfType<LevelUnlocker>();
-
         MostrarPregunta();
         botonSiguiente.onClick.AddListener(MostrarRespuestas);
     }
@@ -64,9 +58,10 @@ public class Cuestionario : MonoBehaviour
             botonesRespuestas[i].onClick.AddListener(() => VerificarRespuesta(index));
         }
     }
+
     void VerificarRespuesta(int index)
     {
-        if (index == preguntas[preguntaActual].respuestaCorrecta)
+        if (System.Array.Exists(preguntas[preguntaActual].respuestasCorrectas, respuesta => respuesta == index))
         {
             respuestasCorrectas++;
         }
@@ -95,10 +90,9 @@ public class Cuestionario : MonoBehaviour
             PlayerPrefs.SetInt("CurrentLevel", NivelAGuardar);
             PlayerPrefs.Save();
 
-            // Enviar evento LevelComplete
             Unity.Services.Analytics.CustomEvent nombreVariable = new Unity.Services.Analytics.CustomEvent("LevelComplete")
             {
-                { "level", NivelAGuardar }, // Asumiendo que NivelAGuardar corresponde al nivel
+                { "level", NivelAGuardar }
             };
             AnalyticsService.Instance.RecordEvent(nombreVariable);
             Debug.Log("LevelComplete: " + NivelAGuardar);
@@ -119,18 +113,7 @@ public class Cuestionario : MonoBehaviour
             AnalyticsService.Instance.RecordEvent(gameOverEvent);
             Debug.Log("GameOver: Level " + nivelActual + ", Section: " + currentSection);
 
-
             SceneManager.LoadScene(defeatSceneName);
         }
     }
-
-    /*private int GetCurrentVillainLevel()
-    {
-        return PlayerPrefs.GetInt("VillainLevel", 0);
-    }
-
-    private int GetCurrentDetectiveLevel()
-    {
-        return PlayerPrefs.GetInt("DetectiveLevel", 0);
-    }*/
 }
