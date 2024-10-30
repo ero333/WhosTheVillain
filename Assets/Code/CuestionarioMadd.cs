@@ -90,11 +90,11 @@ public class Cuestionario : MonoBehaviour
             PlayerPrefs.SetInt("CurrentLevel", NivelAGuardar);
             PlayerPrefs.Save();
 
-            Unity.Services.Analytics.CustomEvent nombreVariable = new Unity.Services.Analytics.CustomEvent("LevelComplete")
+            Unity.Services.Analytics.CustomEvent levelcompleteEvent = new Unity.Services.Analytics.CustomEvent("LevelComplete")
             {
                 { "level", NivelAGuardar }
             };
-            AnalyticsService.Instance.RecordEvent(nombreVariable);
+            AnalyticsService.Instance.RecordEvent(levelcompleteEvent);
             Debug.Log("LevelComplete: " + NivelAGuardar);
 
             SceneManager.LoadScene(victorySceneName);

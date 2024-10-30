@@ -74,7 +74,7 @@ public class TimeController : MonoBehaviour
         int nivelActual = cambioEscenas.Nivel;
         hasLostLevel = true;
 
-        Unity.Services.Analytics.CustomEvent gameOverEvent = new Unity.Services.Analytics.CustomEvent("GameOverVillano")
+        Unity.Services.Analytics.CustomEvent gameOverEvent = new Unity.Services.Analytics.CustomEvent("GameOver")
     {
         { "level", nivelActual },
         { "time", tiempoTotal },

@@ -230,13 +230,13 @@ public class InformeScript : MonoBehaviour
             //saveSystem.SaveProgress(currentDetectiveLevel, 0); // Asumiendo que el nivel del villano es 0 aquí
             //levelUnlocker.UnlockLevels(currentDetectiveLevel, 0);
 
-            Unity.Services.Analytics.CustomEvent nombreVariable = new Unity.Services.Analytics.CustomEvent("LevelComplete")
+            Unity.Services.Analytics.CustomEvent levelcompleteEvent = new Unity.Services.Analytics.CustomEvent("LevelComplete")
             {
                 { "level", X },
                 { "InfoClue", InventoryManager.Instance.InfoClueUsed },
             };
 
-            AnalyticsService.Instance.RecordEvent(nombreVariable);
+            AnalyticsService.Instance.RecordEvent(levelcompleteEvent);
             Debug.Log("LevelComplete: " + X);
             Debug.Log("LevelComplete. InfoClueUsed: " + InventoryManager.Instance.InfoClueUsed);
 

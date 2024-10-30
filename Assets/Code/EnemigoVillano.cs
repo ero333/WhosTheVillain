@@ -74,7 +74,7 @@ public class EnemigoVillano : MonoBehaviour
             int nivelActual = cambioEscenas.Nivel;
             string currentSection = cambioEscenas.section;
 
-            Unity.Services.Analytics.CustomEvent gameOverEvent = new Unity.Services.Analytics.CustomEvent("GameOverVillano")
+            Unity.Services.Analytics.CustomEvent gameOverEvent = new Unity.Services.Analytics.CustomEvent("GameOver")
             {
                 { "level", nivelActual },
                 { "busted", true },
