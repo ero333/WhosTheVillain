@@ -8,18 +8,15 @@ public class InventoryItem : MonoBehaviour
     public string itemName;
     [TextArea(4, 6)] public string itemDescrip;
     public Sprite itemIcon;
-    public GameObject infoPanel;
-    public Image itemImage;
-    public Text itemText;
-    public Button closeButton;
-    public Button backbuttom;
+
+    public Button backButton;
 
     public GameObject subScenario;
     public GameObject mainScenario;
 
     private static int contador;
     public Button botoninforme;
-    
+
     public Image flashEffect;
     public float flashDuration = 0.1f;
 
@@ -28,21 +25,13 @@ public class InventoryItem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (flashEffect != null )
+        if (flashEffect != null)
         {
-            flashEffect.gameObject.SetActive( false );
+            flashEffect.gameObject.SetActive(false);
         }
-        if (closeButton != null )
+        if (backButton != null)
         {
-            closeButton.onClick.AddListener(CloseInfoPanel);
-        }
-        if (infoPanel != null )
-        {
-            infoPanel.SetActive( false );
-        }
-        if (backbuttom != null)
-        {
-            backbuttom.onClick.AddListener(OnBackButtonClicked);
+            backButton.onClick.AddListener(OnBackButtonClicked);
         }
     }
 
@@ -63,38 +52,25 @@ public class InventoryItem : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
     }
 
     private IEnumerator ShowFlashEffect()
     {
-        flashEffect.gameObject.SetActive ( true );
+        flashEffect.gameObject.SetActive(true);
         yield return new WaitForSeconds(flashDuration);
-        flashEffect.gameObject.SetActive ( false );
+        flashEffect.gameObject.SetActive(false);
         Destroy(gameObject);
     }
 
     private void ShowInfoPanel()
     {
-        if (infoPanel != null)
-        {
-            if (itemImage != null)
-            {
-                itemImage.sprite = itemIcon;
-            }
-            if (itemText != null)
-            {
-                itemText.text = itemName;
-            }
-
-            infoPanel.SetActive(true);
-        }
+        InventoryManager.Instance.abrirInfoPanel(itemName, itemDescrip, itemIcon);
     }
 
     public void OnBackButtonClicked()
     {
         Debug.Log("Back button clicked");
-        CloseInfoPanel();
+        InventoryManager.Instance.CerrarInfoPanel();
         if (subScenario != null)
         {
             subScenario.SetActive(false);
@@ -102,14 +78,6 @@ public class InventoryItem : MonoBehaviour
         if (mainScenario != null)
         {
             mainScenario.SetActive(true);
-        }
-    }
-
-    private void CloseInfoPanel()
-    {
-        if (infoPanel != null)
-        {
-            infoPanel.SetActive(false);
         }
     }
 }

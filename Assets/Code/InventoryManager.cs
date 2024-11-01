@@ -2,9 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using TMPro;
-//using static UnityEditor.Progress;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -50,7 +48,6 @@ public class InventoryManager : MonoBehaviour
                 inventoryDescrip[i] = item.itemDescrip;
                 CheckInventoryFull(); // Comprobar si el inventario está lleno
                 break;
-
             }
         }
     }
@@ -95,11 +92,24 @@ public class InventoryManager : MonoBehaviour
             pistaRecolectada.SetActive(false);
         }
 
+        abrirInfoPanel(inventoryName[pista], inventoryDescrip[pista], inventorySlots[pista].sprite);
+    }
+
+    public void abrirInfoPanel(string itemName, string itemDescrip, Sprite itemIcon)
+    {
         Info.SetActive(true);
-        fotoPista.sprite = inventorySlots[pista].sprite;
-        namePista.text = inventoryName[pista];
-        descriptionPista.text = inventoryDescrip[pista];
+        fotoPista.sprite = itemIcon;
+        namePista.text = itemName;
+        descriptionPista.text = itemDescrip;
 
         InfoClueUsed = true;
+    }
+
+    public void CerrarInfoPanel()
+    {
+        if (Info != null)
+        {
+            Info.SetActive(false);
+        }
     }
 }
