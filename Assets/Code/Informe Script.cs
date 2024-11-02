@@ -31,7 +31,7 @@ public class InformeScript : MonoBehaviour
     public Text motiveText;
     public string[] motives;
     private int motiveIndex = 0;
-    private string initialMotiveText = "¿Por qué lo hizo?"; //Texto inicial
+    public string initialMotiveText = "¿Por qué lo hizo?"; //Texto inicial
 
     // Hipótesis
     public Text hypothesisText;
