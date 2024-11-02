@@ -22,9 +22,13 @@ public class EnemigoVillano : MonoBehaviour
 
     public bool isHolding = false;
 
+    private AnalyticsManager analyticsManager;
+    public int tiempoTranscurrido;
+
     // Start is called before the first frame update
     void Start()
     {
+        analyticsManager = FindObjectOfType<AnalyticsManager>();
         InicializarEstado();
     }
 
@@ -74,15 +78,19 @@ public class EnemigoVillano : MonoBehaviour
             int nivelActual = cambioEscenas.Nivel;
             string currentSection = cambioEscenas.section;
 
+            analyticsManager.StopCounting();
+            int timeTranscurrido = analyticsManager.GetTimeElapsed();
+
             Unity.Services.Analytics.CustomEvent gameOverEvent = new Unity.Services.Analytics.CustomEvent("GameOver")
             {
                 { "level", nivelActual },
                 { "busted", true },
-                { "section", currentSection }
+                { "section", currentSection },
+                { "time", timeTranscurrido }
             };
             AnalyticsService.Instance.RecordEvent(gameOverEvent);
 
-            Debug.Log("GameOver: Level " + nivelActual + ", Section: " + currentSection + ", Busted: true");
+            Debug.Log("GameOver: Level " + nivelActual + ", Section: " + currentSection + ", Busted: true" + ", time:" + timeTranscurrido);
 
             Debug.Log("Cambiando a la escena CutsceneDerrotaVillano B");
             SceneManager.LoadScene("CutsceneDerrotaVillano B");

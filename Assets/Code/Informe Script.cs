@@ -53,6 +53,9 @@ public class InformeScript : MonoBehaviour
     public string victoryScene;
     public string defeatScene;
 
+    private AnalyticsManager analyticsManager;
+    public int timeTranscurrido;
+
     // Botón enviar informe
     public Button submitButton;
 
@@ -93,6 +96,7 @@ public class InformeScript : MonoBehaviour
         //saveSystem = FindObjectOfType<SaveSystem>();
         //levelUnlocker = FindObjectOfType<LevelUnlocker>();
 
+        analyticsManager = FindObjectOfType<AnalyticsManager>();
         evidenceIndices = new int[evidenceImages.Length];
         for (int i = 0; i < evidenceImages.Length; i++)
         {
@@ -212,7 +216,7 @@ public class InformeScript : MonoBehaviour
     {
         string victorySceneName = victoryScene;
         string defeatSceneName = defeatScene;
-
+        
 
         if (Evidencia1Correcta && Evidencia2Correcta && Evidencia3Correcta &&
             suspectImage.sprite.name == correctSuspect &&
@@ -229,15 +233,18 @@ public class InformeScript : MonoBehaviour
             // Guardar el progreso y desbloquear niveles
             //saveSystem.SaveProgress(currentDetectiveLevel, 0); // Asumiendo que el nivel del villano es 0 aquí
             //levelUnlocker.UnlockLevels(currentDetectiveLevel, 0);
+            analyticsManager.StopCounting();
+            int timeTranscurrido = analyticsManager.GetTimeElapsed();
 
             Unity.Services.Analytics.CustomEvent levelcompleteEvent = new Unity.Services.Analytics.CustomEvent("LevelComplete")
             {
                 { "level", X },
                 { "InfoClue", InventoryManager.Instance.InfoClueUsed },
+                { "time", timeTranscurrido }
             };
 
             AnalyticsService.Instance.RecordEvent(levelcompleteEvent);
-            Debug.Log("LevelComplete: " + X + " ,InfoClueUsed: " + InventoryManager.Instance.InfoClueUsed);
+            Debug.Log("LevelComplete: " + X + " ,InfoClueUsed: " + InventoryManager.Instance.InfoClueUsed + ", time:" + timeTranscurrido);
 
             SceneManager.LoadScene(victorySceneName);
         }
@@ -247,17 +254,21 @@ public class InformeScript : MonoBehaviour
             string suspect = suspectNames[suspectIndex];
             int motive = motiveIndex + 1;
 
+            analyticsManager.StopCounting();
+            int timeTranscurrido = analyticsManager.GetTimeElapsed();
+
             Unity.Services.Analytics.CustomEvent gameOverEvent = new Unity.Services.Analytics.CustomEvent("GameOver")
             {
               { "level", X },
               { "suspect", suspect },
               { "motive", motive },
               { "clues", combinacionPistas}, // Incluir la combinación de pistas
-              { "InfoClue", InventoryManager.Instance.InfoClueUsed }
+              { "InfoClue", InventoryManager.Instance.InfoClueUsed },
+              { "time", timeTranscurrido }
             };
 
             AnalyticsService.Instance.RecordEvent(gameOverEvent);
-            Debug.Log("GameOver: " + X + ", pistas: " + combinacionPistas + ", sospechoso: " + suspect + ", motivo: " + motive + ", InfoClueUsed: " + InventoryManager.Instance.InfoClueUsed);
+            Debug.Log("GameOver: " + X + ", pistas: " + combinacionPistas + ", sospechoso: " + suspect + ", motivo: " + motive + ", InfoClueUsed: " + InventoryManager.Instance.InfoClueUsed + ", time:" + timeTranscurrido);
 
             SceneManager.LoadScene(defeatSceneName);
         }

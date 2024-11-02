@@ -17,6 +17,9 @@ public class TimeController : MonoBehaviour
 
     private bool hasLostLevel = false;
 
+    private AnalyticsManager analyticsManager;
+    public int timeTranscurrido;
+
     private void Awake()
     {
         restante = (min * 60) + seg;
@@ -27,6 +30,7 @@ public class TimeController : MonoBehaviour
 
     void Start()
     {
+        analyticsManager = FindObjectOfType<AnalyticsManager>();
         hasLostLevel = false;
     }
 
@@ -74,16 +78,20 @@ public class TimeController : MonoBehaviour
         int nivelActual = cambioEscenas.Nivel;
         hasLostLevel = true;
 
+        analyticsManager.StopCounting();
+        int timeTranscurrido = analyticsManager.GetTimeElapsed();
+
         Unity.Services.Analytics.CustomEvent gameOverEvent = new Unity.Services.Analytics.CustomEvent("GameOver")
     {
         { "level", nivelActual },
         { "time", tiempoTotal },
         { "timeout", timeout },
         { "section", currentSection },
+        { "time", timeTranscurrido}
     };
 
         AnalyticsService.Instance.RecordEvent(gameOverEvent);
-        Debug.Log("GameOver: tiempo " + tiempoTotal + ", timeout: " + timeout + ", level: " + nivelActual + ", section: " + currentSection);
+        Debug.Log("GameOver: tiempo " + tiempoTotal + ", timeout: " + timeout + ", level: " + nivelActual + ", section: " + currentSection + ", time:" + timeTranscurrido);
 
         gameOverRegistered = true; // Marca el Game Over como registrado
 

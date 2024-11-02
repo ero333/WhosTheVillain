@@ -72,6 +72,8 @@ public class CambioEscenas : MonoBehaviour
                 { "level", level }
             };
             AnalyticsService.Instance.RecordEvent(levelStartEvent);
+
+            AnalyticsManager.Instance.StartCounting();
         }
     }
 

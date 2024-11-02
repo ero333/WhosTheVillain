@@ -30,8 +30,12 @@ public class Cuestionario : MonoBehaviour
 
     public int NivelAGuardar;
 
+    private AnalyticsManager analyticsManager;
+    public int timeTranscurrido;
+
     void Start()
     {
+        analyticsManager = FindObjectOfType<AnalyticsManager>();
         MostrarPregunta();
         botonSiguiente.onClick.AddListener(MostrarRespuestas);
     }
@@ -90,12 +94,16 @@ public class Cuestionario : MonoBehaviour
             PlayerPrefs.SetInt("CurrentLevel", NivelAGuardar);
             PlayerPrefs.Save();
 
+            analyticsManager.StopCounting();
+            int timeTranscurrido = analyticsManager.GetTimeElapsed();
+
             Unity.Services.Analytics.CustomEvent levelcompleteEvent = new Unity.Services.Analytics.CustomEvent("LevelComplete")
             {
-                { "level", NivelAGuardar }
+                { "level", NivelAGuardar },
+                { "time", timeTranscurrido }
             };
             AnalyticsService.Instance.RecordEvent(levelcompleteEvent);
-            Debug.Log("LevelComplete: " + NivelAGuardar);
+            Debug.Log("LevelComplete: " + NivelAGuardar + ", time:" + timeTranscurrido);
 
             SceneManager.LoadScene(victorySceneName);
         }
@@ -105,13 +113,17 @@ public class Cuestionario : MonoBehaviour
             int nivelActual = cambioEscenas.Nivel;
             string currentSection = cambioEscenas.section;
 
+            analyticsManager.StopCounting();
+            int timeTranscurrido = analyticsManager.GetTimeElapsed();
+
             Unity.Services.Analytics.CustomEvent gameOverEvent = new Unity.Services.Analytics.CustomEvent("GameOver")
             {
                 { "level", nivelActual },
-                { "section", currentSection }
+                { "section", currentSection },
+                { "time", timeTranscurrido }
             };
             AnalyticsService.Instance.RecordEvent(gameOverEvent);
-            Debug.Log("GameOver: Level " + nivelActual + ", Section: " + currentSection);
+            Debug.Log("GameOver: Level " + nivelActual + ", Section: " + currentSection + ", time:" + timeTranscurrido);
 
             SceneManager.LoadScene(defeatSceneName);
         }
