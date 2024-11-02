@@ -9,6 +9,7 @@ public class DestruirPistasVillano : MonoBehaviour
     public int totalObjects = 5;
     public GameObject button;
     public Text objectCounterText;
+    public GameObject Policia;
 
     private TimeController timeController;
 
@@ -30,6 +31,11 @@ public class DestruirPistasVillano : MonoBehaviour
         {
             button.SetActive(true);
             timeController.DetenerTiempo(false); // False para que no registre como Game Over
+
+            if (Policia != null)
+            {
+                Policia.SetActive(false);
+            }
         }
     }
 
