@@ -5226,7 +5226,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1984560876}
         m_TargetAssemblyTypeName: InterrogatoryManager, Assembly-CSharp
-        m_MethodName: MostrarCajaPreguntas
+        m_MethodName: VolverASospechos
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5616,9 +5616,7 @@ MonoBehaviour:
   - {fileID: 614124312}
   BotonesSospechos: {fileID: 906432614}
   BotonCambioEscena: {fileID: 1604631374}
-  preguntasRestantes: 3
-  entrevistasRequeridas: 4
-  Entrevistas: 0
+  BotonSiguiente: {fileID: 0}
 --- !u!4 &1984560877
 Transform:
   m_ObjectHideFlags: 0
