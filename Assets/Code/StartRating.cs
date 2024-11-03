@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
+using Unity.Services.Analytics;
+using System.Collections.Generic;
 
 public class StarRating : MonoBehaviour
 {
@@ -9,8 +11,11 @@ public class StarRating : MonoBehaviour
     public Button submitButton; // Asigna el botón de enviar en el Inspector
     public RatingSection[] ratingSections; // Asigna los apartados en el Inspector
 
+    private GuardarDatos guardarDatos;
+
     void Start()
     {
+        guardarDatos = FindObjectOfType<GuardarDatos>();
         reviewButton.gameObject.SetActive(false);
 
         if (PlayerPrefs.GetInt("Level1Completed", 0) == 1)
@@ -33,12 +38,22 @@ public class StarRating : MonoBehaviour
 
     private void OnSubmitClick()
     {
-        foreach (RatingSection section in ratingSections)
+
+        string logMessage = $"Rate: Art: {ratingSections[0].rating}, Story: {ratingSections[1].rating}, Fun: {ratingSections[2].rating}";
+
+        Debug.Log(logMessage);
+
+        Unity.Services.Analytics.CustomEvent rateEvent = new Unity.Services.Analytics.CustomEvent("Rate")
         {
-            Debug.Log("Rate:" + section.sectionName + " Puntuación: " + section.rating);
-            // Aquí puedes añadir el código para enviar la puntuación a un servidor o guardarla localmente.
-        }
+            { "art", ratingSections[0].rating },
+            { "story", ratingSections[1].rating },
+            { "fun", ratingSections[2].rating },
+            //{ "level", highestLevel }
+        };
+
+        AnalyticsService.Instance.RecordEvent(rateEvent);
     }
+
 
     public void ResetRatings()
     {

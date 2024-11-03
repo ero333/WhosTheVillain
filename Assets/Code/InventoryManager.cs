@@ -83,8 +83,6 @@ public class InventoryManager : MonoBehaviour
             return; // Salir del método si el slot está vacío
         }
 
-        Debug.Log("ClueInventory: " + inventoryName[pista]);
-
         // Desactivar cualquier objeto `pista recolectada` activo
         GameObject[] pistaRecolectadas = GameObject.FindGameObjectsWithTag("PistaRecolectada");
         foreach (GameObject pistaRecolectada in pistaRecolectadas)

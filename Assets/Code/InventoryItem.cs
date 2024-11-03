@@ -39,7 +39,7 @@ public class InventoryItem : MonoBehaviour
     {
         if (isCollected) return;
 
-        Debug.Log("FindClue:" + itemName);
+        Debug.Log("FindClue");
         InventoryManager.Instance.AddItem(this);
         isCollected = true;
 
