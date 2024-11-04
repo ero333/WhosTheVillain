@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -24,6 +23,11 @@ public class Timer : MonoBehaviour
         float minutes = Mathf.FloorToInt(timeElapsed / 60);
         float seconds = Mathf.FloorToInt(timeElapsed % 60);
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+
+    public int GetElapsedTime() // Nuevo método para obtener el tiempo
+    {
+        return Mathf.FloorToInt(timeElapsed); // Devuelve el tiempo en segundos como un entero
     }
 
     void OnDisable()

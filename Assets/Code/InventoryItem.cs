@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Unity.Services.Analytics;
 
 public class InventoryItem : MonoBehaviour
 {
     public string itemName;
+    public string clueName; // Nueva variable para el nombre de la pista
     [TextArea(4, 6)] public string itemDescrip;
     public Sprite itemIcon;
 
@@ -14,12 +16,12 @@ public class InventoryItem : MonoBehaviour
     public GameObject subScenario;
     public GameObject mainScenario;
 
-    private static int contador;
     public Button botoninforme;
 
     public Image flashEffect;
     public float flashDuration = 0.1f;
 
+    private static int contador;
     private bool isCollected = false;
 
     // Start is called before the first frame update
@@ -39,7 +41,33 @@ public class InventoryItem : MonoBehaviour
     {
         if (isCollected) return;
 
-        Debug.Log("FindClue");
+        // Obtener el tiempo transcurrido
+        Timer timer = FindObjectOfType<Timer>();
+        int tiempo = timer.GetElapsedTime();
+
+        // Obtener el nivel actual
+        int currentLevel = PlayerPrefs.GetInt("CurrentLevel", 1);
+
+        // Incrementar el contador de orden
+        contador++;
+
+        Debug.Log("Tiempo transcurrido: " + tiempo + " segundos.");
+        Debug.Log("Nivel actual: " + currentLevel);
+        Debug.Log("Orden de recolección: " + contador);
+        Debug.Log("Nombre de la pista: " + clueName); // Agregar un log para el nombre de la pista
+
+        // Crear el evento de análisis
+        Unity.Services.Analytics.CustomEvent findclueEvent = new Unity.Services.Analytics.CustomEvent("FindClue")
+        {
+            { "Time", tiempo },
+            { "Order", contador },
+            { "LevelD", currentLevel },
+            { "Clue", clueName }
+        };
+
+        AnalyticsService.Instance.RecordEvent(findclueEvent);
+        Debug.Log("FindClue: " + "time: " + tiempo + ", Order: " + contador + ", LevelD: " + currentLevel + ", Clue: " + clueName);
+
         InventoryManager.Instance.AddItem(this);
         isCollected = true;
 
