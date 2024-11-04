@@ -3,32 +3,26 @@ using UnityEngine.Playables;
 
 public class TimelineController : MonoBehaviour
 {
-    public PlayableDirector timeline1; // Arrastra aquí tu primera timeline
-    public PlayableDirector timeline2; // Arrastra aquí tu segunda timeline
-
-    private bool timeline1Finished = false;
-    private bool timeline2Started = false;
+    public PlayableDirector timeline0;
+    public PlayableDirector timeline1;
+    public PlayableDirector timeline2;
 
     void Start()
     {
         // Inicia la primera timeline
-        timeline1.Play();
+        timeline0.Play();
+        timeline0.stopped += OnTimeline0Finished; // Suscribirse al evento
     }
 
-    void Update()
+    private void OnTimeline0Finished(PlayableDirector director)
     {
-        // Verifica si la primera timeline ha terminado
-        if (timeline1.state == PlayState.Paused && !timeline1Finished)
-        {
-            timeline1Finished = true; // Marca que la primera timeline ha terminado
-            timeline2.Play(); // Reproduce la segunda timeline
-        }
+        timeline1.Play();
+        timeline1.stopped += OnTimeline1Finished; // Suscribirse al evento
+    }
 
-        // Verifica si la segunda timeline ha terminado
-        if (timeline2.state == PlayState.Paused && !timeline2Started)
-        {
-            timeline2Started = true; // Marca que la segunda timeline ha terminado
-            // Aquí puedes añadir cualquier lógica adicional que necesites tras finalizar la segunda timeline
-        }
+    private void OnTimeline1Finished(PlayableDirector director)
+    {
+        timeline2.Play();
+        // No es necesario suscribirse aquí a menos que necesites más lógica.
     }
 }
