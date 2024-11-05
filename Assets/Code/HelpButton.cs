@@ -42,7 +42,7 @@ public class HelpButton : MonoBehaviour
 
         if (!informeScript.Evidencia1Correcta || !informeScript.Evidencia2Correcta || !informeScript.Evidencia3Correcta)
         {
-            message = "Tienes una pista errónea.";
+            message = "Tienes una evidencia errónea.";
         }
         else if (!informeScript.SospechosoCorrecto)
         {
