@@ -18,7 +18,7 @@ public class CharacterButton : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("Pointer entered on " + gameObject.name);
+        //Debug.Log("Pointer entered on " + gameObject.name);
         descriptionText.text = characterDescription;
         descriptionText.enabled = true;
         descriptionBackground.enabled = true; // Activar el fondo
@@ -26,14 +26,14 @@ public class CharacterButton : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        Debug.Log("Pointer exited from " + gameObject.name);
+        //Debug.Log("Pointer exited from " + gameObject.name);
         descriptionText.enabled = false;
         descriptionBackground.enabled = false; // Desactivar el fondo
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("Pointer clicked on " + gameObject.name);
+        //Debug.Log("Pointer clicked on " + gameObject.name);
         descriptionText.enabled = false;
         descriptionBackground.enabled = false; // Desactivar el fondo
         button.interactable = false; // Deshabilitar el botón para que no se pueda hacer click otra vez
