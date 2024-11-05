@@ -46,7 +46,10 @@ public class TimeController : MonoBehaviour
             {
                 enMarcha = false;
                 int pistasNoDestruidas = pistasVillano.totalObjects - DestruirPistasVillano.objectsDestroyed;
-                Debug.Log("Pistas no destruidas: " + pistasNoDestruidas);
+                //Debug.Log("Pistas no destruidas: " + pistasNoDestruidas);
+
+                RegistrarEventoMissingClue();
+
                 RegistrarEventoGameOver(true);
                 SceneManager.LoadScene("Pantalla Derrota Villano");
             }
@@ -99,6 +102,40 @@ public class TimeController : MonoBehaviour
         if (timeout)
         {
             SceneManager.LoadScene("Pantalla Derrota");
+        }
+    }
+
+    private void RegistrarEventoMissingClue()
+    {
+        int currentLevel = PlayerPrefs.GetInt("CurrentLevel", 1);
+        List<string> cluesMissing = new List<string>();
+
+        // Obtener todas las pistas en la escena
+        DestruirPistasVillano[] pistas = FindObjectsOfType<DestruirPistasVillano>();
+
+        // Recoger las pistas que no se destruyeron
+        foreach (DestruirPistasVillano pista in pistas)
+        {
+            if (pista != null && pista.gameObject.activeInHierarchy) // Si la pista está activa, no se ha destruido
+            {
+                cluesMissing.Add(pista.clue); // Agregar el nombre de la pista no destruida
+            }
+        }
+
+        // Enviar un evento por cada pista no destruida
+        foreach (string clue in cluesMissing)
+        {
+            // Crear el evento y registrar los datos para cada pista
+            Unity.Services.Analytics.CustomEvent missingClueEvent = new Unity.Services.Analytics.CustomEvent("MissingClue")
+        {
+            {"levelV", currentLevel},
+            {"clue", clue} // Registrar solo la pista específica
+        };
+
+            AnalyticsService.Instance.RecordEvent(missingClueEvent);
+
+            // Imprimir en consola el mensaje deseado
+            Debug.Log($"MissingClue: levelV: {currentLevel}, clue: \"{clue}\"");
         }
     }
 }

@@ -11,6 +11,8 @@ public class DestruirPistasVillano : MonoBehaviour
     public Text objectCounterText;
     public GameObject Policia;
 
+    public string clue;
+
     private TimeController timeController;
 
     // Start is called before the first frame update
