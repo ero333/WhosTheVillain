@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using Unity.Services.Analytics;
+using Newtonsoft.Json;
 
 public class InterrogatoryManager : MonoBehaviour
 {
@@ -42,13 +44,24 @@ public class InterrogatoryManager : MonoBehaviour
 
     public void ActivarRespuesta(int preguntaIndex)
     {
+        //Obtener el nivel actual
+        int currentLevel = PlayerPrefs.GetInt("CurrentLevel", 1);
+
         for (int i = 0; i < botonesPreguntas.Length; i++)
         {
             botonesPreguntas[i].gameObject.SetActive(false);
             imagenCajaPreguntas.gameObject.SetActive(false);
         }
 
-        Debug.Log("Question: " + preguntaIndex);
+        Unity.Services.Analytics.CustomEvent questionEvent = new Unity.Services.Analytics.CustomEvent("Question")
+        {
+            {"levelD", currentLevel},
+            {"button", preguntaIndex + 1 },
+            {"suspect", personajeActual.nombre }
+        };
+
+        AnalyticsService.Instance.RecordEvent(questionEvent);
+        Debug.Log("Question: levelD: " + currentLevel + ", button: " + (preguntaIndex + 1) + ", suspect: " + personajeActual.nombre);
 
         CajaRespuesta.SetActive(true);
         NombrePersonaje.text = personajeActual.nombre;
