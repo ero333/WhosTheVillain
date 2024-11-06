@@ -60,13 +60,13 @@ public class InventoryItem : MonoBehaviour
         Unity.Services.Analytics.CustomEvent findclueEvent = new Unity.Services.Analytics.CustomEvent("FindClue")
         {
             { "time", tiempo },
-            { "order", contador },
+            { "orden", contador },
             { "levelD", currentLevel },
             { "clue", clueName }
         };
 
         AnalyticsService.Instance.RecordEvent(findclueEvent);
-        Debug.Log("FindClue: " + "time: " + tiempo + ", order: " + contador + ", levelD: " + currentLevel + ", clue: " + clueName);
+        Debug.Log("FindClue: " + "time: " + tiempo + ", orden: " + contador + ", levelD: " + currentLevel + ", clue: " + clueName);
 
         InventoryManager.Instance.AddItem(this);
         isCollected = true;
