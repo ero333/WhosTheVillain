@@ -23,6 +23,7 @@ public class InventoryItem : MonoBehaviour
 
     private static int contador;
     private bool isCollected = false;
+    private int currentLevel;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,13 @@ public class InventoryItem : MonoBehaviour
         if (backButton != null)
         {
             backButton.onClick.AddListener(OnBackButtonClicked);
+        }
+
+        currentLevel = PlayerPrefs.GetInt("CurrentLevel", 1);
+        if (currentLevel != PlayerPrefs.GetInt("LastLevel", -1))
+        {
+            contador = 0;
+            PlayerPrefs.SetInt("LastLevel", currentLevel);
         }
     }
 
