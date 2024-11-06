@@ -11,11 +11,9 @@ public class StarRating : MonoBehaviour
     public Button submitButton; // Asigna el botón de enviar en el Inspector
     public RatingSection[] ratingSections; // Asigna los apartados en el Inspector
 
-    private GuardarDatos guardarDatos;
 
     void Start()
     {
-        guardarDatos = FindObjectOfType<GuardarDatos>();
         reviewButton.gameObject.SetActive(false);
 
         if (PlayerPrefs.GetInt("Level1Completed", 0) == 1)
@@ -38,8 +36,9 @@ public class StarRating : MonoBehaviour
 
     private void OnSubmitClick()
     {
+        int ultimoNivelDesbloqueado = GuardarDatos.Instancia.NivelesDesbloqueados;
 
-        string logMessage = $"Rate: Art: {ratingSections[0].rating}, Story: {ratingSections[1].rating}, Fun: {ratingSections[2].rating}";
+        string logMessage = $"Rate: Art: {ratingSections[0].rating}, Story: {ratingSections[1].rating}, Fun: {ratingSections[2].rating}, Level: {ultimoNivelDesbloqueado}";
 
         Debug.Log(logMessage);
 
@@ -48,7 +47,7 @@ public class StarRating : MonoBehaviour
             { "art", ratingSections[0].rating },
             { "story", ratingSections[1].rating },
             { "fun", ratingSections[2].rating },
-            //{ "level", highestLevel }
+            { "level", ultimoNivelDesbloqueado }
         };
 
         AnalyticsService.Instance.RecordEvent(rateEvent);
