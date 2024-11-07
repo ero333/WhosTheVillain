@@ -94,6 +94,8 @@ public class TimeController : MonoBehaviour
     };
 
         AnalyticsService.Instance.RecordEvent(gameOverEvent);
+        AnalyticsService.Instance.Flush();
+
         Debug.Log("GameOver: tiempo " + tiempoTotal + ", timeout: " + timeout + ", level: " + nivelActual + ", section: " + currentSection + ", time:" + timeTranscurrido);
 
         gameOverRegistered = true; // Marca el Game Over como registrado

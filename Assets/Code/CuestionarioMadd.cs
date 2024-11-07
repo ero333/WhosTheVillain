@@ -103,6 +103,8 @@ public class Cuestionario : MonoBehaviour
                 { "time", timeTranscurrido }
             };
             AnalyticsService.Instance.RecordEvent(levelcompleteEvent);
+            AnalyticsService.Instance.Flush();
+
             Debug.Log("LevelComplete: " + NivelAGuardar + ", time:" + timeTranscurrido);
 
             SceneManager.LoadScene(victorySceneName);
@@ -123,6 +125,8 @@ public class Cuestionario : MonoBehaviour
                 { "time", timeTranscurrido }
             };
             AnalyticsService.Instance.RecordEvent(gameOverEvent);
+            AnalyticsService.Instance.Flush();
+
             Debug.Log("GameOver: Level " + nivelActual + ", Section: " + currentSection + ", time:" + timeTranscurrido);
 
             SceneManager.LoadScene(defeatSceneName);

@@ -61,6 +61,8 @@ public class InterrogatoryManager : MonoBehaviour
         };
 
         AnalyticsService.Instance.RecordEvent(questionEvent);
+        AnalyticsService.Instance.Flush();
+
         Debug.Log("Question: levelD: " + currentLevel + ", button: " + (preguntaIndex + 1) + ", suspect: " + personajeActual.nombre);
 
         CajaRespuesta.SetActive(true);
