@@ -51,6 +51,7 @@ public class StarRating : MonoBehaviour
         };
 
         AnalyticsService.Instance.RecordEvent(rateEvent);
+        AnalyticsService.Instance.Flush();
     }
 
 

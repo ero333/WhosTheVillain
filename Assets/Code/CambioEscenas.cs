@@ -73,6 +73,8 @@ public class CambioEscenas : MonoBehaviour
             };
             AnalyticsService.Instance.RecordEvent(levelStartEvent);
 
+            AnalyticsService.Instance.Flush();
+
             AnalyticsManager.Instance.StartCounting();
         }
     }
@@ -91,7 +93,7 @@ public class CambioEscenas : MonoBehaviour
     public void EventoSkip(int a)
     {
         StartCoroutine(LoadSceneAndCleanUp(a));
-        Debug.Log("Skip");
+        //Debug.Log("Skip");
     }
 
     public void SiguienteNivel()

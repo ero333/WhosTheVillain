@@ -74,6 +74,8 @@ public class InventoryItem : MonoBehaviour
         };
 
         AnalyticsService.Instance.RecordEvent(findclueEvent);
+        AnalyticsService.Instance.Flush();
+
         Debug.Log("FindClue: " + "time: " + tiempo + ", orden: " + contador + ", levelD: " + currentLevel + ", clue: " + clueName);
 
         InventoryManager.Instance.AddItem(this);

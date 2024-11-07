@@ -89,6 +89,7 @@ public class EnemigoVillano : MonoBehaviour
                 { "time", timeTranscurrido }
             };
             AnalyticsService.Instance.RecordEvent(gameOverEvent);
+            AnalyticsService.Instance.Flush();
 
             Debug.Log("GameOver: Level " + nivelActual + ", Section: " + currentSection + ", Busted: true" + ", time:" + timeTranscurrido);
 

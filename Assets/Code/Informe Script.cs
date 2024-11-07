@@ -244,6 +244,8 @@ public class InformeScript : MonoBehaviour
             };
 
             AnalyticsService.Instance.RecordEvent(levelcompleteEvent);
+            AnalyticsService.Instance.Flush();
+
             Debug.Log("LevelComplete: " + X + " ,InfoClueUsed: " + InventoryManager.Instance.InfoClueUsed + ", time:" + timeTranscurrido);
 
             SceneManager.LoadScene(victorySceneName);
@@ -268,6 +270,8 @@ public class InformeScript : MonoBehaviour
             };
 
             AnalyticsService.Instance.RecordEvent(gameOverEvent);
+            AnalyticsService.Instance.Flush();
+
             Debug.Log("GameOver: " + X + ", pistas: " + combinacionPistas + ", sospechoso: " + suspect + ", motivo: " + motive + ", InfoClueUsed: " + InventoryManager.Instance.InfoClueUsed + ", time:" + timeTranscurrido);
 
             SceneManager.LoadScene(defeatSceneName);
