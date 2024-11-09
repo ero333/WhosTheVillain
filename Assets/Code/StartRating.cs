@@ -11,6 +11,8 @@ public class StarRating : MonoBehaviour
     public Button submitButton; // Asigna el botón de enviar en el Inspector
     public RatingSection[] ratingSections; // Asigna los apartados en el Inspector
 
+    public GameObject ratingMenu;
+
 
     void Start()
     {
@@ -52,6 +54,11 @@ public class StarRating : MonoBehaviour
 
         AnalyticsService.Instance.RecordEvent(rateEvent);
         AnalyticsService.Instance.Flush();
+
+        if (ratingMenu != null)
+        {
+            ratingMenu.SetActive(false);
+        }    
     }
 
 
