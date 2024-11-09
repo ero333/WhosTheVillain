@@ -54,15 +54,14 @@ public class HelpButton : MonoBehaviour
         }
         else
         {
-            helpButton.interactable = false; // Desactivar si todo es correcto
-            return;
+            message = "No hay nada extraño."; // Nuevo mensaje si todo está correcto
         }
 
         // Mostrar el mensaje en el panel de ayuda
         helpText.text = message;
         helpPanel.SetActive(true);
 
-        // Ocultar el panel después de 10 segundos
+        // Ocultar el panel después de 6 segundos
         StartCoroutine(HideHelpPanel());
     }
 
