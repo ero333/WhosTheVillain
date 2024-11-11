@@ -326,6 +326,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 106260219}
+  uiElementsToIgnore:
+  - {fileID: 2032698341}
+  - {fileID: 1384918583}
+  - {fileID: 1156832499}
+  - {fileID: 130004370}
 --- !u!1 &130004370
 GameObject:
   m_ObjectHideFlags: 0
@@ -2224,6 +2229,7 @@ MonoBehaviour:
   Pistas:
   - {fileID: 1827254576}
   isHolding: 0
+  tiempoTranscurrido: 0
 --- !u!114 &1238936506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2821,6 +2827,7 @@ MonoBehaviour:
   min: 3
   seg: 35
   tiempo: {fileID: 616671236}
+  timeTranscurrido: 0
 --- !u!114 &1774257515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3073,6 +3080,7 @@ MonoBehaviour:
   button: {fileID: 2032698341}
   objectCounterText: {fileID: 0}
   Policia: {fileID: 1238936502}
+  clue: 
 --- !u!1 &1895556800
 GameObject:
   m_ObjectHideFlags: 0

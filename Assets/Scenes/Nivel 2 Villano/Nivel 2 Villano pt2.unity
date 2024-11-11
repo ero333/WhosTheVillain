@@ -429,6 +429,7 @@ MonoBehaviour:
   button: {fileID: 1202514574}
   objectCounterText: {fileID: 0}
   Policia: {fileID: 1502844589}
+  clue: 
 --- !u!114 &164065713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1468,6 +1469,7 @@ MonoBehaviour:
   min: 2
   seg: 35
   tiempo: {fileID: 1043023891}
+  timeTranscurrido: 0
 --- !u!114 &977874078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2062,6 +2064,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1278230065}
+  uiElementsToIgnore:
+  - {fileID: 1202514574}
+  - {fileID: 920030546}
+  - {fileID: 814664088}
+  - {fileID: 131943205}
 --- !u!95 &1278230065
 Animator:
   serializedVersion: 5
@@ -2448,6 +2455,7 @@ MonoBehaviour:
   Pistas:
   - {fileID: 164065708}
   isHolding: 0
+  tiempoTranscurrido: 0
 --- !u!114 &1502844593
 MonoBehaviour:
   m_ObjectHideFlags: 0
