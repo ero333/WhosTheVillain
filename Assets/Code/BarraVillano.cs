@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,38 +6,41 @@ public class BarraVillano : MonoBehaviour
     public Image progressBar;
     public float fillSpeed = 0.1f;
     public bool isFilling = false;
-    public GameObject pista;
+    public GameObject objetoActual;  // Objeto que actualmente está llenando la barra
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (isFilling)
         {
             progressBar.fillAmount += fillSpeed * Time.deltaTime;
-            if (progressBar.fillAmount >= 1 ) 
+            if (progressBar.fillAmount >= 1)
             {
                 progressBar.fillAmount = 0;
                 isFilling = false;
-                Destroy(pista);
+
+                if (objetoActual != null)
+                {
+                    Destroy(objetoActual);  // Destruye el objeto cuando la barra se completa
+                    objetoActual = null;  // Reinicia la referencia del objeto actual
+                }
             }
         }
-       
     }
 
-    public void StartFilling(GameObject objetoPista)
+    public void StartFilling(GameObject nuevoObjeto)
     {
-        pista = objetoPista;
+        // Si el objeto actual es diferente al nuevo, reinicia la barra
+        if (objetoActual != nuevoObjeto)
+        {
+            progressBar.fillAmount = 0;  // Reinicia el progreso de la barra
+            objetoActual = nuevoObjeto;  // Actualiza el objeto actual
+        }
+
         isFilling = true;
     }
 
     public void StopFilling()
-    { 
-        isFilling = false; 
+    {
+        isFilling = false;
     }
 }
