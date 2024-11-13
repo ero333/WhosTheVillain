@@ -703,7 +703,6 @@ GameObject:
   - component: {fileID: 210666730}
   - component: {fileID: 210666729}
   - component: {fileID: 210666728}
-  - component: {fileID: 210666727}
   - component: {fileID: 210666726}
   m_Layer: 5
   m_Name: Labial
@@ -776,50 +775,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 665.73804, y: 158.83948}
   m_EdgeRadius: 0
---- !u!114 &210666727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 210666724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.6415094, g: 0.26962426, b: 0.24510503, a: 1}
-    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 210666730}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &210666728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -855,6 +810,8 @@ MonoBehaviour:
       m_Calls: []
   isHolding: 0
   isTrue: 1
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  highlightedColor: {r: 0.6431373, g: 0.27058825, b: 0.24705882, a: 1}
 --- !u!114 &210666730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1225,7 +1182,6 @@ GameObject:
   - component: {fileID: 334621117}
   - component: {fileID: 334621116}
   - component: {fileID: 334621115}
-  - component: {fileID: 334621114}
   - component: {fileID: 334621113}
   m_Layer: 5
   m_Name: Ganzua
@@ -1298,50 +1254,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 172.13205, y: 861.1396}
   m_EdgeRadius: 0
---- !u!114 &334621114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 334621111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.6415094, g: 0.26962426, b: 0.24510503, a: 1}
-    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 334621117}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &334621115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1377,6 +1289,8 @@ MonoBehaviour:
       m_Calls: []
   isHolding: 0
   isTrue: 1
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  highlightedColor: {r: 0.6431373, g: 0.27058825, b: 0.24705882, a: 1}
 --- !u!114 &334621117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2241,7 +2155,6 @@ GameObject:
   - component: {fileID: 730033526}
   - component: {fileID: 730033525}
   - component: {fileID: 730033524}
-  - component: {fileID: 730033523}
   - component: {fileID: 730033522}
   m_Layer: 5
   m_Name: Peluca
@@ -2314,50 +2227,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 969.2002, y: 388.77063}
   m_EdgeRadius: 0
---- !u!114 &730033523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 730033520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.6415094, g: 0.26962426, b: 0.24510503, a: 1}
-    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 730033526}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &730033524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2393,6 +2262,8 @@ MonoBehaviour:
       m_Calls: []
   isHolding: 0
   isTrue: 1
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  highlightedColor: {r: 0.6431373, g: 0.27058825, b: 0.24705882, a: 1}
 --- !u!114 &730033526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2593,7 +2464,6 @@ GameObject:
   - component: {fileID: 871188704}
   - component: {fileID: 871188703}
   - component: {fileID: 871188702}
-  - component: {fileID: 871188701}
   - component: {fileID: 871188700}
   m_Layer: 5
   m_Name: Pastillas
@@ -2666,50 +2536,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 519.55853, y: 242.41397}
   m_EdgeRadius: 0
---- !u!114 &871188701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 871188698}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.6415094, g: 0.26962426, b: 0.24510503, a: 1}
-    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 871188704}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &871188702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2745,6 +2571,8 @@ MonoBehaviour:
       m_Calls: []
   isHolding: 0
   isTrue: 1
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  highlightedColor: {r: 0.6431373, g: 0.27058825, b: 0.24705882, a: 1}
 --- !u!114 &871188704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3171,7 +2999,6 @@ GameObject:
   - component: {fileID: 1495535844}
   - component: {fileID: 1495535843}
   - component: {fileID: 1495535842}
-  - component: {fileID: 1495535841}
   m_Layer: 5
   m_Name: Cuchillo
   m_TagString: ContarDestrucciones
@@ -3198,50 +3025,6 @@ RectTransform:
   m_AnchoredPosition: {x: -4.66, y: -1.86}
   m_SizeDelta: {x: 107.9413, y: 747.4453}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1495535841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1495535839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.6415094, g: 0.26962426, b: 0.24510503, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1495535845}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!61 &1495535842
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3322,6 +3105,8 @@ MonoBehaviour:
       m_Calls: []
   isHolding: 0
   isTrue: 1
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  highlightedColor: {r: 0.6431373, g: 0.27058825, b: 0.24705882, a: 1}
 --- !u!114 &1495535845
 MonoBehaviour:
   m_ObjectHideFlags: 0
