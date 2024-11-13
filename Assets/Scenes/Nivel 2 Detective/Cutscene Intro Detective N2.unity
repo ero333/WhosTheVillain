@@ -703,6 +703,7 @@ GameObject:
   - component: {fileID: 404062043}
   - component: {fileID: 404062042}
   - component: {fileID: 404062044}
+  - component: {fileID: 404062045}
   m_Layer: 0
   m_Name: Level Manager
   m_TagString: Untagged
@@ -756,6 +757,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75afa374d3e7f074886344a0517074e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &404062045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404062041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d412f2a6f90e430489b328c67f9f8b22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skipbutton: {fileID: 2137045332}
+  cinematicName: Cutscene Intro Detective N2
 --- !u!1 &411102143
 GameObject:
   m_ObjectHideFlags: 0

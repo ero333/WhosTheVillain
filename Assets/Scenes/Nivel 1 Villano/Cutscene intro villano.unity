@@ -3197,6 +3197,7 @@ GameObject:
   - component: {fileID: 1323608707}
   - component: {fileID: 1323608706}
   - component: {fileID: 1323608708}
+  - component: {fileID: 1323608709}
   m_Layer: 0
   m_Name: Level Manager
   m_TagString: Untagged
@@ -3250,6 +3251,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75afa374d3e7f074886344a0517074e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1323608709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323608705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d412f2a6f90e430489b328c67f9f8b22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skipbutton: {fileID: 156020373}
+  cinematicName: Cutscene intro villano
 --- !u!1 &1326539642
 GameObject:
   m_ObjectHideFlags: 0
