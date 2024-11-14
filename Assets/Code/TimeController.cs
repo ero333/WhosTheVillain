@@ -75,7 +75,7 @@ public class TimeController : MonoBehaviour
     {
         if (gameOverRegistered) return; // Evita registrar más de una vez
 
-        int tiempoTotal = Mathf.FloorToInt(tiempoTranscurrido);
+        //int tiempoTotal = Mathf.FloorToInt(tiempoTranscurrido);
         CambioEscenas cambioEscenas = FindObjectOfType<CambioEscenas>();
         string currentSection = cambioEscenas.section;
         int nivelActual = cambioEscenas.Nivel;
@@ -87,7 +87,7 @@ public class TimeController : MonoBehaviour
         Unity.Services.Analytics.CustomEvent gameOverEvent = new Unity.Services.Analytics.CustomEvent("GameOver")
     {
         { "level", nivelActual },
-        { "time", tiempoTotal },
+        //{ "time", tiempoTotal },
         { "timeout", timeout },
         { "section", currentSection },
         { "time", timeTranscurrido}
@@ -96,7 +96,7 @@ public class TimeController : MonoBehaviour
         AnalyticsService.Instance.RecordEvent(gameOverEvent);
         AnalyticsService.Instance.Flush();
 
-        Debug.Log("GameOver: tiempo " + tiempoTotal + ", timeout: " + timeout + ", level: " + nivelActual + ", section: " + currentSection + ", time:" + timeTranscurrido);
+        Debug.Log("GameOver: timeout: " + timeout + ", level: " + nivelActual + ", section: " + currentSection + ", time:" + timeTranscurrido);
 
         gameOverRegistered = true; // Marca el Game Over como registrado
 
