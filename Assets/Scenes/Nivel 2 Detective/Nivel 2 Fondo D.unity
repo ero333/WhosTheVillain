@@ -1179,6 +1179,7 @@ GameObject:
   - component: {fileID: 381533768}
   - component: {fileID: 381533767}
   - component: {fileID: 381533770}
+  - component: {fileID: 381533771}
   m_Layer: 5
   m_Name: Boton Rejilla
   m_TagString: Untagged
@@ -1273,6 +1274,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 555460342}
+        m_TargetAssemblyTypeName: CambiarCursor, Assembly-CSharp
+        m_MethodName: ResetCursor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &381533768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1325,6 +1338,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursorNormal: {fileID: 0}
   cursorSobreObjeto: {fileID: 2800000, guid: c7c119363453c614d9ce949823d04f39, type: 3}
+--- !u!61 &381533771
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381533765}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 70.42, y: 48.77}
+  m_EdgeRadius: 0
 --- !u!1 &385692322
 GameObject:
   m_ObjectHideFlags: 0
@@ -2094,6 +2152,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 555460341}
+  - component: {fileID: 555460342}
   m_Layer: 0
   m_Name: cursor
   m_TagString: Untagged
@@ -2116,6 +2175,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &555460342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555460340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c16a4a1a00c5646b38144efc072f96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorNormal: {fileID: 0}
+  cursorSobreObjeto: {fileID: 0}
 --- !u!1 &572832610
 GameObject:
   m_ObjectHideFlags: 0
@@ -2129,6 +2202,7 @@ GameObject:
   - component: {fileID: 572832613}
   - component: {fileID: 572832612}
   - component: {fileID: 572832615}
+  - component: {fileID: 572832616}
   m_Layer: 5
   m_Name: Boton Cartel
   m_TagString: Untagged
@@ -2223,6 +2297,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 555460342}
+        m_TargetAssemblyTypeName: CambiarCursor, Assembly-CSharp
+        m_MethodName: ResetCursor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &572832613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2275,6 +2361,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursorNormal: {fileID: 0}
   cursorSobreObjeto: {fileID: 2800000, guid: c7c119363453c614d9ce949823d04f39, type: 3}
+--- !u!61 &572832616
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572832610}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 178.23, y: 87.77}
+  m_EdgeRadius: 0
 --- !u!1 &581923902
 GameObject:
   m_ObjectHideFlags: 0
@@ -3800,6 +3931,7 @@ GameObject:
   - component: {fileID: 872102182}
   - component: {fileID: 872102184}
   - component: {fileID: 872102183}
+  - component: {fileID: 872102185}
   m_Layer: 0
   m_Name: Pista Bala
   m_TagString: Untagged
@@ -3891,6 +4023,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.97992086, y: 0.7188871}
   m_EdgeRadius: 0
+--- !u!114 &872102185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872102181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c16a4a1a00c5646b38144efc072f96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorNormal: {fileID: 0}
+  cursorSobreObjeto: {fileID: 2800000, guid: c7c119363453c614d9ce949823d04f39, type: 3}
 --- !u!1 &914019462
 GameObject:
   m_ObjectHideFlags: 0
@@ -4259,6 +4405,7 @@ GameObject:
   - component: {fileID: 1066058172}
   - component: {fileID: 1066058171}
   - component: {fileID: 1066058174}
+  - component: {fileID: 1066058175}
   m_Layer: 5
   m_Name: Boton Palomitas
   m_TagString: Untagged
@@ -4353,6 +4500,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 555460342}
+        m_TargetAssemblyTypeName: CambiarCursor, Assembly-CSharp
+        m_MethodName: ResetCursor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1066058172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4405,6 +4564,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursorNormal: {fileID: 0}
   cursorSobreObjeto: {fileID: 2800000, guid: c7c119363453c614d9ce949823d04f39, type: 3}
+--- !u!61 &1066058175
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066058169}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 100.26, y: 68.44}
+  m_EdgeRadius: 0
 --- !u!1 &1086656094
 GameObject:
   m_ObjectHideFlags: 0
@@ -5936,6 +6140,7 @@ GameObject:
   - component: {fileID: 1420639440}
   - component: {fileID: 1420639442}
   - component: {fileID: 1420639441}
+  - component: {fileID: 1420639443}
   m_Layer: 0
   m_Name: Pista Cinta
   m_TagString: Untagged
@@ -6028,6 +6233,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5060732, y: 3.7935278}
   m_EdgeRadius: 0
+--- !u!114 &1420639443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420639439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c16a4a1a00c5646b38144efc072f96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorNormal: {fileID: 0}
+  cursorSobreObjeto: {fileID: 2800000, guid: c7c119363453c614d9ce949823d04f39, type: 3}
 --- !u!1 &1461836210
 GameObject:
   m_ObjectHideFlags: 0
@@ -6431,6 +6650,7 @@ GameObject:
   - component: {fileID: 1556715374}
   - component: {fileID: 1556715376}
   - component: {fileID: 1556715375}
+  - component: {fileID: 1556715377}
   m_Layer: 0
   m_Name: Pista Ticket
   m_TagString: Untagged
@@ -6522,6 +6742,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.512869, y: 1.4397519}
   m_EdgeRadius: 0
+--- !u!114 &1556715377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556715373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c16a4a1a00c5646b38144efc072f96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorNormal: {fileID: 0}
+  cursorSobreObjeto: {fileID: 2800000, guid: c7c119363453c614d9ce949823d04f39, type: 3}
 --- !u!1 &1557195740
 GameObject:
   m_ObjectHideFlags: 0
@@ -7042,6 +7276,7 @@ GameObject:
   - component: {fileID: 1644519093}
   - component: {fileID: 1644519092}
   - component: {fileID: 1644519095}
+  - component: {fileID: 1644519096}
   m_Layer: 5
   m_Name: Boton Butaca
   m_TagString: Untagged
@@ -7136,6 +7371,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 555460342}
+        m_TargetAssemblyTypeName: CambiarCursor, Assembly-CSharp
+        m_MethodName: ResetCursor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1644519093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7188,6 +7435,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursorNormal: {fileID: 0}
   cursorSobreObjeto: {fileID: 2800000, guid: c7c119363453c614d9ce949823d04f39, type: 3}
+--- !u!61 &1644519096
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644519090}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 133.46, y: 57.16}
+  m_EdgeRadius: 0
 --- !u!1 &1764218917
 GameObject:
   m_ObjectHideFlags: 0
@@ -7735,6 +8027,7 @@ GameObject:
   - component: {fileID: 1902910352}
   - component: {fileID: 1902910351}
   - component: {fileID: 1902910354}
+  - component: {fileID: 1902910355}
   m_Layer: 5
   m_Name: Boton Poster
   m_TagString: Untagged
@@ -7829,6 +8122,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 555460342}
+        m_TargetAssemblyTypeName: CambiarCursor, Assembly-CSharp
+        m_MethodName: ResetCursor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1902910352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7880,7 +8185,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursorNormal: {fileID: 0}
-  cursorSobreObjeto: {fileID: 0}
+  cursorSobreObjeto: {fileID: 2800000, guid: c7c119363453c614d9ce949823d04f39, type: 3}
+--- !u!61 &1902910355
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902910349}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 133, y: 69.49}
+  m_EdgeRadius: 0
 --- !u!1 &2028987623
 GameObject:
   m_ObjectHideFlags: 0
@@ -7892,6 +8242,7 @@ GameObject:
   - component: {fileID: 2028987624}
   - component: {fileID: 2028987626}
   - component: {fileID: 2028987625}
+  - component: {fileID: 2028987627}
   m_Layer: 0
   m_Name: Pista Lista
   m_TagString: Untagged
@@ -7983,6 +8334,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.97464466, y: 0.75912523}
   m_EdgeRadius: 0
+--- !u!114 &2028987627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028987623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c16a4a1a00c5646b38144efc072f96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorNormal: {fileID: 0}
+  cursorSobreObjeto: {fileID: 2800000, guid: c7c119363453c614d9ce949823d04f39, type: 3}
 --- !u!1 &2035181247
 GameObject:
   m_ObjectHideFlags: 0
@@ -8335,6 +8700,7 @@ GameObject:
   - component: {fileID: 2091926707}
   - component: {fileID: 2091926709}
   - component: {fileID: 2091926708}
+  - component: {fileID: 2091926710}
   m_Layer: 0
   m_Name: Pista Guante
   m_TagString: Untagged
@@ -8426,6 +8792,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8780527, y: 0.7038415}
   m_EdgeRadius: 0
+--- !u!114 &2091926710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091926706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c16a4a1a00c5646b38144efc072f96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorNormal: {fileID: 0}
+  cursorSobreObjeto: {fileID: 2800000, guid: c7c119363453c614d9ce949823d04f39, type: 3}
 --- !u!1 &2094002291
 GameObject:
   m_ObjectHideFlags: 0
