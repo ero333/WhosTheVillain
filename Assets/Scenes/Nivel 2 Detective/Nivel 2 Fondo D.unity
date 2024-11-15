@@ -1178,6 +1178,7 @@ GameObject:
   - component: {fileID: 381533769}
   - component: {fileID: 381533768}
   - component: {fileID: 381533767}
+  - component: {fileID: 381533770}
   m_Layer: 5
   m_Name: Boton Rejilla
   m_TagString: Untagged
@@ -1310,6 +1311,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 381533765}
   m_CullTransparentMesh: 1
+--- !u!114 &381533770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381533765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c16a4a1a00c5646b38144efc072f96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorNormal: {fileID: 0}
+  cursorSobreObjeto: {fileID: 2800000, guid: c7c119363453c614d9ce949823d04f39, type: 3}
 --- !u!1 &385692322
 GameObject:
   m_ObjectHideFlags: 0
@@ -1532,6 +1547,7 @@ GameObject:
   - component: {fileID: 430020709}
   - component: {fileID: 430020711}
   - component: {fileID: 430020710}
+  - component: {fileID: 430020712}
   m_Layer: 5
   m_Name: Pista Guante IMG
   m_TagString: Untagged
@@ -1596,6 +1612,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430020708}
   m_CullTransparentMesh: 1
+--- !u!114 &430020712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430020708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c16a4a1a00c5646b38144efc072f96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorNormal: {fileID: 0}
+  cursorSobreObjeto: {fileID: 2800000, guid: c7c119363453c614d9ce949823d04f39, type: 3}
 --- !u!1 &430464424
 GameObject:
   m_ObjectHideFlags: 0
@@ -2055,6 +2085,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 544986955}
   m_CullTransparentMesh: 1
+--- !u!1 &555460340
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 555460341}
+  m_Layer: 0
+  m_Name: cursor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &555460341
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555460340}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.15182327, y: 0.14788847, z: 2.4385839}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &572832610
 GameObject:
   m_ObjectHideFlags: 0
@@ -2067,6 +2128,7 @@ GameObject:
   - component: {fileID: 572832614}
   - component: {fileID: 572832613}
   - component: {fileID: 572832612}
+  - component: {fileID: 572832615}
   m_Layer: 5
   m_Name: Boton Cartel
   m_TagString: Untagged
@@ -2199,6 +2261,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 572832610}
   m_CullTransparentMesh: 1
+--- !u!114 &572832615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572832610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c16a4a1a00c5646b38144efc072f96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorNormal: {fileID: 0}
+  cursorSobreObjeto: {fileID: 2800000, guid: c7c119363453c614d9ce949823d04f39, type: 3}
 --- !u!1 &581923902
 GameObject:
   m_ObjectHideFlags: 0
@@ -3758,6 +3834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17560616f61ded64ca067746a0d08b0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorNormal: {fileID: 0}
   itemName: Bala de Revolver
   clueName: BALA
   itemDescrip: "Es una bala peque\xF1a, como de un rev\xF3lver de bolsillo\u2026
@@ -4012,6 +4089,7 @@ GameObject:
   - component: {fileID: 993587284}
   - component: {fileID: 993587286}
   - component: {fileID: 993587285}
+  - component: {fileID: 993587287}
   m_Layer: 5
   m_Name: Pista Lista IMG
   m_TagString: Untagged
@@ -4076,6 +4154,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 993587283}
   m_CullTransparentMesh: 1
+--- !u!114 &993587287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993587283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c16a4a1a00c5646b38144efc072f96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorNormal: {fileID: 0}
+  cursorSobreObjeto: {fileID: 2800000, guid: c7c119363453c614d9ce949823d04f39, type: 3}
 --- !u!1 &1015555849
 GameObject:
   m_ObjectHideFlags: 0
@@ -4166,6 +4258,7 @@ GameObject:
   - component: {fileID: 1066058173}
   - component: {fileID: 1066058172}
   - component: {fileID: 1066058171}
+  - component: {fileID: 1066058174}
   m_Layer: 5
   m_Name: Boton Palomitas
   m_TagString: Untagged
@@ -4298,6 +4391,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1066058169}
   m_CullTransparentMesh: 1
+--- !u!114 &1066058174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066058169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c16a4a1a00c5646b38144efc072f96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorNormal: {fileID: 0}
+  cursorSobreObjeto: {fileID: 2800000, guid: c7c119363453c614d9ce949823d04f39, type: 3}
 --- !u!1 &1086656094
 GameObject:
   m_ObjectHideFlags: 0
@@ -5863,6 +5970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17560616f61ded64ca067746a0d08b0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorNormal: {fileID: 0}
   itemName: "Cinta de Pel\xEDcula"
   clueName: CINTA
   itemDescrip: "Si lo veo a contraluz, parece ser una escena de romance con un actor
@@ -6357,6 +6465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17560616f61ded64ca067746a0d08b0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorNormal: {fileID: 0}
   itemName: Ticket
   clueName: TICKET
   itemDescrip: "Un boleto para la pel\xEDcula. Todos los asistentes trajeron uno.
@@ -6932,6 +7041,7 @@ GameObject:
   - component: {fileID: 1644519094}
   - component: {fileID: 1644519093}
   - component: {fileID: 1644519092}
+  - component: {fileID: 1644519095}
   m_Layer: 5
   m_Name: Boton Butaca
   m_TagString: Untagged
@@ -7064,6 +7174,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1644519090}
   m_CullTransparentMesh: 1
+--- !u!114 &1644519095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644519090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c16a4a1a00c5646b38144efc072f96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorNormal: {fileID: 0}
+  cursorSobreObjeto: {fileID: 2800000, guid: c7c119363453c614d9ce949823d04f39, type: 3}
 --- !u!1 &1764218917
 GameObject:
   m_ObjectHideFlags: 0
@@ -7610,6 +7734,7 @@ GameObject:
   - component: {fileID: 1902910353}
   - component: {fileID: 1902910352}
   - component: {fileID: 1902910351}
+  - component: {fileID: 1902910354}
   m_Layer: 5
   m_Name: Boton Poster
   m_TagString: Untagged
@@ -7742,6 +7867,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1902910349}
   m_CullTransparentMesh: 1
+--- !u!114 &1902910354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902910349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c16a4a1a00c5646b38144efc072f96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorNormal: {fileID: 0}
+  cursorSobreObjeto: {fileID: 0}
 --- !u!1 &2028987623
 GameObject:
   m_ObjectHideFlags: 0
@@ -7787,6 +7926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17560616f61ded64ca067746a0d08b0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorNormal: {fileID: 0}
   itemName: Lista de Invitados
   clueName: LISTA
   itemDescrip: "Este papel es una lista con todos los invitados a la premier. Est\xE1n
@@ -8229,6 +8369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17560616f61ded64ca067746a0d08b0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorNormal: {fileID: 0}
   itemName: Guante
   clueName: GUANTE
   itemDescrip: "Es un guante de cuero de color negro. Probablemente sea de alguien
@@ -8443,3 +8584,4 @@ SceneRoots:
   - {fileID: 1806655514}
   - {fileID: 629985374}
   - {fileID: 133053191}
+  - {fileID: 555460341}

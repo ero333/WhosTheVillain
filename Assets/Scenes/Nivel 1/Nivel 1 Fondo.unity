@@ -557,6 +557,7 @@ GameObject:
   - component: {fileID: 113505433}
   - component: {fileID: 113505435}
   - component: {fileID: 113505434}
+  - component: {fileID: 113505436}
   m_Layer: 0
   m_Name: Pista Testamento
   m_TagString: Untagged
@@ -591,6 +592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17560616f61ded64ca067746a0d08b0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorNormal: {fileID: 0}
   itemName: Testamento
   clueName: TESTA
   itemDescrip: "Las \xFAltimas l\xEDneas se ven m\xE1s oscuras, es posible que se
@@ -648,6 +650,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9.852233, y: 2.3082952}
   m_EdgeRadius: 0
+--- !u!114 &113505436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113505432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c16a4a1a00c5646b38144efc072f96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorNormal: {fileID: 0}
+  cursorSobreObjeto: {fileID: 2800000, guid: c7c119363453c614d9ce949823d04f39, type: 3}
 --- !u!1 &124300805
 GameObject:
   m_ObjectHideFlags: 0
@@ -792,6 +808,8 @@ GameObject:
   - component: {fileID: 133235186}
   - component: {fileID: 133235185}
   - component: {fileID: 133235184}
+  - component: {fileID: 133235187}
+  - component: {fileID: 133235188}
   m_Layer: 5
   m_Name: BotonFlorero
   m_TagString: Untagged
@@ -886,6 +904,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1610278408}
+        m_TargetAssemblyTypeName: CambiarCursor, Assembly-CSharp
+        m_MethodName: ResetCursor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &133235185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -924,6 +954,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 133235182}
   m_CullTransparentMesh: 1
+--- !u!114 &133235187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133235182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c16a4a1a00c5646b38144efc072f96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorNormal: {fileID: 0}
+  cursorSobreObjeto: {fileID: 2800000, guid: c7c119363453c614d9ce949823d04f39, type: 3}
+--- !u!61 &133235188
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133235182}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 108.88, y: 169.83}
+  m_EdgeRadius: 0
 --- !u!1 &174471116
 GameObject:
   m_ObjectHideFlags: 0
@@ -2328,6 +2417,7 @@ GameObject:
   - component: {fileID: 589285968}
   - component: {fileID: 589285967}
   - component: {fileID: 589285969}
+  - component: {fileID: 589285970}
   m_Layer: 0
   m_Name: "Pista Pa\xF1uelo"
   m_TagString: Untagged
@@ -2362,6 +2452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17560616f61ded64ca067746a0d08b0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorNormal: {fileID: 0}
   itemName: "Pa\xF1uelo"
   clueName: HANKY
   itemDescrip: "Olivia O\u2019Neill mencion\xF3 que su padre gozaba de buena salud\u2026
@@ -2474,6 +2565,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1610278408}
+        m_TargetAssemblyTypeName: CambiarCursor, Assembly-CSharp
+        m_MethodName: ResetCursor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &589285970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589285965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c16a4a1a00c5646b38144efc072f96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorNormal: {fileID: 0}
+  cursorSobreObjeto: {fileID: 2800000, guid: c7c119363453c614d9ce949823d04f39, type: 3}
 --- !u!1 &594384173
 GameObject:
   m_ObjectHideFlags: 0
@@ -3545,6 +3662,8 @@ GameObject:
   - component: {fileID: 720466361}
   - component: {fileID: 720466360}
   - component: {fileID: 720466359}
+  - component: {fileID: 720466362}
+  - component: {fileID: 720466363}
   m_Layer: 5
   m_Name: BotonCajon3
   m_TagString: Untagged
@@ -3639,6 +3758,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1610278408}
+        m_TargetAssemblyTypeName: CambiarCursor, Assembly-CSharp
+        m_MethodName: ResetCursor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &720466360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3677,6 +3808,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 720466357}
   m_CullTransparentMesh: 1
+--- !u!114 &720466362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720466357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c16a4a1a00c5646b38144efc072f96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorNormal: {fileID: 0}
+  cursorSobreObjeto: {fileID: 2800000, guid: c7c119363453c614d9ce949823d04f39, type: 3}
+--- !u!61 &720466363
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720466357}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 142.53, y: 46.29}
+  m_EdgeRadius: 0
 --- !u!1 &776914172
 GameObject:
   m_ObjectHideFlags: 0
@@ -4106,6 +4296,7 @@ GameObject:
   - component: {fileID: 842425556}
   - component: {fileID: 842425557}
   - component: {fileID: 842425558}
+  - component: {fileID: 842425559}
   m_Layer: 5
   m_Name: Pista Vaso
   m_TagString: Untagged
@@ -4189,6 +4380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17560616f61ded64ca067746a0d08b0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorNormal: {fileID: 0}
   itemName: Vaso de Whisky
   clueName: VASO
   itemDescrip: "Los hielos se ven opacos y con un color m\xE1s oscuro de lo habitual.
@@ -4200,6 +4392,20 @@ MonoBehaviour:
   botoninforme: {fileID: 570884428}
   flashEffect: {fileID: 1985124851}
   flashDuration: 0.1
+--- !u!114 &842425559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842425555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c16a4a1a00c5646b38144efc072f96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorNormal: {fileID: 0}
+  cursorSobreObjeto: {fileID: 2800000, guid: c7c119363453c614d9ce949823d04f39, type: 3}
 --- !u!1 &886890309
 GameObject:
   m_ObjectHideFlags: 0
@@ -4291,6 +4497,8 @@ GameObject:
   - component: {fileID: 887312925}
   - component: {fileID: 887312924}
   - component: {fileID: 887312923}
+  - component: {fileID: 887312926}
+  - component: {fileID: 887312927}
   m_Layer: 5
   m_Name: BotonSilla
   m_TagString: Untagged
@@ -4385,6 +4593,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1610278408}
+        m_TargetAssemblyTypeName: CambiarCursor, Assembly-CSharp
+        m_MethodName: ResetCursor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &887312924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4423,6 +4643,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 887312921}
   m_CullTransparentMesh: 1
+--- !u!114 &887312926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887312921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c16a4a1a00c5646b38144efc072f96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorNormal: {fileID: 0}
+  cursorSobreObjeto: {fileID: 2800000, guid: c7c119363453c614d9ce949823d04f39, type: 3}
+--- !u!61 &887312927
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887312921}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 217.9, y: 192.29}
+  m_EdgeRadius: 0
 --- !u!1 &936561837
 GameObject:
   m_ObjectHideFlags: 0
@@ -4464,7 +4743,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 187.87, y: 93.86}
+  m_AnchoredPosition: {x: 187.87, y: 93.859985}
   m_SizeDelta: {x: 337.89, y: 168.84}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &936561839
@@ -5619,6 +5898,9 @@ GameObject:
   - component: {fileID: 1399492665}
   - component: {fileID: 1399492664}
   - component: {fileID: 1399492663}
+  - component: {fileID: 1399492666}
+  - component: {fileID: 1399492667}
+  - component: {fileID: 1399492668}
   m_Layer: 5
   m_Name: BotonTacho
   m_TagString: Untagged
@@ -5713,6 +5995,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1610278408}
+        m_TargetAssemblyTypeName: CambiarCursor, Assembly-CSharp
+        m_MethodName: ResetCursor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1399492664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5751,6 +6045,78 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1399492661}
   m_CullTransparentMesh: 1
+--- !u!114 &1399492666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399492661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c16a4a1a00c5646b38144efc072f96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorNormal: {fileID: 0}
+  cursorSobreObjeto: {fileID: 2800000, guid: c7c119363453c614d9ce949823d04f39, type: 3}
+--- !u!61 &1399492667
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399492661}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 69.59, y: 82.5}
+  m_EdgeRadius: 0
+--- !u!114 &1399492668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399492661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 568a46e9da564df41832cd60c764b980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorNormal: {fileID: 0}
 --- !u!1 &1407987916
 GameObject:
   m_ObjectHideFlags: 0
@@ -6179,6 +6545,7 @@ GameObject:
   - component: {fileID: 1469668084}
   - component: {fileID: 1469668086}
   - component: {fileID: 1469668085}
+  - component: {fileID: 1469668087}
   m_Layer: 0
   m_Name: Pista Carta
   m_TagString: Untagged
@@ -6213,6 +6580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17560616f61ded64ca067746a0d08b0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorNormal: {fileID: 0}
   itemName: Carta
   clueName: CARTA
   itemDescrip: "Hubo problemas entre el se\xF1or O\u2019Neill y un socio. Pese a
@@ -6269,6 +6637,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4259773, y: 2.9998207}
   m_EdgeRadius: 0
+--- !u!114 &1469668087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469668083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c16a4a1a00c5646b38144efc072f96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorNormal: {fileID: 0}
+  cursorSobreObjeto: {fileID: 2800000, guid: c7c119363453c614d9ce949823d04f39, type: 3}
 --- !u!1 &1479103205
 GameObject:
   m_ObjectHideFlags: 0
@@ -6664,6 +7046,8 @@ GameObject:
   - component: {fileID: 1535688482}
   - component: {fileID: 1535688481}
   - component: {fileID: 1535688480}
+  - component: {fileID: 1535688483}
+  - component: {fileID: 1535688484}
   m_Layer: 5
   m_Name: BotonCajon2
   m_TagString: Untagged
@@ -6758,6 +7142,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1610278408}
+        m_TargetAssemblyTypeName: CambiarCursor, Assembly-CSharp
+        m_MethodName: ResetCursor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1535688481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6796,6 +7192,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1535688478}
   m_CullTransparentMesh: 1
+--- !u!114 &1535688483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535688478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c16a4a1a00c5646b38144efc072f96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorNormal: {fileID: 0}
+  cursorSobreObjeto: {fileID: 2800000, guid: c7c119363453c614d9ce949823d04f39, type: 3}
+--- !u!61 &1535688484
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535688478}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 116.67, y: 44.6}
+  m_EdgeRadius: 0
 --- !u!1 &1539094526
 GameObject:
   m_ObjectHideFlags: 0
@@ -7101,6 +7556,98 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1609883436}
   m_CullTransparentMesh: 1
+--- !u!1 &1610278406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1610278409}
+  - component: {fileID: 1610278408}
+  - component: {fileID: 1610278407}
+  m_Layer: 0
+  m_Name: cursor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1610278407
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610278406}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &1610278408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610278406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c16a4a1a00c5646b38144efc072f96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorNormal: {fileID: 0}
+  cursorSobreObjeto: {fileID: 2800000, guid: c7c119363453c614d9ce949823d04f39, type: 3}
+--- !u!4 &1610278409
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610278406}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.94, y: 3.8, z: 6.9466243}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1626844823
 GameObject:
   m_ObjectHideFlags: 0
@@ -7113,6 +7660,8 @@ GameObject:
   - component: {fileID: 1626844827}
   - component: {fileID: 1626844826}
   - component: {fileID: 1626844825}
+  - component: {fileID: 1626844828}
+  - component: {fileID: 1626844829}
   m_Layer: 5
   m_Name: BotonEstantes
   m_TagString: Untagged
@@ -7207,6 +7756,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1610278408}
+        m_TargetAssemblyTypeName: CambiarCursor, Assembly-CSharp
+        m_MethodName: ResetCursor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1626844826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7245,6 +7806,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1626844823}
   m_CullTransparentMesh: 1
+--- !u!114 &1626844828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626844823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c16a4a1a00c5646b38144efc072f96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorNormal: {fileID: 0}
+  cursorSobreObjeto: {fileID: 2800000, guid: c7c119363453c614d9ce949823d04f39, type: 3}
+--- !u!61 &1626844829
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626844823}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 218.7, y: 105.46}
+  m_EdgeRadius: 0
 --- !u!1 &1633227118
 GameObject:
   m_ObjectHideFlags: 0
@@ -7678,6 +8298,8 @@ GameObject:
   - component: {fileID: 1719594290}
   - component: {fileID: 1719594289}
   - component: {fileID: 1719594288}
+  - component: {fileID: 1719594291}
+  - component: {fileID: 1719594292}
   m_Layer: 5
   m_Name: BotonCortinas
   m_TagString: Untagged
@@ -7772,6 +8394,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1610278408}
+        m_TargetAssemblyTypeName: CambiarCursor, Assembly-CSharp
+        m_MethodName: ResetCursor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1719594289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7810,6 +8444,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1719594286}
   m_CullTransparentMesh: 1
+--- !u!114 &1719594291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719594286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c16a4a1a00c5646b38144efc072f96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorNormal: {fileID: 0}
+  cursorSobreObjeto: {fileID: 2800000, guid: c7c119363453c614d9ce949823d04f39, type: 3}
+--- !u!61 &1719594292
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719594286}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 302.84, y: 72.34}
+  m_EdgeRadius: 0
 --- !u!1 &1738887914
 GameObject:
   m_ObjectHideFlags: 0
@@ -9059,6 +9752,8 @@ GameObject:
   - component: {fileID: 2009938264}
   - component: {fileID: 2009938263}
   - component: {fileID: 2009938262}
+  - component: {fileID: 2009938265}
+  - component: {fileID: 2009938266}
   m_Layer: 5
   m_Name: BotonCajon1
   m_TagString: Untagged
@@ -9153,6 +9848,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1610278408}
+        m_TargetAssemblyTypeName: CambiarCursor, Assembly-CSharp
+        m_MethodName: ResetCursor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2009938263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9191,6 +9898,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2009938260}
   m_CullTransparentMesh: 1
+--- !u!114 &2009938265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009938260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c16a4a1a00c5646b38144efc072f96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorNormal: {fileID: 0}
+  cursorSobreObjeto: {fileID: 2800000, guid: c7c119363453c614d9ce949823d04f39, type: 3}
+--- !u!61 &2009938266
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009938260}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 116.1, y: 41.54}
+  m_EdgeRadius: 0
 --- !u!1 &2029557469
 GameObject:
   m_ObjectHideFlags: 0
@@ -9429,6 +10195,7 @@ GameObject:
   - component: {fileID: 2142293447}
   - component: {fileID: 2142293449}
   - component: {fileID: 2142293448}
+  - component: {fileID: 2142293450}
   m_Layer: 0
   m_Name: Pista Reloj
   m_TagString: Untagged
@@ -9463,6 +10230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17560616f61ded64ca067746a0d08b0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorNormal: {fileID: 0}
   itemName: Reloj
   clueName: RELOJ
   itemDescrip: "\xBFDe qui\xE9n ser\xE1 este reloj..? Marca las 07:40 PM."
@@ -9518,6 +10286,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.0601864, y: 1.2411737}
   m_EdgeRadius: 0
+--- !u!114 &2142293450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142293446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c16a4a1a00c5646b38144efc072f96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorNormal: {fileID: 0}
+  cursorSobreObjeto: {fileID: 2800000, guid: c7c119363453c614d9ce949823d04f39, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -9526,3 +10308,4 @@ SceneRoots:
   - {fileID: 66965208}
   - {fileID: 1691935297}
   - {fileID: 1200806024}
+  - {fileID: 1610278409}

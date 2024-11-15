@@ -6,6 +6,7 @@ using Unity.Services.Analytics;
 
 public class InventoryItem : MonoBehaviour
 {
+    public Texture2D cursorNormal; // Cursor por defecto
     public string itemName;
     public string clueName; // Nueva variable para el nombre de la pista
     [TextArea(4, 6)] public string itemDescrip;
@@ -58,6 +59,9 @@ public class InventoryItem : MonoBehaviour
 
         // Incrementar el contador de orden
         contador++;
+
+        Cursor.SetCursor(cursorNormal, Vector2.zero, CursorMode.Auto);
+
 
         Debug.Log("Tiempo transcurrido: " + tiempo + " segundos.");
         Debug.Log("Nivel actual: " + currentLevel);
