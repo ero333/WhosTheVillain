@@ -2003,7 +2003,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &859984072
 Animator:
   serializedVersion: 5
@@ -2255,6 +2255,8 @@ PlayableDirector:
     value: {fileID: 859984072}
   - key: {fileID: 8791666034291297548, guid: 68183d8b8e381334cb4f0efa6d73e37c, type: 2}
     value: {fileID: 859984071}
+  - key: {fileID: -4909343134021510686, guid: 68183d8b8e381334cb4f0efa6d73e37c, type: 2}
+    value: {fileID: 587216779}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &914332578
@@ -2952,7 +2954,7 @@ PlayableDirector:
   m_Enabled: 1
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: 5af7329258535e947b0aa2110a991f67, type: 2}
-  m_InitialState: 0
+  m_InitialState: 1
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
@@ -2969,12 +2971,6 @@ PlayableDirector:
     value: {fileID: 1792279184}
   - key: {fileID: 3530421909533481700, guid: 5af7329258535e947b0aa2110a991f67, type: 2}
     value: {fileID: 859984071}
-  - key: {fileID: -6047435824690457921, guid: 5af7329258535e947b0aa2110a991f67, type: 2}
-    value: {fileID: 1671233124}
-  - key: {fileID: -4892175636777525311, guid: 5af7329258535e947b0aa2110a991f67, type: 2}
-    value: {fileID: 1857837815}
-  - key: {fileID: -1775962773818461455, guid: 5af7329258535e947b0aa2110a991f67, type: 2}
-    value: {fileID: 914332580}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1481284430
@@ -3299,7 +3295,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!320 &1611844880
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -3310,7 +3306,7 @@ PlayableDirector:
   m_Enabled: 1
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: 5a034644983bb1d4385b61efdf5d0921, type: 2}
-  m_InitialState: 1
+  m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
@@ -3411,7 +3407,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1671233125
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3674,7 +3670,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 16777215
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
