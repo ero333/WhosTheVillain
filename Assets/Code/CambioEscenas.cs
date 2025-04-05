@@ -38,7 +38,7 @@ public class CambioEscenas : MonoBehaviour
 
         switch (SceneManager.GetActiveScene().name)
         {
-            case "Cutscene intro villano":  // Antes era 2, ahora será 1
+            case "Nivel 1 Villano Intro":  // Antes era 2, ahora será 1
                 level = 1;
                 break;
             case "Cutscene Intro Detective":  // Antes era 1, ahora será 2
@@ -189,6 +189,11 @@ public class CambioEscenas : MonoBehaviour
     public void CutsceneDerrotaDetective()
     {
         StartCoroutine(LoadSceneAndCleanUp("Cutscene Derrota D"));
+    }
+
+    public void IntroNivel1Villano()
+    {
+        StartCoroutine(LoadSceneAndCleanUp("Nivel 1 Villano Intro"));
     }
 
     public void C1D()

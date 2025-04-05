@@ -38,7 +38,7 @@ public class DesbloqueoDeNiveles : MonoBehaviour
 
     void InitializeLevelScenes()
     {
-        levelScenes.Add(1, "Cutscene intro villano");  // Antes era 2, ahora es 1
+        levelScenes.Add(1, "Nivel 1 Villano Intro");  // Antes era 2, ahora es 1
         levelScenes.Add(2, "Cutscene Intro Detective");  // Antes era 1, ahora es 2
         levelScenes.Add(3, "Cutscene intro villano2");  // Antes era 4, ahora es 3
         levelScenes.Add(4, "Cutscene Intro Detective N2");  // Antes era 3, ahora es 4
