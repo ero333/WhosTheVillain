@@ -4269,6 +4269,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1506120347}
+        m_TargetAssemblyTypeName: EndingChoice, Assembly-CSharp
+        m_MethodName: OnButton1Pressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1067750975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5968,6 +5980,52 @@ RectTransform:
   m_AnchoredPosition: {x: -0.37889066, y: 0.061186727}
   m_SizeDelta: {x: 799.99, y: 449.95}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1506120346
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1506120348}
+  - component: {fileID: 1506120347}
+  m_Layer: 0
+  m_Name: ChoiceManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1506120347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506120346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cee39a0244f430d4380a53b51338673b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endingASceneName: Cutscene Final A
+  endingBSceneName: Cutscene Final B
+--- !u!4 &1506120348
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506120346}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.5339094, y: 0.18663314, z: 90.00006}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1517322643
 GameObject:
   m_ObjectHideFlags: 0
@@ -8036,6 +8094,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1506120347}
+        m_TargetAssemblyTypeName: EndingChoice, Assembly-CSharp
+        m_MethodName: OnButton2Pressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1835880347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9164,3 +9234,4 @@ SceneRoots:
   - {fileID: 1413642610}
   - {fileID: 955040705}
   - {fileID: 1575612475}
+  - {fileID: 1506120348}

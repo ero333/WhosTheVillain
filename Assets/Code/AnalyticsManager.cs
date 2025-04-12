@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.Services.Analytics;
 using Unity.Services.Core;
+using UnityEngine.Analytics;
 
 public class AnalyticsManager : MonoBehaviour
 {
@@ -70,9 +71,23 @@ public class AnalyticsManager : MonoBehaviour
             timeElapsed++;
         }
     }
+
     public void ResetTime()
     {
         timeElapsed = 0;  // Reinicia el tiempo transcurrido
         isCounting = true; // Asegúrate de que comience a contar nuevamente
+    }
+
+    public void SendChoiceEvent(int buttonChoice)
+    {
+        Unity.Services.Analytics.CustomEvent choiceEvent = new Unity.Services.Analytics.CustomEvent("Choice")
+        {
+            {"buttonChoice", buttonChoice}
+        };
+
+        AnalyticsService.Instance.RecordEvent(choiceEvent);
+        AnalyticsService.Instance.Flush();
+
+        Debug.Log("Choice: " + buttonChoice);
     }
 }
