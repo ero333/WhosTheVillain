@@ -216,7 +216,24 @@ public class InformeScript : MonoBehaviour
     {
         string victorySceneName = victoryScene;
         string defeatSceneName = defeatScene;
-        
+
+        HelpButton helpButtonScript = FindObjectOfType<HelpButton>();
+        bool helpWasUsed = helpButtonScript != null && helpButtonScript.WasHelpUsed();
+
+        if (!helpWasUsed)
+        {
+            Unity.Services.Analytics.CustomEvent buttonHelpEvent = new Unity.Services.Analytics.CustomEvent("ButtonHelp")
+            {
+                { "level", X },
+                { "press", false }
+            };
+
+            AnalyticsService.Instance.RecordEvent(buttonHelpEvent);
+            AnalyticsService.Instance.Flush();
+
+            Debug.Log($"[DEBUG] Evento ButtonHelp enviado con level: {X}, press: false");
+        }
+
 
         if (Evidencia1Correcta && Evidencia2Correcta && Evidencia3Correcta &&
             suspectImage.sprite.name == correctSuspect &&

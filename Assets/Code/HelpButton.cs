@@ -2,6 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Unity.Services.Analytics;
 
 public class HelpButton : MonoBehaviour
 {
@@ -34,6 +35,11 @@ public class HelpButton : MonoBehaviour
         }
     }
 
+    public bool WasHelpUsed()
+    {
+        return helpUsed;
+    }
+
     public void OnHelpButtonClick()
     {
         if (informeScript == null) return;
@@ -60,6 +66,19 @@ public class HelpButton : MonoBehaviour
         // Mostrar el mensaje en el panel de ayuda
         helpText.text = message;
         helpPanel.SetActive(true);
+
+        helpUsed = true;
+
+        int currentLevel = PlayerPrefs.GetInt("CurrentLevel", -1);
+        Unity.Services.Analytics.CustomEvent buttonHelpEvent = new Unity.Services.Analytics.CustomEvent("ButtonHelp")
+        {
+            { "level", currentLevel },
+            { "press", true }
+        };
+        AnalyticsService.Instance.RecordEvent(buttonHelpEvent);
+        AnalyticsService.Instance.Flush();
+
+        Debug.Log($"[DEBUG] Evento ButtonHelp enviado con level: {currentLevel}, press: true");
 
         // Ocultar el panel después de 6 segundos
         StartCoroutine(HideHelpPanel());
