@@ -20,8 +20,19 @@ public class BarraVillano : MonoBehaviour
 
                 if (objetoActual != null)
                 {
+                    // Intenta obtener el sprite del objeto antes de destruirlo
+                    Image imagenDelObjeto = objetoActual.GetComponent<Image>();
+                    if (imagenDelObjeto != null && imagenDelObjeto.sprite != null)
+                    {
+                        VillanoInventoryManager.Instance.AgregarObjeto(imagenDelObjeto.sprite);
+                    }
+                    else
+                    {
+                        Debug.LogWarning("El objeto no tiene sprite asignado.");
+                    }
+
                     Destroy(objetoActual);  // Destruye el objeto cuando la barra se completa
-                    objetoActual = null;  // Reinicia la referencia del objeto actual
+                    objetoActual = null;    // Reinicia la referencia
                 }
             }
         }
