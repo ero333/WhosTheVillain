@@ -12,6 +12,8 @@ public class ObjetoBarra : MonoBehaviour
     public Color highlightedColor;
     private Image image;
 
+    [Header("Información del objeto")]
+    public string nombreDelObjeto; // Este es el nombre que va al inventario
     private void Start()
     {
         image = GetComponent<Image>();

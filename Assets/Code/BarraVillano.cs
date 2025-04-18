@@ -24,7 +24,8 @@ public class BarraVillano : MonoBehaviour
                     Image imagenDelObjeto = objetoActual.GetComponent<Image>();
                     if (imagenDelObjeto != null && imagenDelObjeto.sprite != null)
                     {
-                        VillanoInventoryManager.Instance.AgregarObjeto(imagenDelObjeto.sprite);
+                        string nombreObjeto = objetoActual.GetComponent<ObjetoBarra>()?.nombreDelObjeto ?? "Objeto misterioso";
+                        VillanoInventoryManager.Instance.AgregarObjeto(imagenDelObjeto.sprite, nombreObjeto);
                     }
                     else
                     {

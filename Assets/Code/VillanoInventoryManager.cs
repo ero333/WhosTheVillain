@@ -17,7 +17,7 @@ public class VillanoInventoryManager : MonoBehaviour
             Destroy(gameObject);
     }
 
-    public void AgregarObjeto(Sprite spriteDelObjeto)
+    public void AgregarObjeto(Sprite spriteDelObjeto, string nombreDelObjeto)
     {
         for (int i = 0; i < slots.Length; i++)
         {
@@ -25,10 +25,16 @@ public class VillanoInventoryManager : MonoBehaviour
             {
                 slots[i].sprite = spriteDelObjeto;
                 slots[i].color = Color.white;
-                break;  // Salir del loop después de asignar el sprite al primer slot vacío
+
+                // Asegurate de que el slot tenga un InventorySlot
+                InventorySlot slotComponent = slots[i].GetComponent<InventorySlot>();
+                if (slotComponent != null)
+                {
+                    slotComponent.itemName = nombreDelObjeto;
+                }
+
+                break;
             }
         }
-
-        Debug.Log("Objeto agregado al inventario.");
     }
 }
