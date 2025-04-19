@@ -22,7 +22,7 @@ public class ItemTooltip : MonoBehaviour
         tooltipPanel.SetActive(false);
     }
 
-    private void OnMouseEnter()
+    /*private void OnMouseEnter()
     {
         // Aquí activamos el tooltip solo cuando el mouse entra en el slot
         tooltipPanel.SetActive(true);
@@ -36,7 +36,7 @@ public class ItemTooltip : MonoBehaviour
     {
         // Desactivamos el tooltip solo cuando el mouse sale del slot
         tooltipPanel.SetActive(false);
-    }
+    }*/
 
     private void Update()
     {
