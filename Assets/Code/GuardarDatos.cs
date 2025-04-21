@@ -78,11 +78,11 @@ public class GuardarDatos : MonoBehaviour
     private void InitializeLevelScenes()
     {
         levelScenes.Add(1, "Cutscene Intro Juego");  // Antes era 2, ahora es 1
-        levelScenes.Add(2, "Cutscene Intro Detective");  // Antes era 1, ahora es 2
+        levelScenes.Add(2, "Nivel 1 Oficina");  // Antes era 1, ahora es 2
         levelScenes.Add(3, "Cutscene intro villano2");  // Antes era 4, ahora es 3
-        levelScenes.Add(4, "Cutscene Intro Detective N2");  // Antes era 3, ahora es 4
+        levelScenes.Add(4, "Nivel 2 Oficina D");  // Antes era 3, ahora es 4
         levelScenes.Add(5, "Cutscene Intro Villano 3");  // Antes era 6, ahora es 5
-        levelScenes.Add(6, "Cutscene Intro Detective 3");  // Antes era 5, ahora es 6
+        levelScenes.Add(6, "Nivel 3 Oficina D");  // Antes era 5, ahora es 6
     }
 
     public void LoadNextCase()
