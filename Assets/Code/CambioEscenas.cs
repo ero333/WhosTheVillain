@@ -38,7 +38,7 @@ public class CambioEscenas : MonoBehaviour
 
         switch (SceneManager.GetActiveScene().name)
         {
-            case "Nivel 1 Villano Intro":  // Antes era 2, ahora será 1
+            case "Cutscene Intro Juego":  // Antes era 2, ahora será 1
                 level = 1;
                 break;
             case "Cutscene Intro Detective":  // Antes era 1, ahora será 2
