@@ -46,5 +46,29 @@ public class MenuPausa : MonoBehaviour
             Enemigo.GetComponent<EnemigoVillano>().enabled = true; // Reactivar el script del enemigo
         }
     }
+
+    public void MenuPrincipal()
+    {
+        JuegoPausado = false;
+        Time.timeScale = 1f;
+        menuPausa.SetActive(false);
+        SceneManager.LoadScene("MenuPrincipal");
+        if (Enemigo != null)
+        {
+            Enemigo.GetComponent<EnemigoVillano>().enabled = false; // Reactivar el script del enemigo
+        }
+    }
+
+    public void SelectorDeNiveles()
+    {
+        JuegoPausado = false;
+        Time.timeScale = 1f;
+        menuPausa.SetActive(false);
+        SceneManager.LoadScene("Selector de niveles");
+        if (Enemigo != null)
+        {
+            Enemigo.GetComponent<EnemigoVillano>().enabled = false; // Reactivar el script del enemigo
+        }
+    }
 }
 

@@ -970,9 +970,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1704399038}
-        m_TargetAssemblyTypeName: CambioEscenas, Assembly-CSharp
-        m_MethodName: Menu
+      - m_Target: {fileID: 248307665}
+        m_TargetAssemblyTypeName: MenuPausa, Assembly-CSharp
+        m_MethodName: MenuPrincipal
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1940,6 +1940,7 @@ MonoBehaviour:
   isTrue: 1
   normalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightedColor: {r: 0, g: 0, b: 0, a: 0}
+  nombreDelObjeto: 
 --- !u!114 &1513839320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2630,9 +2631,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1704399038}
-        m_TargetAssemblyTypeName: CambioEscenas, Assembly-CSharp
-        m_MethodName: Selector
+      - m_Target: {fileID: 248307665}
+        m_TargetAssemblyTypeName: MenuPausa, Assembly-CSharp
+        m_MethodName: SelectorDeNiveles
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
