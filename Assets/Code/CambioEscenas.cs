@@ -63,16 +63,18 @@ public class CambioEscenas : MonoBehaviour
 
         if (level != 0)
         {
+            PlayerPrefs.SetInt("CurrentLevel", level); // ACTUALIZA PlayerPrefs al nivel correcto
+            PlayerPrefs.Save(); // Guarda los cambios
+
             Debug.Log("LevelStart: " + SceneManager.GetActiveScene().name);
             Debug.Log("level: " + level);
 
             // Crear y enviar el evento LevelStart
             CustomEvent levelStartEvent = new CustomEvent("LevelStart")
-            {
-                { "level", level }
-            };
+    {
+        { "level", level }
+    };
             AnalyticsService.Instance.RecordEvent(levelStartEvent);
-
             AnalyticsService.Instance.Flush();
 
             AnalyticsManager.Instance.StartCounting();
