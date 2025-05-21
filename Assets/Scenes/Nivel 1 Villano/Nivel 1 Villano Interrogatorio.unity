@@ -3795,12 +3795,12 @@ MonoBehaviour:
   preguntas:
   - textoDescripcion: "Buenas tardes, Arwell... \xBFQu\xE9 tal te fue con el caso?
       Tengo entendido que le dedicaste varias horas a investigar la escena del crimen...
-      \xBFTe importa si charlamos un poco? Toma asiento. Quiero hacerte algunas preguntas."
+      \xBFTe importa si charlamos un poco? Toma asiento. Quiero hacerte algunas preguntas. "
     textoPregunta: "\xBFQu\xE9 puedes decirme de la escena del crimen?"
     respuestas:
-    - "La verdad me fue dif\xEDcil llegar a alguna conclusi\xF3n con la escena. "
-    - "El se\xF1or O\u2019Neill parec\xEDa ser un tipo desorganizado. "
-    - "No encontr\xE9 manchas de sangre, por ende, no hubo pelea alguna en la escena. "
+    - "Parece que alguien forz\xF3 la puerta del despacho de la v\xEDctima. "
+    - 'La escena era un completo desastre, estaba todo desorganizado. '
+    - "Encontr\xE9 manchas de sangre, pero no hab\xEDa se\xF1ales de pelea. "
     respuestasCorrectas: 02000000
   - textoDescripcion: "Mmh... Ya veo... El forense mencion\xF3 haber visto una jeringa..."
     textoPregunta: "\xBFQu\xE9 me podr\xEDas contar sobre eso?"
@@ -3813,13 +3813,13 @@ MonoBehaviour:
   - textoDescripcion: "Uhjm\u2026 Entiendo. Para finalizar, sobre la muerte de la
       v\xEDctima\u2026 Los forenses informaron que no encontraron heridas superficiales
       en el cuerpo. Seg\xFAn ellos, falleci\xF3 por causas relacionadas con su salud,
-      pero\u2026"
+      pero\u2026 "
     textoPregunta: "\xBFNotaste algo fuera de lo com\xFAn? "
     respuestas:
-    - 'Francamente no. '
-    - "Teorizo que muri\xF3 por envenenamiento, hab\xEDa un vaso de whisky en la
-      escena. "
-    - "Pienso que muri\xF3 por alg\xFAn paro cardiaco. "
+    - "Encontr\xE9 una pastilla debajo de su escritorio\u2026 Quiz\xE1s tenga algo
+      que ver. "
+    - "Hab\xEDa un vaso de whisky en la escena, quiz\xE1s la bebida lo afect\xF3. "
+    - 'No note nada llamativo. Concuerdo en que pudo haber sido una muerte natural. '
     respuestasCorrectas: 01000000
   textoDescripcion: {fileID: 2071451387}
   textoPreguntaRespuesta: {fileID: 1967079627}
