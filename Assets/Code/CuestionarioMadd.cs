@@ -90,6 +90,9 @@ public class Cuestionario : MonoBehaviour
 
         if (levelCompleted)
         {
+            PlayerPrefs.SetInt("Level1Completed", 1);
+            PlayerPrefs.Save();
+
             GuardarDatos.Instancia.GuardarProgreso(NivelAGuardar);
             PlayerPrefs.SetInt("CurrentLevel", NivelAGuardar);
             PlayerPrefs.Save();

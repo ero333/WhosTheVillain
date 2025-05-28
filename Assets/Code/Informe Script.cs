@@ -239,8 +239,8 @@ public class InformeScript : MonoBehaviour
             suspectImage.sprite.name == correctSuspect &&
             motiveText.text == correctMotive)
         {
-            PlayerPrefs.SetInt("Level1Completed", 1);
-            PlayerPrefs.Save();
+            //PlayerPrefs.SetInt("Level1Completed", 1);
+            //PlayerPrefs.Save();
 
             GuardarDatos.Instancia.GuardarProgreso(X);
 

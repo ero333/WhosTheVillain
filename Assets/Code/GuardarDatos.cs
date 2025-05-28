@@ -29,7 +29,7 @@ public class GuardarDatos : MonoBehaviour
 
     public void GuardarProgreso(int NW)
     {
-        if (NW >= NivelesDesbloqueados)
+        if (NW > NivelesDesbloqueados)
         {
             PlayerPrefs.SetInt("Niveles Ganados", NW);
             print(NW + " niveles guardados");
